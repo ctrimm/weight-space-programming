@@ -22,8 +22,8 @@ first eligible in **2027**, exactly as published by the Social
 Security Administration at
 https://www.ssa.gov/oact/cola/piaformula.html (see SOURCE_TEXT.md,
 retrieved 2026-11-03). No experiment in this repo has touched
-Social Security before; the 2027 bend points were published after
-every prior experiment was run.
+Social Security before; the 2027 formula is the version SSA
+currently publishes.
 
 ## Design
 
