@@ -307,3 +307,28 @@ does not survive.
   rule class; declared limits stand (single-input rule; writers
   may know the formula from training data — the claim is
   weight-writing from text, not rule discovery).
+
+## D16 — Local open-weight replication on the homelab rig (2026-11-03)
+- Brandon asked for the study to be replicated on the homelab rig
+  (one RTX 3090 Ti, LiteLLM gateway). Writers: `q38` (Qwen3.8-27B,
+  3-bit) and `strata` (Qwen3.8-Flash-Next 125B MoE, IQ3_S). Tasks:
+  all seven second-writer rules. The prompts were imported from the
+  three earlier runners, not retyped, and hash-checked against their
+  freezes before the first call.
+- Deviations were declared in PROTOCOL.md before any task call:
+  max_tokens 32,768 (was 20,000), because local reasoning tokens
+  count against it; and up to 3 transport-only retries, not counted
+  as attempts, after the q38 lane crashed and recovered during the
+  smoke test. No transport retry was needed in the run.
+- Result: both writers PASS on all six non-EITC rules at float
+  noise. EITC is Partial ($0.024, 81.8%) for both, identical to
+  Gemini and the original attempt 1, and both reasoning traces name
+  the seam. q38 needed the syntax-only retry on 4/7; strata on 0/7.
+  strata's EITC and member-level SNAP replies ran past 20k tokens.
+- Scoring ran in the foreground (per the D14 lesson), after a
+  calibration step that re-scored the committed Gemini weights and
+  reproduced all seven published max errors.
+- Correction made before publishing: the first RESULTS draft said
+  Gemini's EITC net was 99.96% exact. That figure is the original
+  writer's attempt 2. Gemini's net, re-run, sits at $0.024 across
+  the whole tail, same as the local models.

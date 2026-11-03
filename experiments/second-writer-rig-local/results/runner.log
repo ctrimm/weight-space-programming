@@ -1,0 +1,21 @@
+q38 eitc attempt 1: PARSE FAILED (index out of bounds for W1: 1,1), 11190 tok, 164.7s, finish=stop
+q38 eitc attempt 2: parsed, 11 nonzero, 13983 tok, 204.5s
+q38 snap attempt 1: PARSE FAILED (index out of bounds for W1: 2,2), 10236 tok, 151.1s, finish=stop
+q38 snap attempt 2: parsed, 18 nonzero, 11189 tok, 169.5s
+q38 ssi attempt 1: parsed, 18 nonzero, 6443 tok, 92.0s
+q38 medicaid attempt 1: parsed, 12 nonzero, 9259 tok, 132.8s
+q38 soc attempt 1: PARSE FAILED (Expecting ',' delimiter: line 1 column 496 (char 495)), 10749 tok, 159.6s, finish=stop
+q38 soc attempt 2: parsed, 16 nonzero, 10905 tok, 171.2s
+q38 couple attempt 1: PARSE FAILED (Expecting ',' delimiter: line 1 column 537 (char 536)), 12267 tok, 180.4s, finish=stop
+q38 couple attempt 2: parsed, 18 nonzero, 5908 tok, 115.8s
+q38 snapcomp attempt 1: parsed, 34 nonzero, 17379 tok, 254.5s
+strata eitc attempt 1: parsed, 14 nonzero, 24817 tok, 338.2s
+strata snap attempt 1: parsed, 18 nonzero, 16654 tok, 221.9s
+strata ssi attempt 1: parsed, 13 nonzero, 11853 tok, 187.8s
+strata medicaid attempt 1: parsed, 9 nonzero, 7299 tok, 164.9s
+strata soc attempt 1: parsed, 17 nonzero, 10933 tok, 202.6s
+strata couple attempt 1: parsed, 18 nonzero, 15119 tok, 219.2s
+strata snapcomp attempt 1: parsed, 33 nonzero, 24922 tok, 319.8s
+DONE.
+
+[exited with code 1]
