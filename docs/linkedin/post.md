@@ -13,7 +13,7 @@ What I found:
 
 - Seven benefit rules (SNAP, EITC, SSI individual and couple, Medicaid liability and share of cost) compiled into network weights by construction: exact. Worst error $0.0000000000005 across tens of thousands of test points.
 - GPT-5.6 Sol and Gemini 3.1 Pro, given only the formula text, wrote exact networks too. In two programs, all three writers produced the same circuit up to relabeling.
-- Networks trained on the same formulas reached a $0.32 average error — and changed an SSI couple's payment by up to $25.15 depending on which spouse earned the income. The law counts the couple's combined income, once. In 98.9% of equivalent households, the trained model gave different answers to the same household.
+- Networks trained on the same formulas reached a $0.32 average error, and changed an SSI couple's payment by up to $25.15 depending on which spouse earned the income. The law counts the couple's combined income, once. In 98.9% of equivalent households, the trained model gave different answers to the same household.
 - Augmentation shrank that defect fivefold. A symmetry penalty did worse. An architecture that sums the incomes first eliminated it exactly. Compilation eliminated it and the error.
 
 If you evaluate AI systems that touch benefits, accuracy alone will certify the $25.15 problem. Test the properties the law implies, not just the average error.
