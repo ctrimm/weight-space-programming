@@ -7,7 +7,7 @@ Graphics: `graphic1_stat_card.png` (lead image), `graphic2_bakeoff.png`
 
 TLDR: MIT's "Sparks of Weight-Space Programming" (Tomita et al.) says a frontier model can write a neural network's weights directly, no training. I tested it on US benefit formulas, where correct is defined by law. Written weights were exact. Trained weights were the problem.
 
-Small models are my thing. I trained a custom on-device PII/PHI redaction model — a fine-tuned token classifier — that ships as a Mac app. I built a two-million-parameter speech-to-text model. So I ran this the way I'd want my own work run: pre-registered protocols, scored to the cent, failures published.
+Small models are my thing. I trained a custom on-device PII/PHI redaction model (a fine-tuned token classifier) that ships as a Mac app. I built a two-million-parameter speech-to-text model. So I ran this the way I'd want my own work run: pre-registered protocols, scored to the cent, failures published.
 
 What I found:
 
@@ -18,7 +18,7 @@ What I found:
 
 If you evaluate AI systems that touch benefits, accuracy alone will certify the $25.15 problem. Test the properties the law implies, not just the average error.
 
-Scope, plainly: these are arithmetic cores, not eligibility determinations. Determinations belong in deterministic code. The weights are witnesses — independent implementations that agree to the last digit, or tell you where they don't.
+Scope: these are the arithmetic cores of the programs. Eligibility determinations belong in deterministic code. The weights are witnesses, independent implementations that agree to the last digit or tell you where they don't.
 
 Everything is public, including the failures and one set of numbers I had to correct. Total API cost of the program: $2.40.
 
