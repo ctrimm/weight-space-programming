@@ -1,0 +1,11 @@
+openai/gpt-5.6-sol N03: claim parsed (program: 'FY2026 SNAP two-person monthly benefit rule for a nonelderly/disabled household, using the earned-income, standard, and capped excess-shelter deductions', conf 0.99), $0.0519 (total $0.0519)
+openai/gpt-5.6-sol N04: claim parsed (program: '2026 Supplemental Security Income (SSI) federal benefit for an individual', conf 0.999), $0.0590 (total $0.1109)
+openai/gpt-5.6-sol N09: claim parsed (program: 'Medicaid nursing-facility patient liability with community-spouse income allowance', conf 0.99), $0.0349 (total $0.1458)
+openai/gpt-5.6-sol N10: claim parsed (program: 'Supplemental Security Income (SSI) federal individual monthly payment rule', conf 1.0), $0.0495 (total $0.1953)
+openai/gpt-5.6-sol N11: claim parsed (program: 'Simplified Supplemental Security Income (SSI) benefit rule', conf 0.88), $0.1804 (total $0.3758)
+google/gemini-3.1-pro-preview N01: claim parsed (program: 'Supplemental Nutrition Assistance Program (SNAP)', conf 1.0), $0.1341 (total $0.5099)
+google/gemini-3.1-pro-preview N05: claim parsed (program: 'Supplemental Security Income (SSI)', conf 1.0), $0.0748 (total $0.5847)
+google/gemini-3.1-pro-preview N07: claim parsed (program: 'Medicaid nursing facility patient liability', conf 1.0), $0.0316 (total $0.6162)
+google/gemini-3.1-pro-preview N10: claim parsed (program: 'Supplemental Security Income (SSI)', conf 1.0), $0.0561 (total $0.6723)
+google/gemini-3.1-pro-preview N11: claim parsed (program: 'Supplemental Security Income (SSI)', conf 0.95), $0.2671 (total $0.9394)
+ARM A DONE. total measured spend: $0.9394 of $6.0 cap

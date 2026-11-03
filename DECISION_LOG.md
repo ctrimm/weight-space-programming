@@ -125,3 +125,27 @@ does not survive.
   README edits had silently failed to match; now verified in the
   findings table (row 5) + findings paragraph, and removed from
   What's next.
+
+## D9 — 2026-11-02 (night): Weight-reading experiment
+
+- Cory approved the full design (three readers cross-reading,
+  defect net included). Run under pre-registered protocol + rubric
+  with claims returned as executable expressions and graded
+  behaviorally against the mystery networks themselves.
+- Arm A: all 11 compiled-net reads behaviorally exact (float
+  noise), all constants recovered, by all readers. Defect net
+  flagged by BOTH blind readers, GPT quantifying the $51/mo harm.
+  Spend $0.9394.
+- Control (trained SSI): family identified, constants NOT
+  recoverable (GPT read FBR $1,000, Gemini $914; both confident) —
+  trained weights do not contain their constants in readable form.
+- Arm B (25 behavior samples, control reads only): no rescue.
+  GPT max err flat ($11.35 -> $11.91), Gemini far worse ($89.54 ->
+  $414.46, sample overfit). The paper's behavior-rescue pattern did
+  not reproduce; consistent with there being no exact rule inside
+  a trained net for samples to reveal. Spend $0.4075; experiment
+  total $1.3469 vs $6 cap.
+- Secondary finding for the write-up: readers' recovered constants
+  were mechanically perfect while their prose context was
+  sometimes wrong-year (Gemini doubted the correct $994 against
+  2024's $943). Grade numbers, not narration.

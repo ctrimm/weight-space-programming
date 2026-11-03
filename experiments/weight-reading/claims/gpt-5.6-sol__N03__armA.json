@@ -1,0 +1,19 @@
+{
+  "program": "FY2026 SNAP two-person monthly benefit rule for a nonelderly/disabled household, using the earned-income, standard, and capped excess-shelter deductions",
+  "formula_text": "Let adjusted income A = 0.80E - 209. Let the excess-shelter deduction D = min(744, max(0, S - A/2)). The monthly benefit is min(546, max(0, 546 - 0.30(A - D))) dollars.",
+  "constants": {
+    "earned_income_deduction_rate": 0.2,
+    "standard_deduction": 209,
+    "shelter_income_fraction": 0.5,
+    "maximum_shelter_deduction": 744,
+    "maximum_two_person_allotment": 546,
+    "net_income_benefit_reduction_rate": 0.3
+  },
+  "formula_python": "min(546, max(0, 546 - 0.3 * ((0.8 * E - 209) - min(744, max(0, S - 0.5 * (0.8 * E - 209))))))",
+  "confidence": 0.99,
+  "anomalies": [
+    "The network computes a continuous dollar amount and does not implement SNAP's usual whole-dollar rounding rules.",
+    "If interpreted as a complete eligibility-and-benefit system, it does not separately enforce gross/net income eligibility tests or the minimum allotment for eligible one- or two-person households.",
+    "Twenty-one units in each hidden layer are unused; the sparse network appears deliberately hand-encoded rather than trained."
+  ]
+}

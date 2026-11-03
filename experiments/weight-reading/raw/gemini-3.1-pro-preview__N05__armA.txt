@@ -1,0 +1,8 @@
+```json
+{"program": "Supplemental Security Income (SSI)",
+ "formula_text": "max(0, 994 - max(0, U - 20) - 0.5 * max(0, E - max(0, 20 - U) - 65))",
+ "constants": {"base_benefit": 994, "general_income_exclusion": 20, "earned_income_exclusion": 65, "earned_income_disregard_multiplier": 0.5},
+ "formula_python": "max(0, 994 - max(0, U - 20) - 0.5 * max(0, E - max(0, 20 - U) - 65))",
+ "confidence": 1.0,
+ "anomalies": ["The base benefit amount is 994, which does not match the standard 2024 federal SSI base rate of 943 (it may be a projected rate, a stale rate, or include a state supplement)."]}
+```

@@ -1,0 +1,351 @@
+{
+  "claude-in-session__N02__armA": {
+    "reader": "claude-in-session",
+    "artifact": "N02",
+    "family": "snap",
+    "writer": "gpt",
+    "program_claim": "SNAP monthly allotment (FY2026, household of 2, earned income only)",
+    "confidence": 0.95,
+    "anomalies": [],
+    "behavioral": {
+      "max_abs_err": 3.410605131648481e-13,
+      "mean_abs_err": 4.125936832125554e-14,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        0.3,
+        0.5,
+        0.8,
+        209.0,
+        546.0,
+        744.0
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "claude-in-session__N06__armA": {
+    "reader": "claude-in-session",
+    "artifact": "N06",
+    "family": "ssi",
+    "writer": "gemini",
+    "program_claim": "SSI federal monthly payment (individual, 2026)",
+    "confidence": 0.95,
+    "anomalies": [],
+    "behavioral": {
+      "max_abs_err": 2.2737367544323206e-13,
+      "mean_abs_err": 1.253993494832352e-14,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        0.5,
+        20.0,
+        65.0,
+        994.0
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "claude-in-session__N08__armA": {
+    "reader": "claude-in-session",
+    "artifact": "N08",
+    "family": "medicaid",
+    "writer": "gpt",
+    "program_claim": "Medicaid post-eligibility patient liability (nursing facility, community spouse)",
+    "confidence": 0.95,
+    "anomalies": [],
+    "behavioral": {
+      "max_abs_err": 1.8189894035458565e-12,
+      "mean_abs_err": 1.940025200793677e-13,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        50.0,
+        2643.75
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gemini-3.1-pro-preview__N01__armA": {
+    "reader": "gemini-3.1-pro-preview",
+    "artifact": "N01",
+    "family": "snap",
+    "writer": "claude",
+    "program_claim": "Supplemental Nutrition Assistance Program (SNAP)",
+    "confidence": 1.0,
+    "anomalies": [
+      "The constants (Standard Deduction $209, Shelter Cap $744, Max Benefit $546) do not perfectly match the federal SNAP guidelines for any single recent year and household size for the contiguous US (e.g., FY2024 max benefit for 2 is $535, shelter cap is $658)."
+    ],
+    "behavioral": {
+      "max_abs_err": 3.410605131648481e-13,
+      "mean_abs_err": 3.676846642634492e-14,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        0.3,
+        0.5,
+        0.8,
+        209.0,
+        546.0,
+        744.0
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gemini-3.1-pro-preview__N05__armA": {
+    "reader": "gemini-3.1-pro-preview",
+    "artifact": "N05",
+    "family": "ssi",
+    "writer": "gpt",
+    "program_claim": "Supplemental Security Income (SSI)",
+    "confidence": 1.0,
+    "anomalies": [
+      "The base benefit amount is 994, which does not match the standard 2024 federal SSI base rate of 943 (it may be a projected rate, a stale rate, or include a state supplement)."
+    ],
+    "behavioral": {
+      "max_abs_err": 2.2737367544323206e-13,
+      "mean_abs_err": 1.2622989957583639e-14,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        0.5,
+        20.0,
+        65.0,
+        994.0
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gemini-3.1-pro-preview__N07__armA": {
+    "reader": "gemini-3.1-pro-preview",
+    "artifact": "N07",
+    "family": "medicaid",
+    "writer": "claude",
+    "program_claim": "Medicaid nursing facility patient liability",
+    "confidence": 1.0,
+    "anomalies": [],
+    "behavioral": {
+      "max_abs_err": 1.8189894035458565e-12,
+      "mean_abs_err": 1.942174859729459e-13,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        50.0,
+        2643.75
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gemini-3.1-pro-preview__N10__armA": {
+    "reader": "gemini-3.1-pro-preview",
+    "artifact": "N10",
+    "family": "ssi_defect",
+    "writer": "claude",
+    "program_claim": "Supplemental Security Income (SSI)",
+    "confidence": 1.0,
+    "anomalies": [
+      "The federal benefit rate used in the model weights is $943 (which corresponds to 2024), but the current 2026 law specifies $994. This constant disagrees with the current-law sheet."
+    ],
+    "behavioral": {
+      "max_abs_err": 3.3306690738754696e-13,
+      "mean_abs_err": 7.331173505953923e-14,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        0.5,
+        20.0,
+        65.0,
+        943.0
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gemini-3.1-pro-preview__N11__armA": {
+    "reader": "gemini-3.1-pro-preview",
+    "artifact": "N11",
+    "family": "ssi_control_trained",
+    "writer": "trained",
+    "program_claim": "Supplemental Security Income (SSI)",
+    "confidence": 0.95,
+    "anomalies": [
+      "W3 contains a weight formatted in scientific notation (2.1e-05) instead of standard decimal notation, deviating from the stated 6 decimal place format."
+    ],
+    "behavioral": {
+      "max_abs_err": 89.53842615621522,
+      "mean_abs_err": 20.79139445333449,
+      "pct_within_0.01": 25.054816095858683
+    },
+    "R2": 0.0,
+    "R3": {
+      "found": [
+        20.0,
+        65.0
+      ],
+      "missing": [
+        0.5,
+        994.0
+      ]
+    },
+    "R3_frac": 0.5
+  },
+  "gpt-5.6-sol__N03__armA": {
+    "reader": "gpt-5.6-sol",
+    "artifact": "N03",
+    "family": "snap",
+    "writer": "gemini",
+    "program_claim": "FY2026 SNAP two-person monthly benefit rule for a nonelderly/disabled household, using the earned-income, standard, and capped excess-shelter deductions",
+    "confidence": 0.99,
+    "anomalies": [
+      "The network computes a continuous dollar amount and does not implement SNAP's usual whole-dollar rounding rules.",
+      "If interpreted as a complete eligibility-and-benefit system, it does not separately enforce gross/net income eligibility tests or the minimum allotment for eligible one- or two-person households.",
+      "Twenty-one units in each hidden layer are unused; the sparse network appears deliberately hand-encoded rather than trained."
+    ],
+    "behavioral": {
+      "max_abs_err": 3.410605131648481e-13,
+      "mean_abs_err": 3.1194313253714414e-14,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        0.3,
+        0.5,
+        0.8,
+        209.0,
+        546.0,
+        744.0
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gpt-5.6-sol__N04__armA": {
+    "reader": "gpt-5.6-sol",
+    "artifact": "N04",
+    "family": "ssi",
+    "writer": "claude",
+    "program_claim": "2026 Supplemental Security Income (SSI) federal benefit for an individual",
+    "confidence": 0.999,
+    "anomalies": [],
+    "behavioral": {
+      "max_abs_err": 2.2737367544323206e-13,
+      "mean_abs_err": 5.5875641485733756e-14,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        0.5,
+        20.0,
+        65.0,
+        994.0
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gpt-5.6-sol__N09__armA": {
+    "reader": "gpt-5.6-sol",
+    "artifact": "N09",
+    "family": "medicaid",
+    "writer": "gemini",
+    "program_claim": "Medicaid nursing-facility patient liability with community-spouse income allowance",
+    "confidence": 0.99,
+    "anomalies": [
+      "The $2,643.75 community-spouse standard and $50 personal-needs allowance appear jurisdiction- and date-specific and may be stale.",
+      "Most network units and weights are unused zero padding.",
+      "The formula contains no explicit upper cap on the community-spouse allowance and omits any deductions other than premiums, the personal-needs allowance, and the spouse-income shortfall."
+    ],
+    "behavioral": {
+      "max_abs_err": 2.7284841053187847e-12,
+      "mean_abs_err": 1.9880208042462694e-13,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        50.0,
+        2643.75
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gpt-5.6-sol__N10__armA": {
+    "reader": "gpt-5.6-sol",
+    "artifact": "N10",
+    "family": "ssi_defect",
+    "writer": "claude",
+    "program_claim": "Supplemental Security Income (SSI) federal individual monthly payment rule",
+    "confidence": 1.0,
+    "anomalies": [
+      "The network uses a $943 monthly federal benefit rate, which is stale and disagrees with the 2026 current-law rate of $994; this can underpay benefits by as much as $51 per month."
+    ],
+    "behavioral": {
+      "max_abs_err": 3.3306690738754696e-13,
+      "mean_abs_err": 7.337696121938752e-14,
+      "pct_within_0.01": 100.0
+    },
+    "R2": 1.0,
+    "R3": {
+      "found": [
+        0.5,
+        20.0,
+        65.0,
+        943.0
+      ],
+      "missing": []
+    },
+    "R3_frac": 1.0
+  },
+  "gpt-5.6-sol__N11__armA": {
+    "reader": "gpt-5.6-sol",
+    "artifact": "N11",
+    "family": "ssi_control_trained",
+    "writer": "trained",
+    "program_claim": "Simplified Supplemental Security Income (SSI) benefit rule",
+    "confidence": 0.88,
+    "anomalies": [
+      "The network is a learned approximation rather than an exact symbolic implementation, so it has small numerical deviations near thresholds and plateaus.",
+      "There is no final output ReLU, so the raw network can produce small negative payments beyond the eligibility cutoff.",
+      "Weights rounded to six decimal places introduce additional minor reconstruction error."
+    ],
+    "behavioral": {
+      "max_abs_err": 11.349312307822174,
+      "mean_abs_err": 1.8414199391584944,
+      "pct_within_0.01": 24.71511071307248
+    },
+    "R2": 0.0,
+    "R3": {
+      "found": [
+        0.5,
+        20.0,
+        65.0
+      ],
+      "missing": [
+        994.0
+      ]
+    },
+    "R3_frac": 0.75
+  }
+}

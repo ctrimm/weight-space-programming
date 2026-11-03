@@ -1,0 +1,8 @@
+```json
+{"program": "Medicaid nursing facility patient liability",
+ "formula_text": "max(0, I - max(0, 2643.75 - SI) - P - 50)",
+ "constants": {"MMMNA": 2643.75, "PNA": 50.0},
+ "formula_python": "max(0, I - max(0, 2643.75 - SI) - P - 50)",
+ "confidence": 1.0,
+ "anomalies": []}
+```

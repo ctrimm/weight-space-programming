@@ -1,0 +1,15 @@
+{
+  "program": "Supplemental Security Income (SSI) federal individual monthly payment rule",
+  "formula_text": "Payment = max(943 - max(U - 20, 0) - (1/2) * max(E - 65 - max(20 - U, 0), 0), 0) dollars per month.",
+  "constants": {
+    "federal benefit rate": 943,
+    "general income exclusion": 20,
+    "earned income exclusion": 65,
+    "remaining earned income countable fraction": 0.5
+  },
+  "formula_python": "max(943 - max(U - 20, 0) - 0.5 * max(E - 65 - max(20 - U, 0), 0), 0)",
+  "confidence": 1.0,
+  "anomalies": [
+    "The network uses a $943 monthly federal benefit rate, which is stale and disagrees with the 2026 current-law rate of $994; this can underpay benefits by as much as $51 per month."
+  ]
+}

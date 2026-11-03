@@ -1,0 +1,15 @@
+{
+  "program": "SNAP monthly allotment (FY2026, household of 2, earned income only)",
+  "formula_text": "A = 0.8*E - 209; X = max(0, S - 0.5*A); Xc = min(X, 744); N = max(0, A - Xc); B = max(0, 546 - 0.3*N)",
+  "constants": {
+    "max_allotment": 546,
+    "standard_deduction": 209,
+    "earned_income_deduction_rate": 0.8,
+    "shelter_share": 0.5,
+    "excess_shelter_cap": 744,
+    "benefit_reduction_rate": 0.3
+  },
+  "formula_python": "max(0, 546 - 0.3*max(0, 0.8*E - 209 - min(max(0, S - 0.5*(0.8*E - 209)), 744)))",
+  "confidence": 0.95,
+  "anomalies": []
+}

@@ -1,0 +1,17 @@
+{
+  "program": "Supplemental Nutrition Assistance Program (SNAP)",
+  "formula_text": "Benefit = max(0, 546 - 0.3 * max(0, 0.8 * E - 209 - min(744, max(0, S - 0.5 * (0.8 * E - 209)))))",
+  "constants": {
+    "Standard Deduction": 209,
+    "Shelter Cap": 744,
+    "Max Benefit": 546,
+    "Earned Income Deduction Rate": 0.2,
+    "Benefit Reduction Rate": 0.3,
+    "Shelter Deduction Income Proportion": 0.5
+  },
+  "formula_python": "max(0, 546 - 0.3 * max(0, 0.8 * E - 209 - min(744, max(0, S - 0.5 * (0.8 * E - 209)))))",
+  "confidence": 1.0,
+  "anomalies": [
+    "The constants (Standard Deduction $209, Shelter Cap $744, Max Benefit $546) do not perfectly match the federal SNAP guidelines for any single recent year and household size for the contiguous US (e.g., FY2024 max benefit for 2 is $535, shelter cap is $658)."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "program": "Supplemental Security Income (SSI)",
+  "formula_text": "Payment = max(0, 943 - (max(0, U - 20) + 0.5 * max(0, E - max(0, 20 - U) - 65)))",
+  "constants": {
+    "benefit_rate": 943,
+    "general_income_exclusion": 20,
+    "earned_income_exclusion": 65,
+    "earned_income_disregard_factor": 0.5
+  },
+  "formula_python": "max(0, 943 - (max(0, U - 20) + 0.5 * max(0, E - max(0, 20 - U) - 65)))",
+  "confidence": 1.0,
+  "anomalies": [
+    "The federal benefit rate used in the model weights is $943 (which corresponds to 2024), but the current 2026 law specifies $994. This constant disagrees with the current-law sheet."
+  ]
+}

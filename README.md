@@ -227,6 +227,23 @@ while GPT-5.6 Sol returned no weights at all — it derived the
 $0.024 discontinuity from the constants and declined to submit an
 inexact network. Total measured cost of the replication: $0.65.
 
+The reading direction is also done (2026-11-02,
+`experiments/weight-reading/`): eleven anonymized networks were
+handed to fresh readers — GPT-5.6 Sol, Gemini 3.1 Pro, and the
+original author cross-reading the others' work — with only the
+weights, the architecture, and the meaning of the inputs. Every
+compiled network was read exactly: claimed formulas behaviorally
+identical to the artifacts, every constant recovered. Given the
+stale-FBR network plus a current-law sheet, both blind readers
+flagged the stale $943 rate, one quantifying the harm at exactly
+$51 a month. The trained SSI network broke the pattern in the
+instructive way: both readers named the program but invented
+different benefit rates ($1,000; $914) for a constant that training
+never wrote down anywhere, and 25 input/output samples did not
+rescue them (one reader's error quadrupled to $414). A compiled
+network can be audited by a stranger; a trained one can only be
+recognized.
+
 ## Guardrails
 
 The plain-language section at the top is the short version. The
@@ -249,6 +266,7 @@ experiments/
   medicaid-patient-liability/   Medicaid post-eligibility liability
   ssi-stale-fbr-edit/           Repairing a stale constant by weight edit
   second-writer-openrouter/     GPT-5.6 Sol + Gemini 3.1 Pro replication
+  weight-reading/               Fresh readers identify rules from weights alone
 ```
 
 Figures live in `docs/figures/` (generator: `docs/make_figures.py`).
@@ -280,9 +298,6 @@ python3 train_baseline.py
 - Extend the witness pattern to the remaining arithmetic cores the
   CivBench label program cares about (Medicaid medically-needy share
   of cost with SSI-style income counting; SSI couple rate).
-- Test the *reading* direction from the paper: hand an LLM the weights
-  of an unknown small benefits network and ask what rule it computes —
-  the audit use case.
 
 ## License
 

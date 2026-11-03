@@ -1,0 +1,80 @@
+{
+  "artifacts": {
+    "N01": {
+      "family": "snap",
+      "writer": "claude",
+      "source": "experiments/snap-allotment/zero_shot/snap_weights.npz"
+    },
+    "N02": {
+      "family": "snap",
+      "writer": "gpt",
+      "source": "experiments/second-writer-openrouter/weights/gpt-5.6-sol__snap.npz"
+    },
+    "N03": {
+      "family": "snap",
+      "writer": "gemini",
+      "source": "experiments/second-writer-openrouter/weights/gemini-3.1-pro-preview__snap.npz"
+    },
+    "N04": {
+      "family": "ssi",
+      "writer": "claude",
+      "source": "experiments/ssi-payment/zero_shot/ssi_weights.npz"
+    },
+    "N05": {
+      "family": "ssi",
+      "writer": "gpt",
+      "source": "experiments/second-writer-openrouter/weights/gpt-5.6-sol__ssi.npz"
+    },
+    "N06": {
+      "family": "ssi",
+      "writer": "gemini",
+      "source": "experiments/second-writer-openrouter/weights/gemini-3.1-pro-preview__ssi.npz"
+    },
+    "N07": {
+      "family": "medicaid",
+      "writer": "claude",
+      "source": "experiments/medicaid-patient-liability/zero_shot/medicaid_weights.npz"
+    },
+    "N08": {
+      "family": "medicaid",
+      "writer": "gpt",
+      "source": "experiments/second-writer-openrouter/weights/gpt-5.6-sol__medicaid.npz"
+    },
+    "N09": {
+      "family": "medicaid",
+      "writer": "gemini",
+      "source": "experiments/second-writer-openrouter/weights/gemini-3.1-pro-preview__medicaid.npz"
+    },
+    "N10": {
+      "family": "ssi_defect",
+      "writer": "claude",
+      "source": "experiments/ssi-stale-fbr-edit/stale/ssi_stale_weights.npz"
+    },
+    "N11": {
+      "family": "ssi_control_trained",
+      "writer": "trained",
+      "source": "experiments/ssi-payment/trained/ssi_weights.npz"
+    }
+  },
+  "assignments": {
+    "openai/gpt-5.6-sol": [
+      "N03",
+      "N04",
+      "N09",
+      "N10",
+      "N11"
+    ],
+    "google/gemini-3.1-pro-preview": [
+      "N01",
+      "N05",
+      "N07",
+      "N10",
+      "N11"
+    ],
+    "claude-in-session": [
+      "N02",
+      "N06",
+      "N08"
+    ]
+  }
+}

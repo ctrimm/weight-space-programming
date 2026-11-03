@@ -1,0 +1,16 @@
+```json
+{
+  "program": "Supplemental Security Income (SSI)",
+  "formula_text": "max(0, MaxBenefit - max(0, U - 20) - max(0, E - 65 - max(0, 20 - U)) / 2)",
+  "constants": {
+    "MaxBenefit": 1001.91,
+    "GeneralIncomeDisregard": 20,
+    "EarnedIncomeDisregard": 65
+  },
+  "formula_python": "max(-2.1e-05 * E, 1001.91 - 0.995 * max(0, U - 20) - 0.5 * max(0, E - 85) - 0.708 * U)",
+  "confidence": 0.85,
+  "anomalies": [
+    "W3 contains a weight formatted in scientific notation (2.1e-05) instead of standard decimal notation, deviating from the stated 6 decimal place format."
+  ]
+}
+```

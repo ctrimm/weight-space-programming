@@ -1,0 +1,17 @@
+{
+  "program": "Simplified Supplemental Security Income (SSI) benefit rule",
+  "formula_text": "Monthly payment = max(0, $1,000 - max(0, U - $20) - 0.5*max(0, E - $65 - max(0, $20 - U))). The $20 general-income exclusion is applied to unearned income first, any remainder is added to the $65 earned-income exclusion, and remaining earned income is counted at 50%.",
+  "constants": {
+    "maximum_monthly_payment": 1000,
+    "general_income_exclusion": 20,
+    "earned_income_exclusion": 65,
+    "earned_income_counting_rate": 0.5
+  },
+  "formula_python": "max(0,1000-max(0,U-20)-max(0,E-65-max(0,20-U))/2)",
+  "confidence": 0.88,
+  "anomalies": [
+    "The network is a learned approximation rather than an exact symbolic implementation, so it has small numerical deviations near thresholds and plateaus.",
+    "There is no final output ReLU, so the raw network can produce small negative payments beyond the eligibility cutoff.",
+    "Weights rounded to six decimal places introduce additional minor reconstruction error."
+  ]
+}

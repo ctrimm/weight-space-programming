@@ -1,0 +1,32 @@
+{
+  "program": "Empirical piecewise-linear surrogate for the neural network's learned simplified SSI payment rule",
+  "formula_text": "The network is best matched by a learned piecewise-linear rule rather than the exact textbook SSI formula. Unearned income changes the effective benefit intercept, while earned income is counted at approximately 50% after an unearned-income-dependent exclusion near $86\u2013$100. A piecewise-linear transition around zero approximates the network's soft eligibility cutoff.",
+  "constants": {
+    "maximum_monthly_payment_approx": 1001.91,
+    "earned_income_counting_rate_approx": 0.5,
+    "effective_earned_exclusion_at_zero_unearned_income": 100.106,
+    "effective_earned_exclusion_at_20_unearned_income": 89.257,
+    "effective_earned_exclusion_above_77_unearned_income": 85.764,
+    "unearned_income_breakpoints": [
+      20,
+      77
+    ],
+    "cutoff_transition_breakpoints": [
+      -15,
+      -12.4,
+      -10.3,
+      0.5,
+      5.2,
+      46
+    ]
+  },
+  "formula_python": "0.0192308*max(0,(1041.67-0.87725*min(U,20)-0.957807*max(0,min(U,77)-20)-max(0,U-77)-0.5*E-(0.397176+0.00051765*min(U,20)-0.000602684*max(0,min(U,77)-20))*max(0,100.106-0.54245*min(U,20)-0.0612807*max(0,min(U,77)-20)-E))+15)+0.13315*max(0,(1041.67-0.87725*min(U,20)-0.957807*max(0,min(U,77)-20)-max(0,U-77)-0.5*E-(0.397176+0.00051765*min(U,20)-0.000602684*max(0,min(U,77)-20))*max(0,100.106-0.54245*min(U,20)-0.0612807*max(0,min(U,77)-20)-E))+12.4)-0.0829365*max(0,(1041.67-0.87725*min(U,20)-0.957807*max(0,min(U,77)-20)-max(0,U-77)-0.5*E-(0.397176+0.00051765*min(U,20)-0.000602684*max(0,min(U,77)-20))*max(0,100.106-0.54245*min(U,20)-0.0612807*max(0,min(U,77)-20)-E))+10.3)+0.266725*max(0,(1041.67-0.87725*min(U,20)-0.957807*max(0,min(U,77)-20)-max(0,U-77)-0.5*E-(0.397176+0.00051765*min(U,20)-0.000602684*max(0,min(U,77)-20))*max(0,100.106-0.54245*min(U,20)-0.0612807*max(0,min(U,77)-20)-E))-0.5)+0.725104*max(0,(1041.67-0.87725*min(U,20)-0.957807*max(0,min(U,77)-20)-max(0,U-77)-0.5*E-(0.397176+0.00051765*min(U,20)-0.000602684*max(0,min(U,77)-20))*max(0,100.106-0.54245*min(U,20)-0.0612807*max(0,min(U,77)-20)-E))-5.2)-0.0612745*max(0,(1041.67-0.87725*min(U,20)-0.957807*max(0,min(U,77)-20)-max(0,U-77)-0.5*E-(0.397176+0.00051765*min(U,20)-0.000602684*max(0,min(U,77)-20))*max(0,100.106-0.54245*min(U,20)-0.0612807*max(0,min(U,77)-20)-E))-46)",
+  "confidence": 0.78,
+  "anomalies": [
+    "This is an empirical reconstruction from the supplied measurements, not the exact symbolic expansion of the network weights.",
+    "The inferred earned-income threshold varies with unearned income, unlike the textbook SSI rule.",
+    "The network has a soft, irregular transition near zero rather than an exact max(0, payment) cutoff.",
+    "Deep in the ineligible region the network produces input-dependent residuals of a few cents, including small negative values; the expression approximates these as zero.",
+    "Additional hidden-unit breakpoints may exist between the measured inputs."
+  ]
+}

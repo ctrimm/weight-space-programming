@@ -1,0 +1,16 @@
+{
+  "frozen_before_reads": true,
+  "files": {
+    "mystery/N01.npz": "0588d0c56e5f618b38b0ef73f0b15e820177d6c4d90dc2cf519b9a4fe6d2b098",
+    "mystery/N02.npz": "f887136a755efc961a6c7e6e9dc0f6f9d212a6930e41980313f6de644c58aafe",
+    "mystery/N03.npz": "c783305d64cdb7d3aeef7b88b2b625aa04142ca785812110443d90a0e3dd4a9f",
+    "mystery/N04.npz": "4887bcc4b5fc08ded783aca745a760e1df9185f328dc1e64b52507c1a7718b2a",
+    "mystery/N05.npz": "42c4604763219bb6d4895441b74ac84647cde45098d3d9141d7065d7a4956914",
+    "mystery/N06.npz": "ec0cf3e4523b24e7aec91dc81f938568110d9583222d54a829dd98c9b8083ebc",
+    "mystery/N07.npz": "40f5528eb1c634005018c162fcf057aae0df64ffe1121fb27475c425fbff05f1",
+    "mystery/N08.npz": "73b53680e8022b0392adf3aa24ddfc9f77e22a163acbf3e5117f63c93b9d5cb0",
+    "mystery/N09.npz": "1fdc247e94ba724f0c06c09549e9fa60de35fa7466283a3a9b93452691c3de1e",
+    "mystery/N10.npz": "a4ab1e5d3b2258a6d7a8615ca88936f0522316b320863b80e57bd7a4ecc731e1",
+    "mystery/N11.npz": "2a57db37fcacedb546e5b3e6e09c394ccec5d62eef147a56a1210c691ede98af"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "program": "2026 Supplemental Security Income (SSI) federal benefit for an individual",
+  "formula_text": "Payment = max(0, $994 - max(0, U - $20) - 0.5 * max(0, E - $65 - max(0, $20 - U))). This applies the $20 general income exclusion first to unearned income, applies any remainder plus the $65 earned-income exclusion to earned income, and counts one-half of the remaining earned income.",
+  "constants": {
+    "federal_benefit_rate": 994,
+    "general_income_exclusion": 20,
+    "earned_income_exclusion": 65,
+    "earned_income_count_rate": 0.5
+  },
+  "formula_python": "max(0, 994 - max(0, U - 20) - max(0, E - 65 - max(0, 20 - U)) / 2)",
+  "confidence": 0.999,
+  "anomalies": []
+}

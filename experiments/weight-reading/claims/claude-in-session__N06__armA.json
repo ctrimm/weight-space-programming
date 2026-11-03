@@ -1,0 +1,13 @@
+{
+  "program": "SSI federal monthly payment (individual, 2026)",
+  "formula_text": "CU = max(0, U - 20); R = max(0, 20 - U); CE = max(0, E - 65 - R)/2; P = max(0, 994 - (CU + CE))",
+  "constants": {
+    "federal_benefit_rate": 994,
+    "general_exclusion": 20,
+    "earned_exclusion": 65,
+    "earned_disregard_rate": 0.5
+  },
+  "formula_python": "max(0, 994 - (max(0, U - 20) + max(0, E - 65 - max(0, 20 - U))/2))",
+  "confidence": 0.95,
+  "anomalies": []
+}

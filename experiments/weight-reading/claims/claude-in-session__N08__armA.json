@@ -1,0 +1,11 @@
+{
+  "program": "Medicaid post-eligibility patient liability (nursing facility, community spouse)",
+  "formula_text": "A = max(0, 2643.75 - SI); L = max(0, I - 50 - A - P)",
+  "constants": {
+    "mmmna_minimum": 2643.75,
+    "personal_needs_allowance": 50
+  },
+  "formula_python": "max(0, I - 50 - max(0, 2643.75 - SI) - P)",
+  "confidence": 0.95,
+  "anomalies": []
+}

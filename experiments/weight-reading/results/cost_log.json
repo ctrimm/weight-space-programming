@@ -1,0 +1,125 @@
+{
+  "calls": [
+    {
+      "model": "openai/gpt-5.6-sol",
+      "artifact": "N03",
+      "arm": "A",
+      "cost_usd": 0.051867,
+      "prompt_tokens": 3878,
+      "completion_tokens": 1624,
+      "seconds": 19.0,
+      "parse": "ok"
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "artifact": "N04",
+      "arm": "A",
+      "cost_usd": 0.059037,
+      "prompt_tokens": 6896,
+      "completion_tokens": 1228,
+      "seconds": 10.1,
+      "parse": "ok"
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "artifact": "N09",
+      "arm": "A",
+      "cost_usd": 0.034907,
+      "prompt_tokens": 4034,
+      "completion_tokens": 737,
+      "seconds": 9.3,
+      "parse": "ok"
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "artifact": "N10",
+      "arm": "A",
+      "cost_usd": 0.049497,
+      "prompt_tokens": 7024,
+      "completion_tokens": 719,
+      "seconds": 7.7,
+      "parse": "ok"
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "artifact": "N11",
+      "arm": "A",
+      "cost_usd": 0.180447,
+      "prompt_tokens": 8194,
+      "completion_tokens": 6974,
+      "seconds": 60.7,
+      "parse": "ok"
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "artifact": "N01",
+      "arm": "A",
+      "cost_usd": 0.134128,
+      "prompt_tokens": 3914,
+      "completion_tokens": 10525,
+      "seconds": 100.6,
+      "parse": "ok"
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "artifact": "N05",
+      "arm": "A",
+      "cost_usd": 0.074786,
+      "prompt_tokens": 6931,
+      "completion_tokens": 5077,
+      "seconds": 51.1,
+      "parse": "ok"
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "artifact": "N07",
+      "arm": "A",
+      "cost_usd": 0.031566,
+      "prompt_tokens": 4071,
+      "completion_tokens": 1952,
+      "seconds": 19.3,
+      "parse": "ok"
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "artifact": "N10",
+      "arm": "A",
+      "cost_usd": 0.05605,
+      "prompt_tokens": 7067,
+      "completion_tokens": 3493,
+      "seconds": 31.5,
+      "parse": "ok"
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "artifact": "N11",
+      "arm": "A",
+      "cost_usd": 0.267102,
+      "prompt_tokens": 13281,
+      "completion_tokens": 20045,
+      "seconds": 178.6,
+      "parse": "ok"
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "artifact": "N11",
+      "arm": "B",
+      "cost_usd": 0.126208,
+      "prompt_tokens": 817,
+      "completion_tokens": 6147,
+      "seconds": 65.7,
+      "parse": "ok"
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "artifact": "N11",
+      "arm": "B",
+      "cost_usd": 0.281266,
+      "prompt_tokens": 887,
+      "completion_tokens": 23291,
+      "seconds": 243.3,
+      "parse": "ok"
+    }
+  ],
+  "total_usd": 1.346861
+}
