@@ -1,0 +1,1 @@
+{"error":"No such weights exist: a finite ReLU network is continuous, but the specified credit is discontinuous at x=57310 (left limit is $0.024, while the value at and above 57310 is $0)."}

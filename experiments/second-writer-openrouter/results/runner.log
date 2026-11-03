@@ -1,0 +1,10 @@
+openai/gpt-5.6-sol eitc attempt 1: PARSE FAILED ('arrays'), $0.0217 (total $0.0217)
+openai/gpt-5.6-sol eitc attempt 2: PARSE FAILED ('arrays'), $0.0237 (total $0.0454)
+openai/gpt-5.6-sol snap attempt 1: parsed, 18 nonzero, $0.0532 (total $0.0986)
+openai/gpt-5.6-sol medicaid attempt 1: parsed, 9 nonzero, $0.0139 (total $0.1124)
+openai/gpt-5.6-sol ssi attempt 1: parsed, 13 nonzero, $0.0161 (total $0.1285)
+google/gemini-3.1-pro-preview eitc attempt 1: parsed, 11 nonzero, $0.2013 (total $0.3298)
+google/gemini-3.1-pro-preview snap attempt 1: parsed, 17 nonzero, $0.1658 (total $0.4956)
+google/gemini-3.1-pro-preview medicaid attempt 1: parsed, 9 nonzero, $0.0558 (total $0.5514)
+google/gemini-3.1-pro-preview ssi attempt 1: parsed, 13 nonzero, $0.0822 (total $0.6336)
+DONE. total measured spend: $0.6336 of $10.0 cap

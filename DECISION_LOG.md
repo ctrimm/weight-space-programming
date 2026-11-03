@@ -100,3 +100,28 @@ does not survive.
   pilot-first design (2 non-Anthropic frontier models x EITC) then
   full sweep, proposed hard cap $3. Awaiting his explicit yes, per
   the standing OpenRouter rule.
+
+## D8 — 2026-11-02 (night): Second-writer replication via OpenRouter
+
+- Cory authorized the pilot with a **$10 hard cap** (raised from the
+  $3 proposed). Pre-registered protocol; one stateless call per
+  model x experiment, one syntax-repair retry, no score feedback.
+  Actual total spend **$0.653** (account-verified; $0.6336 across 10
+  logged calls + ~$0.019 from a killed first launch whose in-flight
+  call billed server-side). Well under cap; per-call costs came in
+  ~4-10x below the dashboard-anchored estimate range.
+- Results: GPT-5.6 Sol and Gemini 3.1 Pro both PASS SNAP, SSI, and
+  Medicaid exactly. EITC split: Gemini reproduced the original
+  attempt 1 functionally identically (max $0.024, Partial); GPT-5.6
+  Sol declined twice, correctly deriving the $0.024 discontinuity
+  at $57,310 from the constants and refusing to submit inexact
+  weights — recorded as FAIL (no submission) per the gate, with the
+  refusal preserved verbatim in raw/. No third call was made.
+- Conclusion recorded: cross-vendor replication holds; the witness
+  use case now has a documented behavioral fork (build-to-table vs
+  refuse-on-inconsistency) worth surfacing wherever the results are
+  presented.
+- README hygiene (Cory's catch): the editing experiment's earlier
+  README edits had silently failed to match; now verified in the
+  findings table (row 5) + findings paragraph, and removed from
+  What's next.

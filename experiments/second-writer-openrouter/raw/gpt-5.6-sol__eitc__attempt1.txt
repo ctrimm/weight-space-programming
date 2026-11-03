@@ -1,0 +1,1 @@
+{"error":"No valid weights exist. Any finite affine/ReLU network is continuous, but the specified credit is discontinuous at x=57310: the left-hand limit is 7152-0.2106*(57310-23350)=0.024 dollars, while the defined value at x=57310 is 0 dollars."}

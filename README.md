@@ -143,6 +143,7 @@ Every experiment follows the same pre-registered discipline:
 | 2 | [EITC credit](experiments/eitc-credit/) — TY2025, 2 children | exact at 99.96% of 2,818 pts; $0.024 at one seam point | max $5.19; 15.7% within $0.01 | Partial — see below |
 | 3 | [SSI federal payment](experiments/ssi-payment/) — 2026, individual | max error $2×10⁻¹³ over 32,381 pts; 100% within $0.01 | max $9.54; 26.6% within $0.01 | **PASS (exact)** |
 | 4 | [Medicaid patient liability](experiments/medicaid-patient-liability/) — post-eligibility, community spouse | max error $2×10⁻¹² over 86,105 pts; 100% within $0.01 | max $31.67; 3.3% within $0.01 | **PASS (exact)** |
+| 5 | [SSI stale-FBR edit](experiments/ssi-stale-fbr-edit/) — experiment 3 recompiled with the stale 2024 FBR ($943), then repaired | stale net exact for 2024 but up to $51.00/mo wrong vs 2026; after a **2-parameter weight edit**: max error $2×10⁻¹³ over 56,381 pts | control, not a baseline: the trained SSI net contains no parameter equal to either year's FBR — a stale constant in trained weights is not even locatable | **PASS (surgical repair, 2 of 1,297 params)** |
 
 ![Worst-case error by experiment: written weights at 1e-13 to 2.4 cents, trained weights at 5 to 32 dollars](docs/figures/fig_max_error.png)
 
@@ -201,6 +202,31 @@ wide, uniform training data almost never lands there, and the trained
 net's error in the spill region runs $4.88–$7.22 against $0.15
 overall — the written weights encode the spill exactly, for free.
 
+The fifth experiment tests the paper's other direction: *editing*.
+The SSI formula was compiled with the stale 2024 benefit rate
+($943 instead of $994) — the same defect the CivBench audit found in
+published benefits-as-code labels. The stale network is a perfect
+implementation of the wrong year: underpaying by up to $51.00 a
+month. Scanning its weights for the literal value 0.943 finds the
+rate in exactly two places (a hinge bias and the output bias), and
+changing just those **2 of 1,297 parameters** to the 2026 rate
+restores exactness — the edited file is array-for-array identical
+to the network built fresh with the correct rate. The trained SSI
+network, by contrast, contains no parameter equal to either year's
+rate: in trained weights a constant is smeared everywhere and
+addressable nowhere, so it could not be found or fixed without
+retraining. Full record in `experiments/ssi-stale-fbr-edit/`.
+
+A second-writer replication (2026-11-02,
+`experiments/second-writer-openrouter/`) gave GPT-5.6 Sol and
+Gemini 3.1 Pro the same four stipulated rules through OpenRouter,
+one stateless prompt each. Both compiled SNAP, SSI, and Medicaid
+exactly. On EITC they split: Gemini reproduced the original
+writer's first attempt metric for metric (Partial, $0.024 seam),
+while GPT-5.6 Sol returned no weights at all — it derived the
+$0.024 discontinuity from the constants and declined to submit an
+inexact network. Total measured cost of the replication: $0.65.
+
 ## Guardrails
 
 The plain-language section at the top is the short version. The
@@ -222,6 +248,7 @@ experiments/
   ssi-payment/                  2026 SSI federal payment, individual
   medicaid-patient-liability/   Medicaid post-eligibility liability
   ssi-stale-fbr-edit/           Repairing a stale constant by weight edit
+  second-writer-openrouter/     GPT-5.6 Sol + Gemini 3.1 Pro replication
 ```
 
 Figures live in `docs/figures/` (generator: `docs/make_figures.py`).
@@ -256,9 +283,6 @@ python3 train_baseline.py
 - Test the *reading* direction from the paper: hand an LLM the weights
   of an unknown small benefits network and ask what rule it computes —
   the audit use case.
-- Test the *editing* direction: take a network with a known, named
-  defect (a stale constant compiled in) and ask for a surgical weight
-  edit, the analogue of the paper's reasoning-loop fix.
 
 ## License
 

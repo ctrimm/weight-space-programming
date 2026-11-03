@@ -1,0 +1,62 @@
+{
+  "gemini-3.1-pro-preview__eitc": {
+    "n": 2818,
+    "max_abs_err": 0.024000000002466493,
+    "mean_abs_err": 0.004360539390416946,
+    "pct_within_0.01": 81.83108587650815,
+    "pct_within_1": 100.0,
+    "gate": "Partial"
+  },
+  "gemini-3.1-pro-preview__snap": {
+    "n": 40049,
+    "max_abs_err": 3.410605131648481e-13,
+    "mean_abs_err": 3.1194313253714414e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0,
+    "gate": "PASS"
+  },
+  "gpt-5.6-sol__snap": {
+    "n": 40049,
+    "max_abs_err": 3.410605131648481e-13,
+    "mean_abs_err": 4.125936832125554e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0,
+    "gate": "PASS"
+  },
+  "gemini-3.1-pro-preview__ssi": {
+    "n": 32381,
+    "max_abs_err": 2.2737367544323206e-13,
+    "mean_abs_err": 1.253993494832352e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0,
+    "gate": "PASS"
+  },
+  "gpt-5.6-sol__ssi": {
+    "n": 32381,
+    "max_abs_err": 2.2737367544323206e-13,
+    "mean_abs_err": 1.253993494832352e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0,
+    "gate": "PASS"
+  },
+  "gemini-3.1-pro-preview__medicaid": {
+    "n": 86105,
+    "max_abs_err": 2.7284841053187847e-12,
+    "mean_abs_err": 1.9760053815547934e-13,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0,
+    "gate": "PASS"
+  },
+  "gpt-5.6-sol__medicaid": {
+    "n": 86105,
+    "max_abs_err": 1.8189894035458565e-12,
+    "mean_abs_err": 1.940025200793677e-13,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0,
+    "gate": "PASS"
+  },
+  "gpt-5.6-sol__eitc": {
+    "gate": "FAIL (no submission)",
+    "note": "Model declined to return weights on both attempts, correctly identifying the $0.024 discontinuity at x=57310 in the stipulated rule. See raw replies."
+  }
+}

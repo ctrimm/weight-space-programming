@@ -1,0 +1,111 @@
+{
+  "calls": [
+    {
+      "model": "openai/gpt-5.6-sol",
+      "task": "eitc",
+      "attempt": 1,
+      "cost_usd": 0.02174,
+      "prompt_tokens": 440,
+      "completion_tokens": 999,
+      "seconds": 14.1,
+      "raw_file": "gpt-5.6-sol__eitc__attempt1.txt",
+      "parse": "failed: 'arrays'"
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "task": "eitc",
+      "attempt": 2,
+      "cost_usd": 0.023672,
+      "prompt_tokens": 463,
+      "completion_tokens": 1091,
+      "seconds": 16.2,
+      "raw_file": "gpt-5.6-sol__eitc__attempt2.txt",
+      "parse": "failed: 'arrays'"
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "task": "snap",
+      "attempt": 1,
+      "cost_usd": 0.053152,
+      "prompt_tokens": 473,
+      "completion_tokens": 2563,
+      "seconds": 28.0,
+      "raw_file": "gpt-5.6-sol__snap__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 18
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "task": "medicaid",
+      "attempt": 1,
+      "cost_usd": 0.013852,
+      "prompt_tokens": 468,
+      "completion_tokens": 599,
+      "seconds": 8.4,
+      "raw_file": "gpt-5.6-sol__medicaid__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 9
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "task": "ssi",
+      "attempt": 1,
+      "cost_usd": 0.016072,
+      "prompt_tokens": 513,
+      "completion_tokens": 701,
+      "seconds": 7.5,
+      "raw_file": "gpt-5.6-sol__ssi__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 13
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "task": "eitc",
+      "attempt": 1,
+      "cost_usd": 0.201318,
+      "prompt_tokens": 489,
+      "completion_tokens": 16695,
+      "seconds": 135.0,
+      "raw_file": "gemini-3.1-pro-preview__eitc__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 11
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "task": "snap",
+      "attempt": 1,
+      "cost_usd": 0.165786,
+      "prompt_tokens": 507,
+      "completion_tokens": 13731,
+      "seconds": 121.7,
+      "raw_file": "gemini-3.1-pro-preview__snap__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 17
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "task": "medicaid",
+      "attempt": 1,
+      "cost_usd": 0.05583,
+      "prompt_tokens": 501,
+      "completion_tokens": 4569,
+      "seconds": 42.4,
+      "raw_file": "gemini-3.1-pro-preview__medicaid__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 9
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "task": "ssi",
+      "attempt": 1,
+      "cost_usd": 0.082192,
+      "prompt_tokens": 548,
+      "completion_tokens": 6758,
+      "seconds": 53.2,
+      "raw_file": "gemini-3.1-pro-preview__ssi__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 13
+    }
+  ],
+  "total_usd": 0.633614
+}
