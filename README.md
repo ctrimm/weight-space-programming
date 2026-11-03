@@ -277,13 +277,60 @@ of once per couple. Swapping the spouses was one point in this
 equivalence class; the within-class range is the general metric,
 and it catches structural failure that average accuracy dilutes.
 
+**The structural-property atlas** (`experiments/structural-property-atlas/`).
+The split-invariance result generalized: across all six rules and
+23 property families (monotonicity directions, output bounds,
+plateaus, pinned bands, invariances), no compiled net from any
+writer violates anything by more than 5e-13 — while every trained
+baseline violates most of its rule's properties, including outputs
+the program cannot produce at all (SNAP allotments outside
+[0, $546] on 21.5% of probes; SSI's first-$20 property failed on
+100% of probes).
+
+**The repair bake-off** (`experiments/ssi-couple-repair-bakeoff/`).
+Can training be fixed? Augmentation shrinks the couple net's
+invariance defect ~5x, a symmetry penalty ~10x — but the defect
+survives in ~95% of classes either way. A sum-first architecture
+that cannot express the violation reaches exactly zero, and is the
+most accurate learned arm besides. If a property matters enough to
+test for, it matters enough to build in.
+
+**SNAP at member level** (`experiments/snap-household-composition/`,
+replicated in `experiments/second-writer-snap-composition/`). The
+allotment rule rebuilt with per-member inputs: the compiled
+construction is exact and invariant, the trained baseline is
+composition-dependent in 96.7% of classes (worst $18.32), and both
+outside writers replicated the construction exactly — combining
+the members' incomes in layer 1 unprompted, and matching the
+oracle on the should-change control (earned vs unearned) as well
+as the invariance.
+
+**Canonical circuits** (`experiments/canonical-circuits/`). Under
+hidden-unit permutation and positive scaling, independent writers
+collapse to *one* canonical circuit in Medicaid liability and
+share of cost; in SSI and the couple rule the two API writers share
+a circuit leaner than the original's; Gemini's SNAP is a genuinely
+different circuit for the same function. Most cross-writer
+parameter difference is relabeling, and the method says so only
+where it is true (the EITC negative control, whose functions
+differ, does not collapse).
+
+**CivBench narrative order, label side**
+(`experiments/civbench-narrative-order/`). Verified mechanically
+that all 156 scored CivBench fixtures carry household composition
+only as aggregate scalar fields — there is no member order for a
+deterministic label to depend on. The order risk lives in the
+rendered prose prompts, i.e. in models, which is CivBench Build 1
+work and stays gated there.
+
 ## What all of this cost
 
-**$2.21 in total API spend** ($0.653 for the second-writer
+**$2.40 in total API spend** ($0.653 for the second-writer
 replication, $1.3469 for the weight-reading experiment, $0.2095
-for the witness-extension replication, all measured from the
-providers' own usage accounting and itemized in those experiments'
-RESULTS.md). Everything else — the original
+for the witness-extension replication, $0.1949 for the
+member-level SNAP replication, all measured from the providers'
+own usage accounting, reconciled against the account aggregate,
+and itemized in those experiments' RESULTS.md). Everything else — the original
 constructions, the trained baselines, the editing experiment — ran
 in-session or on local CPU at no API cost. Each experiment's
 RESULTS.md carries its own cost line.
@@ -315,6 +362,12 @@ experiments/
   ssi-couple-payment/           2026 SSI couple payment, exclusions once per couple
   second-writer-witness-extension/  GPT + Gemini replicate the two witness rules
   ssi-couple-split-invariance/  Equivalent compositions must pay identically: they don't, for the trained net
+  structural-property-atlas/    23 structural properties x every net: compiled violate none, trained violate most
+  ssi-couple-repair-bakeoff/    Augmentation vs penalty vs architecture: only architecture reaches zero
+  snap-household-composition/   SNAP with per-member inputs: invariance + should-change controls
+  second-writer-snap-composition/  GPT + Gemini replicate the member-level SNAP rule
+  canonical-circuits/           Writers' circuits under permutation/scaling gauge: mostly one circuit
+  civbench-narrative-order/     Label-side audit: CivBench scenarios have no member order to permute
 ```
 
 Cross-experiment figures live in `docs/figures/` (generator: `docs/make_figures.py`); each experiment's RESULTS.md embeds its own figures from its `figures/` folder (generators: `docs/make_writeup_figures.py`, `docs/make_witness_figures.py`).

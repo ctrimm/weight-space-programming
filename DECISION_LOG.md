@@ -225,3 +225,43 @@ does not survive.
 - Takeaway recorded for CivBench: report invariance defects
   alongside accuracy for any learned scorer; the equivalence-class
   range is the general form of the member-swap test.
+
+## D13 — Full follow-up queue run (2026-11-03)
+- Decision: execute the whole proposed queue on Cory's authorization
+  with a $5 OpenRouter cap: structural-property atlas, repair
+  bake-off, member-level SNAP + second-writer replication,
+  canonical circuits, and the CivBench narrative-order label side
+  (model side explicitly left in CivBench Build 1, per its own
+  gating). Total measured spend: $0.1949 (one replication run);
+  project API total now $2.40.
+- Atlas: 23 property families x 6 rules — no compiled arm violates
+  anything beyond 4.4e-13; every trained baseline violates most of
+  its rule's properties, incl. out-of-envelope outputs (SNAP 21.5%
+  of probes; SSI first-$20 property 100% of probes).
+- Bake-off: augmentation cuts the couple invariance defect ~5x,
+  symmetry penalty ~10x, neither below ~94% of classes affected;
+  sum-first architecture: defect exactly 0 (float noise) and best
+  learned accuracy (max $3.33). Standing conclusion: properties
+  that matter get built in, not trained toward.
+- Member-level SNAP: compiled construction exact + invariant;
+  trained baseline composition-dependent in 96.7% of classes
+  (worst $18.32) and wrong on the should-change control by up to
+  $6.00; GPT + Gemini replicated exactly, unprompted staging.
+- Canonical circuits: under permutation + positive scaling
+  (WL refinement; edge weights normalized by both endpoint scales —
+  a one-endpoint normalization falsely split a known-rescaling pair
+  and was caught by the controls), Medicaid liability and SOC have
+  a single canonical circuit across all three writers; SSI/couple:
+  GPT = Gemini, original more verbose; Gemini SNAP is a genuinely
+  different circuit, same function; EITC negative control correctly
+  non-equivalent.
+- CivBench: all 156 scored bac fixtures carry composition only as
+  aggregate scalars (2 single-element lists, 2 meta dicts) — label
+  order-invariance holds by representation, verified mechanically;
+  the prose-prompt permutation test is specified for Build 1.
+- Process: sandbox overlay (fsync=volatile) lost the first
+  trainings' outputs across a runtime restart despite success logs;
+  arms retrained and scored in-session. New standing practice
+  (Cory's call): commit + push each completed work unit to the
+  GitHub remote immediately — the remote, not the local tree, is
+  the durability boundary.
