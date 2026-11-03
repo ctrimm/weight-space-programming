@@ -1,6 +1,6 @@
 # LinkedIn post — draft for Cory (2026-11-03, plain-language revision)
 
-Graphics: `graphic1_stat_card.png` (lead image), `graphic2_bakeoff.png`
+Graphics: `graphic1_stat_card.png` (lead image), `graphic2_repairs.png`
 (second image in the carousel). Post text below the line.
 (Supersedes the denser concise draft of the same day, which assumed
 too much reader context.)
