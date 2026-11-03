@@ -1,0 +1,6 @@
+{
+  "control_file": "claude-control.npz",
+  "sha256": "d2dd44b32ab2537c94c2cf9511de37d49dec4f4366f78a02025d78bbc404ec42",
+  "built_before_api_calls": true,
+  "note": "Control construction hash-frozen before writer weights were scored."
+}

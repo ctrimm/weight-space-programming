@@ -1,0 +1,27 @@
+{
+  "n_points": 120004,
+  "gate_pass_usd": 0.01,
+  "arms": {
+    "claude-control": {
+      "max_abs_err": 3.637978807091713e-12,
+      "mean_abs_err": 4.684814739161205e-13,
+      "pct_within_0.01": 100.0,
+      "nonzero_params": 8,
+      "verdict": "PASS"
+    },
+    "gpt-5.6-sol": {
+      "max_abs_err": 3.637978807091713e-12,
+      "mean_abs_err": 4.684814739161205e-13,
+      "pct_within_0.01": 100.0,
+      "nonzero_params": 8,
+      "verdict": "PASS"
+    },
+    "gemini-3.1-pro-preview": {
+      "max_abs_err": 3.637978807091713e-12,
+      "mean_abs_err": 4.684814739161205e-13,
+      "pct_within_0.01": 100.0,
+      "nonzero_params": 8,
+      "verdict": "PASS"
+    }
+  }
+}

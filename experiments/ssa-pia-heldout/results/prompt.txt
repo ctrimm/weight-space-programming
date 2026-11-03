@@ -1,0 +1,17 @@
+SOURCE TEXT (Social Security Administration, "Primary Insurance Amount", retrieved 2026-11-03 from https://www.ssa.gov/oact/cola/piaformula.html):
+
+"The PIA is the sum of three separate percentages of portions of average indexed monthly earnings. The portions depend on the year in which a worker attains age 62, becomes disabled before age 62, or dies before attaining age 62.
+
+For 2027 these portions are the first $1,340, the amount between $1,340 and $8,077, and the amount over $8,077. These dollar amounts are the "bend points" of the 2027 PIA formula.
+
+For an individual who first becomes eligible for old-age insurance benefits or disability insurance benefits in 2027, or who dies in 2027 before becoming eligible for benefits, his/her PIA will be the sum of: (a) 90 percent of the first $1,340 of his/her average indexed monthly earnings, plus (b) 32 percent of his/her average indexed monthly earnings over $1,340 and through $8,077, plus (c) 15 percent of his/her average indexed monthly earnings over $8,077. We round this amount to the next lower multiple of $.10 if it is not already a multiple of $.10."
+
+TASK: Write the weights of a neural network that computes the sum (a)+(b)+(c) above — the primary insurance amount for a worker first eligible in 2027, as a function of average indexed monthly earnings x (dollars). Implement the sum ONLY: do NOT implement the final rounding sentence (that rounding is the subject of a separate experiment). Domain: x in [0, 20000].
+
+NETWORK SPEC (fixed architecture; scaling is part of the architecture, not the weights):
+- Forward pass: for each layer i, h = W_i @ h_prev + b_i, followed by ReLU after every layer except the last. W_i has shape [out_features, in_features]; entry "r,c" multiplies input component c into output unit r.
+- Inputs: [x/10000] (x = average indexed monthly earnings in dollars). Layers: W1 [16,1], b1 [16], then ReLU, then W2 [1,16], b2 [1] (final layer linear). Output dollars = 1000 * (final linear output). Arrays: W1, b1, W2, b2.
+- Return the weights as ONE JSON object, no markdown, no commentary:
+  {"arrays": {"W1": {"shape": [rows, cols], "entries": {"r,c": number, ...}}, "b1": {"shape": [n], "entries": {"i": number, ...}}, ...}}
+  List ONLY nonzero entries; every unlisted entry is 0. Include every array named in the architecture, even if all its entries are 0 (then "entries": {}).
+- Work in the scaled units the architecture defines. Derive the weights by reasoning about the formula. Do not approximate: the network will be checked against the formula on tens of thousands of inputs and must match to the cent everywhere.
