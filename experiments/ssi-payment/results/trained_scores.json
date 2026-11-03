@@ -1,0 +1,82 @@
+{
+  "arm": "trained",
+  "grid": {
+    "n": 7381,
+    "max_abs_err": 9.538426156215223,
+    "mean_abs_err": 0.11637802393353594,
+    "pct_within_0.01": 29.183037528790134,
+    "pct_within_1": 97.34453326107574
+  },
+  "random": {
+    "n": 20000,
+    "max_abs_err": 8.207994281970855,
+    "mean_abs_err": 0.07012391314913986,
+    "pct_within_0.01": 29.595,
+    "pct_within_1": 98.43499999999999
+  },
+  "kink": {
+    "n": 5000,
+    "max_abs_err": 6.211665015386529,
+    "mean_abs_err": 0.5287368002789347,
+    "pct_within_0.01": 10.82,
+    "pct_within_1": 80.44
+  },
+  "all": {
+    "n": 32381,
+    "max_abs_err": 9.538426156215223,
+    "mean_abs_err": 0.15148230317256722,
+    "pct_within_0.01": 26.602019702912198,
+    "pct_within_1": 95.40780087088108
+  },
+  "regions": {
+    "0:U<=20 spill, no earned excess": {
+      "n": 4,
+      "max_abs_err": 9.538426156215223,
+      "mean_abs_err": 7.222863972214128,
+      "pct_within_0.01": 0.0,
+      "pct_within_1": 0.0
+    },
+    "1:U>20, no earned excess": {
+      "n": 120,
+      "max_abs_err": 5.349312307822174,
+      "mean_abs_err": 0.5879883939981848,
+      "pct_within_0.01": 0.8333333333333334,
+      "pct_within_1": 80.83333333333333
+    },
+    "2:U<=20 spill, earned excess": {
+      "n": 79,
+      "max_abs_err": 5.175575664714643,
+      "mean_abs_err": 4.880573121317758,
+      "pct_within_0.01": 0.0,
+      "pct_within_1": 0.0
+    },
+    "3:U>20, earned excess": {
+      "n": 1600,
+      "max_abs_err": 3.365706638769325,
+      "mean_abs_err": 0.1468660681987717,
+      "pct_within_0.01": 6.0,
+      "pct_within_1": 94.9375
+    },
+    "5:U>20, no excess, payment 0": {
+      "n": 60,
+      "max_abs_err": 1.3358952059847884,
+      "mean_abs_err": 0.4394739698688292,
+      "pct_within_0.01": 1.6666666666666667,
+      "pct_within_1": 86.66666666666667
+    },
+    "6:spill, excess, payment 0": {
+      "n": 38,
+      "max_abs_err": 1.9713242109047069,
+      "mean_abs_err": 0.14606610628732491,
+      "pct_within_0.01": 0.0,
+      "pct_within_1": 97.36842105263158
+    },
+    "7:U>20, excess, payment 0": {
+      "n": 5480,
+      "max_abs_err": 0.6376408352802565,
+      "mean_abs_err": 0.01953762692547527,
+      "pct_within_0.01": 37.518248175182485,
+      "pct_within_1": 100.0
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-11-03T00:16:03.311424+00:00",
+  "note": "Zero-shot attempt 1 weights, hashed BEFORE any scorer was written or run.",
+  "files": {
+    "zero_shot/eitc_weights.npz": "37d3c815094258500520854c56cde1ad577518689fb7f5b8581c1571b7930807",
+    "zero_shot/snap_weights.npz": "0588d0c56e5f618b38b0ef73f0b15e820177d6c4d90dc2cf519b9a4fe6d2b098",
+    "zero_shot/write_eitc_weights.py": "bb8f4672cb047bfd6fb07df3e05d243ac2fe897cdb460f9801443e15ef372f66",
+    "zero_shot/write_snap_weights.py": "fe0e4c20f3125a7c0635787691073f385dfc984225ccb9ef96e6d4c98dc2fc76",
+    "PROTOCOL.md": "d31130dedc643e79d8e28fa78da934a9e2c986f8888e11936796452b43d48b8d",
+    "oracle.py": "ea9e4c5a5b1c53effddfd434ce439467bd680b882afb8d11a08eb5f5a7fb31a2",
+    "mlp.py": "97897d5f4320cfe9511dbd7de61531a92428b3a5c43b967066f6226b587f2d2a"
+  }
+}

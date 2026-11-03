@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-11-03T00:31:00.697828+00:00",
+  "note": "Medicaid zero-shot attempt 1, hashed BEFORE score.py was written or run.",
+  "files": {
+    "zero_shot/medicaid_weights.npz": "40f5528eb1c634005018c162fcf057aae0df64ffe1121fb27475c425fbff05f1",
+    "zero_shot/write_medicaid_weights.py": "ee560aa76fc8189b5b559a14360ba5f651f904d82575558b2826eb83b723298d",
+    "PROTOCOL.md": "dedd7e3b994f79a982ec36692e80fc0299315c0b4122e6addd5afb70adf1dff9",
+    "oracle.py": "9ca539ed4818aa3069c2e2ce74219efdd658440a626a881e5544fc16a9738b24",
+    "mlp.py": "bea633c920a7069dedbaf668b0a7b7091452ddfb25375231454c1bca90f90c2d"
+  }
+}

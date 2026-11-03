@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-11-03T00:30:41.335219+00:00",
+  "note": "SSI zero-shot attempt 1, hashed BEFORE score.py was written or run.",
+  "files": {
+    "zero_shot/ssi_weights.npz": "4887bcc4b5fc08ded783aca745a760e1df9185f328dc1e64b52507c1a7718b2a",
+    "zero_shot/write_ssi_weights.py": "c8623457ea1fe8bb1d893fed79e439377434ff31804205eb9a370c393b55a047",
+    "PROTOCOL.md": "6b5be92683adbf77a1c00ae7643bda645c9eb7740b522ca34a1e6f05356af43b",
+    "oracle.py": "750448b228d0583c865397a3ee46250619e537fed7e59240622b1439ab6a0bea",
+    "mlp.py": "bea633c920a7069dedbaf668b0a7b7091452ddfb25375231454c1bca90f90c2d"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "arm": "zero_shot",
+  "snap_grid": {
+    "n": 15049,
+    "max_abs_err": 2.4158453015843406e-13,
+    "mean_abs_err": 3.006704387019403e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0
+  },
+  "snap_random": {
+    "n": 20000,
+    "max_abs_err": 3.410605131648481e-13,
+    "mean_abs_err": 3.7650460527061114e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0
+  },
+  "snap_kink": {
+    "n": 5000,
+    "max_abs_err": 2.8421709430404007e-13,
+    "mean_abs_err": 5.341043163298309e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0
+  },
+  "snap_all": {
+    "n": 40049,
+    "max_abs_err": 3.410605131648481e-13,
+    "mean_abs_err": 3.676846642634492e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0
+  },
+  "snap_regions": {
+    "0:no excess shelter": {
+      "n": 1710,
+      "max_abs_err": 1.2789769243681803e-13,
+      "mean_abs_err": 4.2459603084927565e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "1:excess shelter uncapped": {
+      "n": 2692,
+      "max_abs_err": 2.4158453015843406e-13,
+      "mean_abs_err": 4.64881559036356e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "2:excess shelter capped": {
+      "n": 3440,
+      "max_abs_err": 1.1368683772161603e-13,
+      "mean_abs_err": 5.445824669767146e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "11:uncapped, N floored": {
+      "n": 519,
+      "max_abs_err": 0.0,
+      "mean_abs_err": 0.0,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "12:capped, N floored": {
+      "n": 2275,
+      "max_abs_err": 0.0,
+      "mean_abs_err": 0.0,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "20:no excess, benefit 0": {
+      "n": 2879,
+      "max_abs_err": 0.0,
+      "mean_abs_err": 0.0,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "21:uncapped, benefit 0": {
+      "n": 1200,
+      "max_abs_err": 1.1102230246251565e-13,
+      "mean_abs_err": 4.413136522884997e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "22:capped, benefit 0": {
+      "n": 334,
+      "max_abs_err": 2.220446049250313e-13,
+      "mean_abs_err": 4.3212273413553994e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    }
+  }
+}
