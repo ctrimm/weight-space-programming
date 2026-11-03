@@ -120,3 +120,32 @@ fig.tight_layout()
 fig.savefig(rd_dir / "figures" / "fig_reading.png", bbox_inches="tight")
 plt.close(fig)
 print("writeup figures done")
+
+# ------------------------------------------------ second writer, witness extension
+swe_dir = ROOT / "experiments" / "second-writer-witness-extension"
+rep = json.loads((swe_dir / "results" / "replication_scores.json").read_text())
+fig, ax = plt.subplots(figsize=(7.6, 3.6))
+groups = ["Share of cost", "SSI couple"]
+writers = [("Muse Spark (original)", [1.36e-12, 5.83e-13], "#555555"),
+           ("GPT-5.6 Sol", [rep["gpt-5.6-sol__soc"]["all"]["max_abs_err"],
+                            rep["gpt-5.6-sol__couple"]["all"]["max_abs_err"]], "#1a7f37"),
+           ("Gemini 3.1 Pro", [rep["gemini-3.1-pro-preview__soc"]["all"]["max_abs_err"],
+                               rep["gemini-3.1-pro-preview__couple"]["all"]["max_abs_err"]], "#1757a6")]
+x = np.arange(2); wdt = 0.26
+from matplotlib.patches import Patch
+for j, (name, vals, color) in enumerate(writers):
+    ax.bar(x + (j - 1) * wdt, [max(v, 1e-13) for v in vals], wdt, color=color)
+ax.legend(handles=[Patch(color=c, label=n) for n, _, c in writers], fontsize=8.5, frameon=False, loc="upper right")
+ax.set_yscale("log"); ax.set_ylim(1e-14, 1e2)
+ax.set_ylabel("Worst-case error vs the formula (dollars, log scale)")
+ax.set_title("Second writers on the witness-extension rules: exact in all four cells")
+ax.set_xticks(x, groups)
+ax.axhline(0.01, color="grey", ls="--", lw=1)
+ax.annotate("Gemini's share-of-cost arrays are parameter-for-parameter\nidentical to the original construction (max param diff = 0)",
+            xy=(0 + wdt, 1.36e-12), xytext=(0.18, 1e-5), fontsize=9,
+            arrowprops={"arrowstyle": "->", "lw": 0.8})
+fig.tight_layout()
+(swe_dir / "figures").mkdir(exist_ok=True)
+fig.savefig(swe_dir / "figures" / "fig_replication.png", bbox_inches="tight")
+plt.close(fig)
+print("witness-extension figure done")

@@ -1,0 +1,54 @@
+{
+  "cap_usd": 0.75,
+  "calls": [
+    {
+      "model": "openai/gpt-5.6-sol",
+      "task": "soc",
+      "attempt": 1,
+      "cost_usd": 0.014252,
+      "prompt_tokens": 563,
+      "completion_tokens": 600,
+      "seconds": 9.2,
+      "raw_file": "gpt-5.6-sol__soc__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 16
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "task": "couple",
+      "attempt": 1,
+      "cost_usd": 0.0222,
+      "prompt_tokens": 620,
+      "completion_tokens": 986,
+      "seconds": 10.7,
+      "raw_file": "gpt-5.6-sol__couple__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 16
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "task": "soc",
+      "attempt": 1,
+      "cost_usd": 0.09309,
+      "prompt_tokens": 603,
+      "completion_tokens": 7657,
+      "seconds": 63.8,
+      "raw_file": "gemini-3.1-pro-preview__soc__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 16
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "task": "couple",
+      "attempt": 1,
+      "cost_usd": 0.080006,
+      "prompt_tokens": 667,
+      "completion_tokens": 6556,
+      "seconds": 55.2,
+      "raw_file": "gemini-3.1-pro-preview__couple__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 16
+    }
+  ],
+  "total_usd": 0.20954799999999998
+}

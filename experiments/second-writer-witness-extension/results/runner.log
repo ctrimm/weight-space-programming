@@ -1,0 +1,5 @@
+openai/gpt-5.6-sol soc attempt 1: parsed, 16 nonzero, $0.0143 (total $0.0143)
+openai/gpt-5.6-sol couple attempt 1: parsed, 16 nonzero, $0.0222 (total $0.0365)
+google/gemini-3.1-pro-preview soc attempt 1: parsed, 16 nonzero, $0.0931 (total $0.1295)
+google/gemini-3.1-pro-preview couple attempt 1: parsed, 16 nonzero, $0.0800 (total $0.2095)
+DONE. total measured spend: $0.2095 of $0.75 cap

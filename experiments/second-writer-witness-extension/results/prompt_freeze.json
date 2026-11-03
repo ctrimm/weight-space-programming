@@ -1,0 +1,14 @@
+{
+  "created_before_first_model_call": true,
+  "runner_file": "run_replication.py",
+  "prompts": {
+    "soc": {
+      "sha256": "44719854824ba8bb9fe93030cf3e5dac9bbfb71bacdc378179b6840cf49355fe",
+      "characters": 1928
+    },
+    "couple": {
+      "sha256": "7b7043b5599393560297d4d5799488a34a9c36a71aee2f45440771eda98148ed",
+      "characters": 2014
+    }
+  }
+}

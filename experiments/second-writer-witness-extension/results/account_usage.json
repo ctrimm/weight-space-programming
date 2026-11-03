@@ -1,0 +1,14 @@
+{
+  "before": {
+    "total_credits_usd": 100.0,
+    "total_usage_usd": 77.963827427,
+    "balance_usd": 22.036172573,
+    "recorded_at_unix": 1793673033.280111
+  },
+  "after": {
+    "total_credits_usd": 100.0,
+    "total_usage_usd": 78.093369427,
+    "balance_usd": 21.906630573,
+    "recorded_at_unix": 1793673173.0296931
+  }
+}

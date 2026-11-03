@@ -1,0 +1,18 @@
+{
+  "gemini-3.1-pro-preview__couple.npz": {
+    "sha256": "c3a7efca86ce78591c6ca1605fb81986120d0990647769941561967388d64468",
+    "bytes": 12670
+  },
+  "gemini-3.1-pro-preview__soc.npz": {
+    "sha256": "ec8aa2a1dc63b094d8d89db0bd1269e050429638264dfcf9b0096c508bb5638d",
+    "bytes": 12478
+  },
+  "gpt-5.6-sol__couple.npz": {
+    "sha256": "4a0924b8e131cf4fb7d3cbb4862b1f71d7dd41935b475c43071b4d532919528d",
+    "bytes": 12670
+  },
+  "gpt-5.6-sol__soc.npz": {
+    "sha256": "4fb3a009772281c54ea36bcc7433cb98cb359fdf234701f9b2d8a2fc966ab3ca",
+    "bytes": 12478
+  }
+}

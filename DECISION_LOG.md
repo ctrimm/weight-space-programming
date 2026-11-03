@@ -178,3 +178,28 @@ does not survive.
   second-writer (per-model errors with the refusal marked, never
   drawn as a bar), reading (Arm A exactness + Arm B control),
   SOC + couple (rule surface vs trained-error slice).
+
+## D11 — Second-writer replication of the witness extension (2026-11-02)
+- Decision: run the replication Cory approved for the two witness
+  rules (share of cost, SSI couple) under a pre-registered protocol
+  in experiments/second-writer-witness-extension/: same two models,
+  same sparse-JSON format, one call per cell, one syntax-repair
+  retry allowed, prompts hash-frozen before the first call, weights
+  hash-frozen before scoring, $0.75 hard cap against a ~$0.35
+  estimate grounded in pilot per-call actuals.
+- Result: PASS exact in all 4 cells, all first attempts, no
+  retries, no refusals. SOC max err 1.36e-12 for both writers with
+  audit probes exactly $1,380/$880; couple max err 5.83e-13 with
+  zero-member slices exact. All four submissions use exactly 16
+  nonzero parameters.
+- Convergence beyond the functional level: Gemini's SOC arrays are
+  parameter-for-parameter identical to the original in-session
+  construction (max param diff 0; submitted file SHA-256 equals the
+  original experiment's FREEZE hash). The other three submissions
+  reach the identical function through different parameter values
+  (max diff 1.0 SOC/GPT; 2.98 couple/both).
+- Spend $0.2095 measured (GPT $0.0365, Gemini $0.1730), reconciled
+  against the account aggregate delta $0.209548 after the final
+  call posted; the runner's immediate after-check lagged at
+  $0.1295, the known OpenRouter aggregate lag. Project API total
+  now $2.21.

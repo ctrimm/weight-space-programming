@@ -257,14 +257,20 @@ construction combines two people's income *before* counting, so the
 $20 and $65 exclusions apply once per couple as the rule requires;
 it is exact even on the boundary slices where one member has no
 income at all — the slices where the trained baseline makes its
-worst errors in the whole design (up to $48).
+worst errors in the whole design (up to $48). Both constructions were then
+replicated by the second writers (`experiments/second-writer-witness-extension/`):
+GPT-5.6 Sol and Gemini 3.1 Pro compiled both rules exactly from
+bare prompts, audit probes included — and Gemini's share-of-cost
+arrays turned out parameter-for-parameter identical to the original
+construction.
 
 ## What all of this cost
 
-**$2.00 in total API spend** ($0.653 for the second-writer
-replication, $1.3469 for the weight-reading experiment, both
-measured from the providers' own usage accounting and itemized in
-those experiments' RESULTS.md). Everything else — the original
+**$2.21 in total API spend** ($0.653 for the second-writer
+replication, $1.3469 for the weight-reading experiment, $0.2095
+for the witness-extension replication, all measured from the
+providers' own usage accounting and itemized in those experiments'
+RESULTS.md). Everything else — the original
 constructions, the trained baselines, the editing experiment — ran
 in-session or on local CPU at no API cost. Each experiment's
 RESULTS.md carries its own cost line.
@@ -294,6 +300,7 @@ experiments/
   weight-reading/               Fresh readers identify rules from weights alone
   medicaid-share-of-cost/       CA medically-needy share of cost (SSI counting reused)
   ssi-couple-payment/           2026 SSI couple payment, exclusions once per couple
+  second-writer-witness-extension/  GPT + Gemini replicate the two witness rules
 ```
 
 Cross-experiment figures live in `docs/figures/` (generator: `docs/make_figures.py`); each experiment's RESULTS.md embeds its own figures from its `figures/` folder (generators: `docs/make_writeup_figures.py`, `docs/make_witness_figures.py`).
@@ -322,9 +329,11 @@ python3 train_baseline.py
 
 ## What's next
 
-- Second-writer replication of the two newest constructions (share
-  of cost, SSI couple): at the pilot's measured per-call rates this
-  would cost roughly $0.35 in API spend. Not yet run.
+- Nothing queued. The witness pattern now covers the arithmetic
+  cores named for the CivBench label program — six rules, each with
+  a trained baseline, and the two newest independently replicated
+  by two other frontier models. Extending coverage to further rule
+  families is future work.
 
 ## License
 
