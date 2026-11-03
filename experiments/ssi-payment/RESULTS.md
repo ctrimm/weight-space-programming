@@ -25,3 +25,13 @@ in input space is nearly invisible to sampling — and it is precisely
 the detail the benefits-as-code oracle behind CivBench omits entirely
 (its $20 exclusion never spills; SSI audit, 2026-11-01). Raw scores:
 `results/`.
+
+## Cost
+
+$0 in API or cloud spend. The zero-shot weights were written by
+Muse Spark in-session (no per-call charge), and the trained
+baselines were trained on local CPU in this workspace. The only
+priced resources consumed anywhere in this repo are the OpenRouter
+calls in `../second-writer-openrouter/` ($0.653) and
+`../weight-reading/` ($1.3469) — $2.00 total across the project,
+each documented in that experiment's RESULTS.md.

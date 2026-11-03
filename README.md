@@ -144,6 +144,8 @@ Every experiment follows the same pre-registered discipline:
 | 3 | [SSI federal payment](experiments/ssi-payment/) — 2026, individual | max error $2×10⁻¹³ over 32,381 pts; 100% within $0.01 | max $9.54; 26.6% within $0.01 | **PASS (exact)** |
 | 4 | [Medicaid patient liability](experiments/medicaid-patient-liability/) — post-eligibility, community spouse | max error $2×10⁻¹² over 86,105 pts; 100% within $0.01 | max $31.67; 3.3% within $0.01 | **PASS (exact)** |
 | 5 | [SSI stale-FBR edit](experiments/ssi-stale-fbr-edit/) — experiment 3 recompiled with the stale 2024 FBR ($943), then repaired | stale net exact for 2024 but up to $51.00/mo wrong vs 2026; after a **2-parameter weight edit**: max error $2×10⁻¹³ over 56,381 pts | control, not a baseline: the trained SSI net contains no parameter equal to either year's FBR — a stale constant in trained weights is not even locatable | **PASS (surgical repair, 2 of 1,297 params)** |
+| 6 | [Medicaid share of cost](experiments/medicaid-share-of-cost/) — CA medically-needy, SSI counting as a subroutine | max error $1×10⁻¹² over 43,607 pts; both CivBench audit probes reproduced exactly ($1,380 / $880) | max $32.73; 3.3% within $0.01; probes under by ~$22 | **PASS (exact)** |
+| 7 | [SSI couple payment](experiments/ssi-couple-payment/) — 2026 couple rate $1,491, exclusions once per couple | max error $6×10⁻¹³ over 44,762 pts; 100% within $0.01 incl. both zero-member slices | max $48.11; 21.2% within $0.01; worst on the boundary slices | **PASS (exact)** |
 
 ![Worst-case error by experiment: written weights at 1e-13 to 2.4 cents, trained weights at 5 to 32 dollars](docs/figures/fig_max_error.png)
 
@@ -244,6 +246,29 @@ rescue them (one reader's error quadrupled to $414). A compiled
 network can be audited by a stranger; a trained one can only be
 recognized.
 
+**Two more witnesses** (`experiments/medicaid-share-of-cost/`,
+`experiments/ssi-couple-payment/`). The share-of-cost construction
+reuses the whole SSI income-counting machine as a subroutine inside
+a second program — different threshold, an extra input subtracted
+after the count — and reproduces the CivBench Medicaid audit's two
+corrected values ($1,380 and $880) exactly, where the trained
+baseline underbills both households by about $22. The couple
+construction combines two people's income *before* counting, so the
+$20 and $65 exclusions apply once per couple as the rule requires;
+it is exact even on the boundary slices where one member has no
+income at all — the slices where the trained baseline makes its
+worst errors in the whole design (up to $48).
+
+## What all of this cost
+
+**$2.00 in total API spend** ($0.653 for the second-writer
+replication, $1.3469 for the weight-reading experiment, both
+measured from the providers' own usage accounting and itemized in
+those experiments' RESULTS.md). Everything else — the original
+constructions, the trained baselines, the editing experiment — ran
+in-session or on local CPU at no API cost. Each experiment's
+RESULTS.md carries its own cost line.
+
 ## Guardrails
 
 The plain-language section at the top is the short version. The
@@ -267,9 +292,11 @@ experiments/
   ssi-stale-fbr-edit/           Repairing a stale constant by weight edit
   second-writer-openrouter/     GPT-5.6 Sol + Gemini 3.1 Pro replication
   weight-reading/               Fresh readers identify rules from weights alone
+  medicaid-share-of-cost/       CA medically-needy share of cost (SSI counting reused)
+  ssi-couple-payment/           2026 SSI couple payment, exclusions once per couple
 ```
 
-Figures live in `docs/figures/` (generator: `docs/make_figures.py`).
+Cross-experiment figures live in `docs/figures/` (generator: `docs/make_figures.py`); each experiment's RESULTS.md embeds its own figures from its `figures/` folder (generators: `docs/make_writeup_figures.py`, `docs/make_witness_figures.py`).
 
 Each experiment is self-contained: `PROTOCOL.md` (pre-registration),
 `oracle.py` (the stipulated rule), `mlp.py` (generic forward pass),
@@ -295,9 +322,9 @@ python3 train_baseline.py
 
 ## What's next
 
-- Extend the witness pattern to the remaining arithmetic cores the
-  CivBench label program cares about (Medicaid medically-needy share
-  of cost with SSI-style income counting; SSI couple rate).
+- Second-writer replication of the two newest constructions (share
+  of cost, SSI couple): at the pilot's measured per-call rates this
+  would cost roughly $0.35 in API spend. Not yet run.
 
 ## License
 

@@ -149,3 +149,32 @@ does not survive.
   were mechanically perfect while their prose context was
   sometimes wrong-year (Gemini doubted the correct $994 against
   2024's $943). Grade numbers, not narration.
+
+## D10 — Witness-pattern extension: share of cost + SSI couple (2026-11-02)
+- Decision: extend the witness pattern to the two remaining
+  arithmetic cores named in the README, both built zero-shot
+  in-session with pre-registered protocols, frozen weights, trained
+  baselines, and per-experiment figures. Cost $0 (no API calls).
+- Medicaid medically-needy share of cost (CA): the SSI counting
+  machine reused verbatim as a subroutine; SOC = max(0, C - 600 - M).
+  PASS exact, max err 1.36e-12 over 43,607 points. The two CivBench
+  audit probes are named design points: written net reproduces the
+  corrected $1,380 / $880 exactly; trained baseline max $32.73,
+  3.30% within a cent, and underbills both probe households by
+  ~$22. Tests composition — a witness subroutine carrying into a
+  second program unchanged.
+- SSI couple payment: incomes combined BEFORE counting so the $20 /
+  $65 exclusions apply once per couple; FBR $1,491 (2026). PASS
+  exact, max err 5.83e-13 over 44,762 points including both
+  zero-member slices, whose statistics are identical to the last
+  digit as the rule's symmetry requires. Trained baseline max
+  $48.11, 21.2% within a cent, worst exactly on the boundary slices
+  (4.08% within a cent, member-1-zero) and asymmetric where the rule
+  is symmetric. Coverage rationale: the couple rate is the largest
+  stale-rate exposure in the audited SSI slice ($76 year-over-year
+  vs $51 individual).
+- Figures: every experiment writeup now embeds at least one chart
+  (Cory's direction, 2026-11-02): editing (damage profile),
+  second-writer (per-model errors with the refusal marked, never
+  drawn as a bar), reading (Arm A exactness + Arm B control),
+  SOC + couple (rule surface vs trained-error slice).

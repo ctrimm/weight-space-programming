@@ -30,3 +30,13 @@ independently of the statutory rates they derive from. A scorer (or a
 benchmark) that treats rounded table constants as exact will
 manufacture apparent model errors at exactly the seams. Raw scores:
 `results/`.
+
+## Cost
+
+$0 in API or cloud spend. The zero-shot weights were written by
+Muse Spark in-session (no per-call charge), and the trained
+baselines were trained on local CPU in this workspace. The only
+priced resources consumed anywhere in this repo are the OpenRouter
+calls in `../second-writer-openrouter/` ($0.653) and
+`../weight-reading/` ($1.3469) — $2.00 total across the project,
+each documented in that experiment's RESULTS.md.

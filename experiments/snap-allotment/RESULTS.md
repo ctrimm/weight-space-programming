@@ -20,3 +20,13 @@ the plain grid, and the worst region is the intersection of two kinks
 (shelter cap binding + benefit exhausted: mean $1.81, only 31% within
 $1). Training approximates the formula; the written weights *are* the
 formula. Raw scores: `results/`.
+
+## Cost
+
+$0 in API or cloud spend. The zero-shot weights were written by
+Muse Spark in-session (no per-call charge), and the trained
+baselines were trained on local CPU in this workspace. The only
+priced resources consumed anywhere in this repo are the OpenRouter
+calls in `../second-writer-openrouter/` ($0.653) and
+`../weight-reading/` ($1.3469) — $2.00 total across the project,
+each documented in that experiment's RESULTS.md.

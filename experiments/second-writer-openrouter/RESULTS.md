@@ -20,6 +20,8 @@ Max abs errors in dollars. Full metrics in
 `results/second_writer_scores.json`; per-call costs in
 `results/cost_log.json`; raw replies in `raw/`.
 
+![Worst-case error by writer and task, log scale: exact at float noise everywhere submitted; GPT-5.6 Sol's EITC cell is an X - no submission](figures/fig_second_writer.png)
+
 ## The EITC cell split three ways
 
 The stipulated EITC rule is, as this repo's ERRATUM documents,

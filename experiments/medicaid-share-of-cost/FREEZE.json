@@ -1,0 +1,6 @@
+{
+  "frozen_before_scoring": true,
+  "files": {
+    "zero_shot/soc_weights.npz": "ec8aa2a1dc63b094d8d89db0bd1269e050429638264dfcf9b0096c508bb5638d"
+  }
+}

@@ -52,6 +52,8 @@ Three things worth pulling out:
    trained." Sparsity itself is a tell — which cuts both ways: it
    also means a compiled network announces that it is compiled.
 
+![Arm A: all compiled-net reads at float noise, trained control at $11-$90; Arm B: behavior samples leave GPT flat and make Gemini far worse](figures/fig_reading.png)
+
 ## The control: where reading stops
 
 The trained SSI network was identified as SSI by both readers —
