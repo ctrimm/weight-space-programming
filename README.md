@@ -324,12 +324,25 @@ deterministic label to depend on. The order risk lives in the
 rendered prose prompts, i.e. in models, which is CivBench Build 1
 work and stays gated there.
 
+**Held-out test: a rule from regulatory text only**
+(`experiments/ssa-pia-heldout/`). Every rule above was restated as
+a cleaned formula before any writer saw it. This one was not: the
+writers received the Social Security Administration's published
+text for the 2027 primary insurance amount, verbatim, and nothing
+else. GPT-5.6 Sol, Gemini 3.1 Pro, and the in-session control all
+returned exact networks on the first attempt (max error 3.6e-12
+over 120,003 points) — and all three returned the *same eight
+nonzero parameters*: given prose percentages and bend points,
+three models from three vendors converged on the identical
+circuit. Full-suite verification of everything above: see
+VERIFICATION.md.
+
 ## What all of this cost
 
-**$2.40 in total API spend** ($0.653 for the second-writer
+**$2.48 in total API spend** ($0.653 for the second-writer
 replication, $1.3469 for the weight-reading experiment, $0.2095
 for the witness-extension replication, $0.1949 for the
-member-level SNAP replication, all measured from the providers'
+member-level SNAP replication, $0.0831 for the held-out PIA test, all measured from the providers'
 own usage accounting, reconciled against the account aggregate,
 and itemized in those experiments' RESULTS.md). Everything else — the original
 constructions, the trained baselines, the editing experiment — ran

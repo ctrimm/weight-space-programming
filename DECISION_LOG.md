@@ -291,3 +291,19 @@ does not survive.
   shipped artifacts before they are published. (Same failure mode
   as the garbled replication cost delivery earlier that day, whose
   figures the account aggregate disproved.)
+
+## D15 — Held-out test from regulatory text only (2026-11-03)
+- Cory approved the two final experiments (held-out + boundary)
+  plus a full-suite recheck, with the $0.20–$0.50 API estimate in
+  view. Held-out design: SSA 2027 PIA, writers receive ONLY the
+  verbatim SSA text (SOURCE_TEXT.md); rounding sentence excluded
+  by task instruction and handled as the boundary experiment.
+- Outcome: all three writers PASS exact, first attempts, no
+  retries; max err 3.64e-12 over 120,003 points; all three
+  returned the identical 8 nonzero parameters. Spend $0.0831 of
+  the $0.50 cap (GPT $0.0111, Gemini $0.0720). Project API total
+  $2.48.
+- The "handed the cleaned formula" objection is answered for this
+  rule class; declared limits stand (single-input rule; writers
+  may know the formula from training data — the claim is
+  weight-writing from text, not rule discovery).

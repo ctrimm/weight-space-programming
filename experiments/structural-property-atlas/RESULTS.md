@@ -27,7 +27,10 @@ parentheses):
 
 For every compiled arm in every rule — 17 writer/rule combinations
 (GPT has no EITC entry; it declined) — the worst adverse amount
-across all of that rule's properties is at most 4.4e-13 dollars,
+across all of that rule's properties is at most 8.9e-13 dollars
+(corrected 2026-11-03: the full-suite verification rerun put the
+SSI-couple original's worst monotonicity probe at 8.882e-13; the
+original 4.4e-13 bound did not reproduce. See ../../VERIFICATION.md),
 and the share of probes violating by more than a cent is 0.0%
 everywhere. This includes properties nobody constructed for
 explicitly in this pass: the plateau's flatness, the first-$20
