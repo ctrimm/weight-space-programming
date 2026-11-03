@@ -289,11 +289,12 @@ the program cannot produce at all (SNAP allotments outside
 
 **The repair bake-off** (`experiments/ssi-couple-repair-bakeoff/`).
 Can training be fixed? Augmentation shrinks the couple net's
-invariance defect ~5x, a symmetry penalty ~10x — but the defect
-survives in ~95% of classes either way. A sum-first architecture
-that cannot express the violation reaches exactly zero, and is the
-most accurate learned arm besides. If a property matters enough to
-test for, it matters enough to build in.
+invariance defect ~5x and improves its accuracy on every measure;
+a symmetry penalty at the weight tried is weaker on nearly every
+measure — and the defect survives in ~94% of classes either way. A
+sum-first architecture that cannot express the violation reaches
+exactly zero invariance error, at an accuracy cost. If a property
+matters enough to test for, it matters enough to build in.
 
 **SNAP at member level** (`experiments/snap-household-composition/`,
 replicated in `experiments/second-writer-snap-composition/`). The

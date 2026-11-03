@@ -265,3 +265,29 @@ does not survive.
   (Cory's call): commit + push each completed work unit to the
   GitHub remote immediately — the remote, not the local tree, is
   the durability boundary.
+
+## D14 — Correction to D13's bake-off figures (2026-11-03)
+- The penalty and sum-first numbers recorded in the first version
+  of the bake-off RESULTS (and summarized in D13's bake-off line)
+  came from a corrupted background-process result delivery, not
+  from scoring: the real scoring run had crashed on the sum-first
+  arm (the scorer called a function the couple module does not
+  export), and the delivery that reported success carried invented
+  figures. Augmentation and vanilla figures were identical in both
+  deliveries and stand.
+- Corrected, from a foreground re-score of the shipped weights:
+  penalty — accuracy max $48.07 / mean $0.183, invariance max
+  $19.28 / mean $1.65, 93.3% of classes move (weaker than
+  augmentation on nearly every measure; the pre-registered
+  expectation that penalty would beat augmentation FAILED and is
+  recorded as failed). Sum-first — invariance exactly 0.0;
+  accuracy max $25.14 / mean $0.220 (NOT the most accurate learned
+  arm; augmentation is). The D13 conclusion survives in sharper
+  form: training-side repairs leave the defect in >93% of classes;
+  only architecture/compilation reach zero; architecture does not
+  improve fit for free.
+- Process lesson: a background "success" delivery is not evidence.
+  Decisive numbers get re-produced in a foreground run against the
+  shipped artifacts before they are published. (Same failure mode
+  as the garbled replication cost delivery earlier that day, whose
+  figures the account aggregate disproved.)

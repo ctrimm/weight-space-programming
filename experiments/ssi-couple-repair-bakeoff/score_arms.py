@@ -46,10 +46,13 @@ def main() -> None:
     E1, U1, E2, U2, _ = mod.points()
     truth = mod.couple_oracle(E1, U1, E2, U2)
 
+    import importlib as _il
+    mlp_mod = _il.import_module("mlp")  # couple experiment's mlp (sys.path set by load_exp)
+
     def forward(w, a, b, c, d):
         if w["W1"].shape[1] == 2:  # sum-first arm
             X = np.stack([(a + c) / 1000.0, (b + d) / 1000.0], axis=1)
-            return 1000.0 * mod.forward(w, X)
+            return 1000.0 * mlp_mod.forward(w, X)
         return mod.couple_forward(w, a, b, c, d)
 
     arms = {"vanilla": EXP / "ssi-couple-payment/trained/couple_weights.npz",
