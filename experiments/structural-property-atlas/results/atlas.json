@@ -1,0 +1,503 @@
+{
+  "snap": {
+    "original": {
+      "mono_E_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 3.3306690738754696e-13,
+        "n": 38977
+      },
+      "mono_S_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 2.2737367544323206e-13,
+        "n": 38977
+      },
+      "bounds_0_546": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 2.220446049250313e-13,
+        "n": 40049
+      }
+    },
+    "gpt": {
+      "mono_E_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 1.1102230246251565e-13,
+        "n": 38977
+      },
+      "mono_S_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 2.2737367544323206e-13,
+        "n": 38977
+      },
+      "bounds_0_546": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 40049
+      }
+    },
+    "gemini": {
+      "mono_E_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 3.410605131648481e-13,
+        "n": 38977
+      },
+      "mono_S_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 2.2737367544323206e-13,
+        "n": 38977
+      },
+      "bounds_0_546": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 2.2737367544323206e-13,
+        "n": 40049
+      }
+    },
+    "trained": {
+      "mono_E_nonincreasing": {
+        "pct_probes_over_0.01": 23.524129614901096,
+        "max_adverse": 3.007749128558089,
+        "n": 38977
+      },
+      "mono_S_nondecreasing": {
+        "pct_probes_over_0.01": 27.55984298432409,
+        "max_adverse": 3.2540178398655923,
+        "n": 38977
+      },
+      "bounds_0_546": {
+        "pct_probes_over_0.01": 21.526130490149566,
+        "max_adverse": 4.530828696932165,
+        "n": 40049
+      }
+    }
+  },
+  "eitc": {
+    "gpt": {
+      "note": "no submission (declined; see second-writer experiment)"
+    },
+    "original": {
+      "phasein_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 712
+      },
+      "plateau_constant": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 211
+      },
+      "phaseout_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 1351
+      },
+      "bounds_0_7152": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 2818
+      }
+    },
+    "gemini": {
+      "phasein_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 712
+      },
+      "plateau_constant": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 211
+      },
+      "phaseout_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 1351
+      },
+      "bounds_0_7152": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 2818
+      }
+    },
+    "trained": {
+      "phasein_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 712
+      },
+      "plateau_constant": {
+        "pct_probes_over_0.01": 98.5781990521327,
+        "max_adverse": 1.5729258000601476,
+        "n": 211
+      },
+      "phaseout_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 1351
+      },
+      "bounds_0_7152": {
+        "pct_probes_over_0.01": 10.858765081618168,
+        "max_adverse": 1.4905274183281136,
+        "n": 2818
+      }
+    }
+  },
+  "ssi": {
+    "original": {
+      "mono_E_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 4.440892098500626e-13,
+        "n": 31876
+      },
+      "mono_U_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 4.440892098500626e-13,
+        "n": 31380
+      },
+      "first20_free_at_zero_earned": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 41
+      },
+      "bounds_0_994": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 2.220446049250313e-13,
+        "n": 32381
+      }
+    },
+    "gpt": {
+      "mono_E_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 31876
+      },
+      "mono_U_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 31380
+      },
+      "first20_free_at_zero_earned": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 41
+      },
+      "bounds_0_994": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 32381
+      }
+    },
+    "gemini": {
+      "mono_E_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 31876
+      },
+      "mono_U_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 31380
+      },
+      "first20_free_at_zero_earned": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 41
+      },
+      "bounds_0_994": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 32381
+      }
+    },
+    "trained": {
+      "mono_E_nonincreasing": {
+        "pct_probes_over_0.01": 2.732463295269168,
+        "max_adverse": 5.403223458373077,
+        "n": 31876
+      },
+      "mono_U_nonincreasing": {
+        "pct_probes_over_0.01": 10.280433397068196,
+        "max_adverse": 0.4939240246137344,
+        "n": 31380
+      },
+      "first20_free_at_zero_earned": {
+        "pct_probes_over_0.01": 100.0,
+        "max_adverse": 7.9113099691843445,
+        "n": 41
+      },
+      "bounds_0_994": {
+        "pct_probes_over_0.01": 16.12056452858158,
+        "max_adverse": 9.538426156215223,
+        "n": 32381
+      }
+    }
+  },
+  "medicaid": {
+    "original": {
+      "mono_I_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 84704
+      },
+      "mono_SI_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 84451
+      },
+      "mono_P_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 71872
+      },
+      "bounds_0_and_le_I": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 86105
+      }
+    },
+    "gpt": {
+      "mono_I_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 84704
+      },
+      "mono_SI_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 84451
+      },
+      "mono_P_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 71872
+      },
+      "bounds_0_and_le_I": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 86105
+      }
+    },
+    "gemini": {
+      "mono_I_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 84704
+      },
+      "mono_SI_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 84451
+      },
+      "mono_P_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 71872
+      },
+      "bounds_0_and_le_I": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 86105
+      }
+    },
+    "trained": {
+      "mono_I_nondecreasing": {
+        "pct_probes_over_0.01": 8.585190782017378,
+        "max_adverse": 13.320889983493513,
+        "n": 84704
+      },
+      "mono_SI_nondecreasing": {
+        "pct_probes_over_0.01": 11.860131910812187,
+        "max_adverse": 14.119291914013038,
+        "n": 84451
+      },
+      "mono_P_nonincreasing": {
+        "pct_probes_over_0.01": 6.924810774710596,
+        "max_adverse": 5.971784444113726,
+        "n": 71872
+      },
+      "bounds_0_and_le_I": {
+        "pct_probes_over_0.01": 9.280529585970617,
+        "max_adverse": 28.023958137675276,
+        "n": 86105
+      }
+    }
+  },
+  "soc": {
+    "original": {
+      "mono_E_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "mono_U_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "mono_M_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "bounds_ge_0": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "audit_probes": {
+        "max_adverse": 0.0,
+        "n": 2,
+        "pct_probes_over_0.01": 0.0
+      }
+    },
+    "gpt": {
+      "mono_E_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "mono_U_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "mono_M_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "bounds_ge_0": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "audit_probes": {
+        "max_adverse": 0.0,
+        "n": 2,
+        "pct_probes_over_0.01": 0.0
+      }
+    },
+    "gemini": {
+      "mono_E_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "mono_U_nondecreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "mono_M_nonincreasing": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "bounds_ge_0": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 20000
+      },
+      "audit_probes": {
+        "max_adverse": 0.0,
+        "n": 2,
+        "pct_probes_over_0.01": 0.0
+      }
+    },
+    "trained": {
+      "mono_E_nondecreasing": {
+        "pct_probes_over_0.01": 13.165,
+        "max_adverse": 0.29703317712267974,
+        "n": 20000
+      },
+      "mono_U_nondecreasing": {
+        "pct_probes_over_0.01": 11.344999999999999,
+        "max_adverse": 0.33153345396855216,
+        "n": 20000
+      },
+      "mono_M_nonincreasing": {
+        "pct_probes_over_0.01": 9.55,
+        "max_adverse": 0.3612224129115049,
+        "n": 20000
+      },
+      "bounds_ge_0": {
+        "pct_probes_over_0.01": 15.565000000000001,
+        "max_adverse": 5.533629319173588,
+        "n": 20000
+      },
+      "audit_probes": {
+        "max_adverse": 21.898083631026793,
+        "n": 2,
+        "pct_probes_over_0.01": 100.0
+      }
+    }
+  },
+  "couple": {
+    "original": {
+      "swap_invariance": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 44762
+      },
+      "mono_each_input_nonincreasing_worst": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 8.881784197001252e-13,
+        "n": 43601
+      },
+      "bounds_0_1491": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 4.440892098500626e-13,
+        "n": 44762
+      }
+    },
+    "gpt": {
+      "swap_invariance": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 44762
+      },
+      "mono_each_input_nonincreasing_worst": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 41423
+      },
+      "bounds_0_1491": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 44762
+      }
+    },
+    "gemini": {
+      "swap_invariance": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 44762
+      },
+      "mono_each_input_nonincreasing_worst": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 41423
+      },
+      "bounds_0_1491": {
+        "pct_probes_over_0.01": 0.0,
+        "max_adverse": 0.0,
+        "n": 44762
+      }
+    },
+    "trained": {
+      "swap_invariance": {
+        "pct_probes_over_0.01": 73.41271614315714,
+        "max_adverse": 23.466782450043183,
+        "n": 44762
+      },
+      "mono_each_input_nonincreasing_worst": {
+        "pct_probes_over_0.01": 6.6879200018348195,
+        "max_adverse": 1.7162864446573778,
+        "n": 43601
+      },
+      "bounds_0_1491": {
+        "pct_probes_over_0.01": 48.13681247486707,
+        "max_adverse": 2.3169053417753105,
+        "n": 44762
+      }
+    }
+  }
+}

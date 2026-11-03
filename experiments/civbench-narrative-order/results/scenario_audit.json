@@ -1,0 +1,1709 @@
+{
+  "n_fixtures": 156,
+  "fixtures_with_non_scalar_values": [
+    "bac-eitc-027",
+    "bac-ssi-031",
+    "bac-wic-011",
+    "bac-wic-015"
+  ],
+  "rows": [
+    {
+      "fixture": "bac-eitc-001",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-002",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-004",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-005",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-006",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-007",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-009",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-010",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-011",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-012",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-013",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-014",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-015",
+      "n_fields": 6,
+      "value_types": [
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-016",
+      "n_fields": 6,
+      "value_types": [
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-017",
+      "n_fields": 6,
+      "value_types": [
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-018",
+      "n_fields": 6,
+      "value_types": [
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-023",
+      "n_fields": 7,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-027",
+      "n_fields": 7,
+      "value_types": [
+        "int",
+        "list",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-eitc-029",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-001",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-002",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-003",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-004",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-005",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-006",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-007",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-008",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-009",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-010",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-011",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-012",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-013",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-014",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-015",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-016",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-017",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-018",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-019",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-020",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-021",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-025",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-027",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-028",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-029",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-030",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-031",
+      "n_fields": 5,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-032",
+      "n_fields": 5,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-033",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-034",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-035",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-036",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-037",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-medicaid-040",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-001",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-002",
+      "n_fields": 4,
+      "value_types": [
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-003",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-004",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-005",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-006",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-007",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-008",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-009",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-010",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-011",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-012",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-013",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-014",
+      "n_fields": 9,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-015",
+      "n_fields": 5,
+      "value_types": [
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-016",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-017",
+      "n_fields": 9,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-018",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-019",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-020",
+      "n_fields": 3,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-021",
+      "n_fields": 3,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-022",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-023",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-024",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-025",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-029",
+      "n_fields": 11,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-030",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-031",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-032",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-033",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-034",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-035",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-036",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-037",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-038",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-039",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-snap-040",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-001",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-002",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-003",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-004",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-005",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-006",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-007",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-008",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-009",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-010",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-011",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-012",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-013",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-014",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-015",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-016",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-018",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-019",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-020",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-021",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-022",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-023",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-024",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-025",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-026",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-027",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-030",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-031",
+      "n_fields": 8,
+      "value_types": [
+        "bool",
+        "dict",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-033",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-035",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-ssi-036",
+      "n_fields": 5,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-001",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-002",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-003",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-004",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-005",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-006",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-007",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-011",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-013",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-014",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-015",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-016",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-017",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-018",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-019",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-va_pension-025",
+      "n_fields": 9,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-001",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-002",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-003",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-005",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-006",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-007",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-008",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-009",
+      "n_fields": 6,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-010",
+      "n_fields": 4,
+      "value_types": [
+        "int",
+        "str"
+      ],
+      "gold_eligibility": false,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-011",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "list",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-015",
+      "n_fields": 6,
+      "value_types": [
+        "dict",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-016",
+      "n_fields": 5,
+      "value_types": [
+        "bool",
+        "float",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-018",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-019",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-020",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-021",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-022",
+      "n_fields": 6,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-023",
+      "n_fields": 7,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    },
+    {
+      "fixture": "bac-wic-024",
+      "n_fields": 5,
+      "value_types": [
+        "bool",
+        "int",
+        "str"
+      ],
+      "gold_eligibility": true,
+      "content_stable_under_key_permutation": true
+    }
+  ]
+}

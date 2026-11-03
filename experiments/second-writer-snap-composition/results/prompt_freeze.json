@@ -1,0 +1,10 @@
+{
+  "created_before_first_model_call": true,
+  "runner_file": "run_replication.py",
+  "prompts": {
+    "snapcomp": {
+      "sha256": "fd652f7dd689d577ecf4d630608504f20fa58fe57c6c2703b696622a3bd8630b",
+      "characters": 1857
+    }
+  }
+}

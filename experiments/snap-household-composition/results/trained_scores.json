@@ -1,0 +1,36 @@
+{
+  "arm": "trained",
+  "accuracy": {
+    "n": 30000,
+    "max_abs_err": 64.59809475862176,
+    "mean_abs_err": 0.2864604496135056,
+    "pct_within_0.01": 10.813333333333333,
+    "pct_within_1": 95.92666666666668
+  },
+  "random": {
+    "n": 25000,
+    "max_abs_err": 39.66866990202652,
+    "mean_abs_err": 0.22273970433832438,
+    "pct_within_0.01": 12.396,
+    "pct_within_1": 96.736
+  },
+  "kink": {
+    "n": 5000,
+    "max_abs_err": 64.59809475862176,
+    "mean_abs_err": 0.6050641759894116,
+    "pct_within_0.01": 2.9000000000000004,
+    "pct_within_1": 91.88
+  },
+  "invariance": {
+    "max_range": 18.319388504689528,
+    "mean_range": 5.457465941690424,
+    "pct_classes_over_0.01": 96.66666666666667,
+    "n_classes": 90
+  },
+  "should_change_control": {
+    "oracle_delta_mean": -0.3266683603562015,
+    "oracle_delta_min": -9.000000000000227,
+    "delta_max_abs_err": 6.0043784011907,
+    "delta_mean_abs_err": 0.07123648401324692
+  }
+}

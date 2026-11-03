@@ -1,0 +1,36 @@
+{
+  "arm": "zero_shot",
+  "accuracy": {
+    "n": 30000,
+    "max_abs_err": 4.263256414560601e-13,
+    "mean_abs_err": 1.611250392367462e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0
+  },
+  "random": {
+    "n": 25000,
+    "max_abs_err": 4.263256414560601e-13,
+    "mean_abs_err": 1.3286083344610233e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0
+  },
+  "kink": {
+    "n": 5000,
+    "max_abs_err": 3.7214675785435247e-13,
+    "mean_abs_err": 3.0244606818996543e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1": 100.0
+  },
+  "invariance": {
+    "max_range": 2.8421709430404007e-13,
+    "mean_range": 1.9648480373588327e-14,
+    "pct_classes_over_0.01": 0.0,
+    "n_classes": 90
+  },
+  "should_change_control": {
+    "oracle_delta_mean": -0.3266683603562015,
+    "oracle_delta_min": -9.000000000000227,
+    "delta_max_abs_err": 4.440892098500626e-13,
+    "delta_mean_abs_err": 1.976818708726569e-14
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "snap": {
+    "gauge_equivalent": {
+      "original vs gpt": true,
+      "original vs gemini": false,
+      "gpt vs gemini": false
+    },
+    "active_units": {
+      "original": {
+        "layer1": 3,
+        "layer2": 2
+      },
+      "gpt": {
+        "layer1": 3,
+        "layer2": 2
+      },
+      "gemini": {
+        "layer1": 3,
+        "layer2": 2
+      }
+    },
+    "dead_units": {
+      "original": 43,
+      "gpt": 43,
+      "gemini": 43
+    }
+  },
+  "ssi": {
+    "gauge_equivalent": {
+      "original vs gpt": false,
+      "original vs gemini": false,
+      "gpt vs gemini": true
+    },
+    "active_units": {
+      "original": {
+        "layer1": 3,
+        "layer2": 2,
+        "layer3": 3
+      },
+      "gpt": {
+        "layer1": 3,
+        "layer2": 2,
+        "layer3": 1
+      },
+      "gemini": {
+        "layer1": 3,
+        "layer2": 2,
+        "layer3": 1
+      }
+    },
+    "dead_units": {
+      "original": 64,
+      "gpt": 66,
+      "gemini": 66
+    }
+  },
+  "medicaid": {
+    "gauge_equivalent": {
+      "original vs gpt": true,
+      "original vs gemini": true,
+      "gpt vs gemini": true
+    },
+    "active_units": {
+      "original": {
+        "layer1": 3,
+        "layer2": 1
+      },
+      "gpt": {
+        "layer1": 3,
+        "layer2": 1
+      },
+      "gemini": {
+        "layer1": 3,
+        "layer2": 1
+      }
+    },
+    "dead_units": {
+      "original": 44,
+      "gpt": 44,
+      "gemini": 44
+    }
+  },
+  "soc": {
+    "gauge_equivalent": {
+      "original vs gpt": true,
+      "original vs gemini": true,
+      "gpt vs gemini": true
+    },
+    "active_units": {
+      "original": {
+        "layer1": 4,
+        "layer2": 3,
+        "layer3": 1
+      },
+      "gpt": {
+        "layer1": 4,
+        "layer2": 3,
+        "layer3": 1
+      },
+      "gemini": {
+        "layer1": 4,
+        "layer2": 3,
+        "layer3": 1
+      }
+    },
+    "dead_units": {
+      "original": 64,
+      "gpt": 64,
+      "gemini": 64
+    }
+  },
+  "couple": {
+    "gauge_equivalent": {
+      "original vs gpt": false,
+      "original vs gemini": false,
+      "gpt vs gemini": true
+    },
+    "active_units": {
+      "original": {
+        "layer1": 3,
+        "layer2": 2,
+        "layer3": 3
+      },
+      "gpt": {
+        "layer1": 3,
+        "layer2": 2,
+        "layer3": 1
+      },
+      "gemini": {
+        "layer1": 3,
+        "layer2": 2,
+        "layer3": 1
+      }
+    },
+    "dead_units": {
+      "original": 64,
+      "gpt": 66,
+      "gemini": 66
+    }
+  },
+  "eitc_attempt1_vs_gemini": {
+    "gauge_equivalent": {
+      "original_attempt1 vs gemini": false
+    },
+    "active_units": {
+      "original_attempt1": {
+        "layer1": 4
+      },
+      "gemini": {
+        "layer1": 4
+      }
+    },
+    "dead_units": {
+      "original_attempt1": 12,
+      "gemini": 12
+    }
+  },
+  "eitc_attempt2_vs_gemini": {
+    "gauge_equivalent": {
+      "original_attempt2 vs gemini": false
+    },
+    "active_units": {
+      "original_attempt2": {
+        "layer1": 4
+      },
+      "gemini": {
+        "layer1": 4
+      }
+    },
+    "dead_units": {
+      "original_attempt2": 12,
+      "gemini": 12
+    }
+  }
+}

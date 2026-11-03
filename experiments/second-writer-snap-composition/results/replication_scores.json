@@ -1,0 +1,74 @@
+{
+  "gemini-3.1-pro-preview__snapcomp": {
+    "accuracy": {
+      "n": 30000,
+      "max_abs_err": 4.831690603168681e-13,
+      "mean_abs_err": 6.161204879617798e-15,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "random": {
+      "n": 25000,
+      "max_abs_err": 4.831690603168681e-13,
+      "mean_abs_err": 5.0681236984928545e-15,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "kink": {
+      "n": 5000,
+      "max_abs_err": 4.618527782440651e-13,
+      "mean_abs_err": 1.162661078524252e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "invariance": {
+      "max_range": 3.836930773104541e-13,
+      "mean_range": 1.8789907901211538e-14,
+      "pct_classes_over_0.01": 0.0,
+      "n_classes": 90
+    },
+    "should_change_control": {
+      "oracle_delta_mean": -0.3266683603562015,
+      "oracle_delta_min": -9.000000000000227,
+      "delta_max_abs_err": 3.552713678800501e-13,
+      "delta_mean_abs_err": 4.035882739117369e-15
+    },
+    "gate": "PASS"
+  },
+  "gpt-5.6-sol__snapcomp": {
+    "accuracy": {
+      "n": 30000,
+      "max_abs_err": 4.263256414560601e-13,
+      "mean_abs_err": 4.840889171002042e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "random": {
+      "n": 25000,
+      "max_abs_err": 4.263256414560601e-13,
+      "mean_abs_err": 4.867111158546322e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "kink": {
+      "n": 5000,
+      "max_abs_err": 3.7214675785435247e-13,
+      "mean_abs_err": 4.709779233280642e-14,
+      "pct_within_0.01": 100.0,
+      "pct_within_1": 100.0
+    },
+    "invariance": {
+      "max_range": 2.8421709430404007e-13,
+      "mean_range": 5.295517111234302e-14,
+      "pct_classes_over_0.01": 0.0,
+      "n_classes": 90
+    },
+    "should_change_control": {
+      "oracle_delta_mean": -0.3266683603562015,
+      "oracle_delta_min": -9.000000000000227,
+      "delta_max_abs_err": 4.440892098500626e-13,
+      "delta_mean_abs_err": 7.816591818254893e-14
+    },
+    "gate": "PASS"
+  }
+}

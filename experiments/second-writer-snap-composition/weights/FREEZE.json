@@ -1,0 +1,10 @@
+{
+  "gemini-3.1-pro-preview__snapcomp.npz": {
+    "sha256": "2053a86165118a69d5b2f6b8ef94019df4cba5cb2ec17b85b55f105072cd6893",
+    "bytes": 7590
+  },
+  "gpt-5.6-sol__snapcomp.npz": {
+    "sha256": "6ce5360988b3d710834e939284c6248a9ad02fbdd834a5badb591ec3f0de4e32",
+    "bytes": 7590
+  }
+}

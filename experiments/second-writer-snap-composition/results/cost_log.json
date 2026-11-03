@@ -1,0 +1,30 @@
+{
+  "cap_usd": 5.0,
+  "calls": [
+    {
+      "model": "openai/gpt-5.6-sol",
+      "task": "snapcomp",
+      "attempt": 1,
+      "cost_usd": 0.027816,
+      "prompt_tokens": 589,
+      "completion_tokens": 1273,
+      "seconds": 13.6,
+      "raw_file": "gpt-5.6-sol__snapcomp__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 34
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "task": "snapcomp",
+      "attempt": 1,
+      "cost_usd": 0.167076,
+      "prompt_tokens": 642,
+      "completion_tokens": 13816,
+      "seconds": 109.9,
+      "raw_file": "gemini-3.1-pro-preview__snapcomp__attempt1.txt",
+      "parse": "ok",
+      "nonzero": 33
+    }
+  ],
+  "total_usd": 0.194892
+}
