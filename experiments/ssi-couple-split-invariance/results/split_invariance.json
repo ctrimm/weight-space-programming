@@ -1,0 +1,174 @@
+{
+  "arms": {
+    "original": {
+      "grid": {
+        "max_range": 6.661338147750939e-13,
+        "mean_range": 3.949433372933224e-14,
+        "pct_classes_over_0.01": 0.0,
+        "pct_classes_over_1": 0.0
+      },
+      "worst_class": {
+        "range": 6.661338147750939e-13,
+        "min": -4.440892098500626e-13,
+        "max": 2.220446049250313e-13,
+        "E_total": 3000.0,
+        "U_total": 3000.0,
+        "split_at_min": [
+          0.99,
+          0.0
+        ],
+        "split_at_max": [
+          0.0,
+          0.99
+        ],
+        "oracle_value": 0.0
+      },
+      "accuracy_grid": {
+        "max_abs_err": 4.440892098500626e-13,
+        "mean_abs_err": 9.325204622366325e-14,
+        "pct_within_0.01": 100.0
+      },
+      "random": {
+        "max_range": 8.881784197001252e-13,
+        "mean_range": 2.3036150764710326e-13,
+        "pct_classes_over_0.01": 0.0,
+        "pct_classes_over_1": 0.0
+      }
+    },
+    "gpt-5.6-sol": {
+      "grid": {
+        "max_range": 2.2382096176443156e-13,
+        "mean_range": 9.888386405994727e-15,
+        "pct_classes_over_0.01": 0.0,
+        "pct_classes_over_1": 0.0
+      },
+      "worst_class": {
+        "range": 2.2382096176443156e-13,
+        "min": 28.499999999999748,
+        "max": 28.49999999999997,
+        "E_total": 3000.0,
+        "U_total": 10.0,
+        "split_at_min": [
+          0.99,
+          0.0
+        ],
+        "split_at_max": [
+          0.0,
+          0.0
+        ],
+        "oracle_value": 28.5
+      },
+      "accuracy_grid": {
+        "max_abs_err": 2.5224267119483557e-13,
+        "mean_abs_err": 5.2023929496536224e-14,
+        "pct_within_0.01": 100.0
+      },
+      "random": {
+        "max_range": 4.547473508864641e-13,
+        "mean_range": 2.545874622228439e-14,
+        "pct_classes_over_0.01": 0.0,
+        "pct_classes_over_1": 0.0
+      }
+    },
+    "gemini-3.1-pro-preview": {
+      "grid": {
+        "max_range": 2.2382096176443156e-13,
+        "mean_range": 9.888386405994727e-15,
+        "pct_classes_over_0.01": 0.0,
+        "pct_classes_over_1": 0.0
+      },
+      "worst_class": {
+        "range": 2.2382096176443156e-13,
+        "min": 28.499999999999748,
+        "max": 28.49999999999997,
+        "E_total": 3000.0,
+        "U_total": 10.0,
+        "split_at_min": [
+          0.99,
+          0.0
+        ],
+        "split_at_max": [
+          0.0,
+          0.0
+        ],
+        "oracle_value": 28.5
+      },
+      "accuracy_grid": {
+        "max_abs_err": 2.5224267119483557e-13,
+        "mean_abs_err": 5.2023929496536224e-14,
+        "pct_within_0.01": 100.0
+      },
+      "random": {
+        "max_range": 4.547473508864641e-13,
+        "mean_range": 2.545874622228439e-14,
+        "pct_classes_over_0.01": 0.0,
+        "pct_classes_over_1": 0.0
+      }
+    },
+    "trained": {
+      "grid": {
+        "max_range": 25.152815907926424,
+        "mean_range": 3.6410860283524262,
+        "pct_classes_over_0.01": 98.88888888888889,
+        "pct_classes_over_1": 72.22222222222221
+      },
+      "worst_class": {
+        "range": 25.152815907926424,
+        "min": 1260.2619729172332,
+        "max": 1285.4147888251596,
+        "E_total": 0.0,
+        "U_total": 250.0,
+        "split_at_min": [
+          0.0,
+          0.0
+        ],
+        "split_at_max": [
+          0.0,
+          0.75
+        ],
+        "oracle_value": 1261.0
+      },
+      "accuracy_grid": {
+        "max_abs_err": 50.28510966840781,
+        "mean_abs_err": 7.750969270460895,
+        "pct_within_0.01": 5.573921028466483
+      },
+      "random": {
+        "max_range": 24.916421791727316,
+        "mean_range": 1.2322203389412065,
+        "pct_classes_over_0.01": 99.92,
+        "pct_classes_over_1": 40.98
+      }
+    },
+    "oracle": {
+      "grid": {
+        "max_range": 0.0,
+        "mean_range": 0.0,
+        "pct_classes_over_0.01": 0.0,
+        "pct_classes_over_1": 0.0
+      },
+      "worst_class": {
+        "range": 0.0,
+        "min": 1491.0,
+        "max": 1491.0,
+        "E_total": 0.0,
+        "U_total": 0.0,
+        "split_at_min": [
+          0.0,
+          0.0
+        ],
+        "split_at_max": [
+          0.0,
+          0.0
+        ],
+        "oracle_value": 1491.0
+      },
+      "random": {
+        "max_range": 4.547473508864641e-13,
+        "mean_range": 8.594724931754172e-15,
+        "pct_classes_over_0.01": 0.0,
+        "pct_classes_over_1": 0.0
+      }
+    }
+  }
+}

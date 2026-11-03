@@ -264,6 +264,19 @@ bare prompts, audit probes included — and Gemini's share-of-cost
 arrays turned out parameter-for-parameter identical to the original
 construction.
 
+**Split invariance** (`experiments/ssi-couple-split-invariance/`).
+The couple rule depends only on combined income totals, so every
+reallocation of the same totals between the spouses is the same
+household under the law. Measured across 90 totals classes x 121
+compositions (plus 5,000 random classes), all three compiled couple
+nets are invariant to within a trillionth of a dollar — while the
+trained baseline's answer moves in 98.9% of classes (mean range
+$3.64, worst $25.15), with the worst class decomposing into a
+recognizable wrong rule: an exclusion applied per member instead
+of once per couple. Swapping the spouses was one point in this
+equivalence class; the within-class range is the general metric,
+and it catches structural failure that average accuracy dilutes.
+
 ## What all of this cost
 
 **$2.21 in total API spend** ($0.653 for the second-writer
@@ -301,6 +314,7 @@ experiments/
   medicaid-share-of-cost/       CA medically-needy share of cost (SSI counting reused)
   ssi-couple-payment/           2026 SSI couple payment, exclusions once per couple
   second-writer-witness-extension/  GPT + Gemini replicate the two witness rules
+  ssi-couple-split-invariance/  Equivalent compositions must pay identically: they don't, for the trained net
 ```
 
 Cross-experiment figures live in `docs/figures/` (generator: `docs/make_figures.py`); each experiment's RESULTS.md embeds its own figures from its `figures/` folder (generators: `docs/make_writeup_figures.py`, `docs/make_witness_figures.py`).

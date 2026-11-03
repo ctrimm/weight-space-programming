@@ -203,3 +203,25 @@ does not survive.
   call posted; the runner's immediate after-check lagged at
   $0.1295, the known OpenRouter aggregate lag. Project API total
   now $2.21.
+
+## D12 — Split-invariance audit of the couple nets (2026-11-02)
+- Decision: run the experiment Cory picked from the queue —
+  measure within-equivalence-class output range for every couple
+  net, where classes are all compositions sharing the same combined
+  income totals (the stipulated couple rule depends only on the
+  totals). Pre-registered protocol; frozen weights; $0, local.
+- Result: all three compiled arms (original, GPT, Gemini) are
+  invariant to <= 8.9e-13 across 90 grid classes x 121 splits and
+  5,000 random classes x 8 splits; GPT and Gemini range statistics
+  are identical at every reported digit. The trained baseline moves
+  in 98.9% of grid classes (mean range $3.64, worst $25.15; random
+  arm worst $24.92, 99.9% of classes > $0.01).
+- Worst class anatomy: E=0, U=$250, correct $1,261 flat; trained
+  spans $1,260.26-$1,285.41 driven entirely by the unearned split —
+  the fingerprint of a per-member $20 exclusion, the exact
+  once-per-couple semantics the couple rule tests. Accuracy kept
+  separate (trained grid accuracy is boundary-weighted and worse
+  than its standard-design numbers; disclosed in RESULTS.md).
+- Takeaway recorded for CivBench: report invariance defects
+  alongside accuracy for any learned scorer; the equivalence-class
+  range is the general form of the member-swap test.
