@@ -307,3 +307,26 @@ does not survive.
   rule class; declared limits stand (single-input rule; writers
   may know the formula from training data — the claim is
   weight-writing from text, not rule discovery).
+
+## D16 — Boundary case (SSA rounding) + full-suite verification (2026-11-03)
+- Boundary: the $0.05 error floor for dime rounding is real and
+  attained by the centered-ramp construction (max $0.0500, real
+  network and closed form). Trained arm: mid-range mean $0.0250
+  (the predicted midpoint signature) but a low-end offset set its
+  max at $2.26 — the protocol's "near $0.10" trained-max guess
+  missed and is recorded as missed. Composition arm: exact PIA
+  vs rounded-by-law amount, max $0.0999 — deployments must round
+  in ordinary code after any network.
+- Process: two uncheckpointed arm-3 training runs were lost to
+  sandbox volatility (one "successful" delivery, files missing —
+  the D14 pattern). Final run: checkpointed chunks, sync per
+  chunk; discarded 6,000-step run's scores preserved. The
+  15,000-step repo-standard length replaced the shortened plan.
+- Verification: Cory asked for a full recheck before publication
+  or author outreach. Every experiment's own scorer was re-run
+  in the foreground against the shipped weights (VERIFICATION.md).
+  All decisive numbers reproduced except one bound: the atlas
+  RESULTS claimed compiled violations "at most 4.4e-13"; the
+  rerun puts the couple original's worst probe at 8.882e-13.
+  Corrected in place with a dated note; no conclusion depends on
+  it (0.0% of probes over a cent reproduced exactly).

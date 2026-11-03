@@ -337,6 +337,20 @@ three models from three vendors converged on the identical
 circuit. Full-suite verification of everything above: see
 VERIFICATION.md.
 
+**The boundary: rounding** (`experiments/ssa-rounding-boundary/`).
+The SSA text's last step — round the PIA down to the next lower
+$0.10 — is a step function, and no continuous network can
+implement it exactly: at a $0.10 jump, any candidate is at least
+$0.05 wrong somewhere (proof in the experiment's protocol). The
+best construction attains exactly that floor ($0.0500 max error,
+99.2% of points within a cent); a trained network lands on the
+same midpoint strategy in mid-range (mean error $0.0250) plus a
+low-end offset; and the exact PIA network scored against the
+rounded-by-law amount is off by up to $0.0999 — the rounding gap
+itself. Continuous rules are exactly representable; discontinuous
+ones only to half their jump. For a whole-dollar round the floor
+is $0.50; for an eligibility gate, the jump is the whole decision.
+
 ## What all of this cost
 
 **$2.48 in total API spend** ($0.653 for the second-writer

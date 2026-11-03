@@ -1,0 +1,15 @@
+{
+  "arm3_trained_window_0_50": {
+    "max_abs_err": 2.263447154490568,
+    "mean_abs_err": 1.00985946045305,
+    "pct_within_0.01": 0.42099915800168397
+  },
+  "arm3_trained_random_0_5000": {
+    "max_abs_err": 2.2604229722382256,
+    "mean_abs_err": 0.04829431892030262,
+    "pct_within_0.01": 18.7015
+  },
+  "steps": 15000,
+  "batch": 8192,
+  "seed": 20261103
+}
