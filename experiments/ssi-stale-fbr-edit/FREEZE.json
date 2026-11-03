@@ -1,0 +1,7 @@
+{
+  "frozen_before_edit": true,
+  "note": "Stale weights frozen before the edit script was written, per PROTOCOL.md.",
+  "files": {
+    "stale/ssi_stale_weights.npz": "a4ab1e5d3b2258a6d7a8615ca88936f0522316b320863b80e57bd7a4ecc731e1"
+  }
+}

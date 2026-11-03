@@ -1,0 +1,156 @@
+{
+  "grid__edited_vs_current": {
+    "n": 7381,
+    "max_abs_err": 2.220446049250313e-13,
+    "mean_abs_err": 5.737733671045027e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "grid__delta_vs_theory": {
+    "n": 7381,
+    "max_abs_err": 2.5934809855243657e-13,
+    "mean_abs_err": 4.5300709396928446e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random__edited_vs_current": {
+    "n": 20000,
+    "max_abs_err": 2.2737367544323206e-13,
+    "mean_abs_err": 6.072529146194938e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random__delta_vs_theory": {
+    "n": 20000,
+    "max_abs_err": 2.877698079828406e-13,
+    "mean_abs_err": 4.3000758509492697e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_0__edited_vs_current": {
+    "n": 8,
+    "max_abs_err": 0.0,
+    "mean_abs_err": 0.0,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_0__delta_vs_theory": {
+    "n": 8,
+    "max_abs_err": 0.0,
+    "mean_abs_err": 0.0,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_1__edited_vs_current": {
+    "n": 291,
+    "max_abs_err": 1.1368683772161603e-13,
+    "mean_abs_err": 2.9337357285764964e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_1__delta_vs_theory": {
+    "n": 291,
+    "max_abs_err": 2.2737367544323206e-13,
+    "mean_abs_err": 5.260702145000467e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_2__edited_vs_current": {
+    "n": 203,
+    "max_abs_err": 2.2737367544323206e-13,
+    "mean_abs_err": 4.2737570461235585e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_2__delta_vs_theory": {
+    "n": 203,
+    "max_abs_err": 2.2737367544323206e-13,
+    "mean_abs_err": 4.9702989397997155e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_3__edited_vs_current": {
+    "n": 4345,
+    "max_abs_err": 1.9895196601282805e-13,
+    "mean_abs_err": 4.7353912122548195e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_3__delta_vs_theory": {
+    "n": 4345,
+    "max_abs_err": 2.877698079828406e-13,
+    "mean_abs_err": 5.293195877773278e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_5__edited_vs_current": {
+    "n": 125,
+    "max_abs_err": 0.0,
+    "mean_abs_err": 0.0,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_5__delta_vs_theory": {
+    "n": 125,
+    "max_abs_err": 0.0,
+    "mean_abs_err": 0.0,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_6__edited_vs_current": {
+    "n": 69,
+    "max_abs_err": 0.0,
+    "mean_abs_err": 0.0,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_6__delta_vs_theory": {
+    "n": 69,
+    "max_abs_err": 0.0,
+    "mean_abs_err": 0.0,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_7__edited_vs_current": {
+    "n": 14959,
+    "max_abs_err": 2.220446049250313e-13,
+    "mean_abs_err": 6.62838547558478e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "random_region_7__delta_vs_theory": {
+    "n": 14959,
+    "max_abs_err": 1.1102230246251565e-13,
+    "mean_abs_err": 4.0418975814617303e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "kink_jitter__edited_vs_current": {
+    "n": 9000,
+    "max_abs_err": 1.1368683772161603e-13,
+    "mean_abs_err": 1.6184584536757837e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "kink_jitter__delta_vs_theory": {
+    "n": 9000,
+    "max_abs_err": 1.1368683772161603e-13,
+    "mean_abs_err": 1.9342552251247172e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "all__edited_vs_current": {
+    "n": 56381,
+    "max_abs_err": 2.2737367544323206e-13,
+    "mean_abs_err": 5.317704619585728e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  },
+  "all__delta_vs_theory": {
+    "n": 56381,
+    "max_abs_err": 2.877698079828406e-13,
+    "mean_abs_err": 3.9525333830539744e-14,
+    "pct_within_0.01": 100.0,
+    "pct_within_1.00": 100.0
+  }
+}

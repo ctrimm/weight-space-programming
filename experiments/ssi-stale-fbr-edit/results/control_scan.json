@@ -1,0 +1,19 @@
+{
+  "total_parameters": 1297,
+  "target_0.943": {
+    "exact_hits": 0,
+    "nearest_abs_distance": 0.029146015644073486
+  },
+  "target_0.994": {
+    "exact_hits": 0,
+    "nearest_abs_distance": 0.08014601469039917
+  },
+  "target_0.02": {
+    "exact_hits": 0,
+    "nearest_abs_distance": 7.599592208862305e-07
+  },
+  "target_0.065": {
+    "exact_hits": 0,
+    "nearest_abs_distance": 1.8440186977386475e-05
+  }
+}

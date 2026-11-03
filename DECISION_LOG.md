@@ -75,3 +75,28 @@ preserved in trained_v1/ and results/trained_v1_scores.json.
 Reasoning: a weight-writing win over a strawman baseline proves
 nothing; the interesting claim survives a competent baseline or it
 does not survive.
+
+## D7 — 2026-11-02 (evening): License CC BY 4.0; editing experiment run
+
+- License chosen by Cory: free to use, cross-reference, and cite,
+  with credit to Cory Trimm — implemented as CC BY 4.0 (LICENSE file
+  with his copyright line and a suggested citation; README section).
+- Editing experiment commissioned by Cory the same evening and run
+  under a pre-registered protocol (PROTOCOL.md written and stale
+  weights SHA-256-frozen before the edit script existed). Findings:
+  a stale-FBR SSI network is exact for the wrong year (max $51.00
+  error vs the 2026 rule, mean $17.65); the FBR lives in exactly 2
+  of 1,297 parameters as a literal; editing those 2 restores
+  exactness (2.3e-13) with the functional delta matching theory to
+  2.9e-13; the edited file is array-identical to the independently
+  constructed 2026 network. Control: the trained SSI network
+  contains no parameter equal to either FBR (nearest 0.029/0.080
+  away) — trained constants are not locatable, hence not surgically
+  repairable.
+- Second weight writer via OpenRouter scoped but NOT run: live
+  account balance $24.04 (read from the OpenRouter API, no model
+  calls made). Estimate presented to Cory anchored in dashboard
+  per-run actuals (Sonnet $0.063/run, Opus ~$0.21/run, Oct 2026);
+  pilot-first design (2 non-Anthropic frontier models x EITC) then
+  full sweep, proposed hard cap $3. Awaiting his explicit yes, per
+  the standing OpenRouter rule.

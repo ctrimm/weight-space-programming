@@ -221,6 +221,7 @@ experiments/
   eitc-credit/                  TY2025 EITC, 2 children (incl. ERRATUM.md)
   ssi-payment/                  2026 SSI federal payment, individual
   medicaid-patient-liability/   Medicaid post-eligibility liability
+  ssi-stale-fbr-edit/           Repairing a stale constant by weight edit
 ```
 
 Figures live in `docs/figures/` (generator: `docs/make_figures.py`).
@@ -258,3 +259,14 @@ python3 train_baseline.py
 - Test the *editing* direction: take a network with a known, named
   defect (a stale constant compiled in) and ask for a surgical weight
   edit, the analogue of the paper's reasoning-loop fix.
+
+## License
+
+Creative Commons Attribution 4.0 International (CC BY 4.0).
+Copyright (c) 2026 Cory Trimm.
+
+Use it, share it, adapt it, cross-reference it, cite it — for any
+purpose — provided you give credit to **Cory Trimm**. Suggested
+citation: Trimm, Cory, *Weight-Space Programming for the Social
+Safety Net* (2026), <https://github.com/ctrimm/weight-space-programming>.
+Full terms in [LICENSE](LICENSE).

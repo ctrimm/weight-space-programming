@@ -1,0 +1,22 @@
+{
+  "total_parameters": 1297,
+  "changed_parameters": 2,
+  "hits": [
+    {
+      "param": "b3",
+      "index": [
+        0
+      ],
+      "old": -0.943,
+      "new": -0.994
+    },
+    {
+      "param": "b4",
+      "index": [
+        0
+      ],
+      "old": 0.943,
+      "new": 0.994
+    }
+  ]
+}
