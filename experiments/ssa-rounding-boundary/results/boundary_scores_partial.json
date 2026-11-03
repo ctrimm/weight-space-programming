@@ -1,0 +1,26 @@
+{
+  "floor_theory_usd": 0.05,
+  "gate_usd": 0.01,
+  "arms": {
+    "arm1_ramp_net_0_20": {
+      "max_abs_err": 0.05000000000020055,
+      "mean_abs_err": 0.0024943126425484765,
+      "pct_within_0.01": 92.01269968250794
+    },
+    "arm2_ramp_closed_form_window_0_50": {
+      "max_abs_err": 0.05000000000000071,
+      "mean_abs_err": 0.0002500994998010736,
+      "pct_within_0.01": 99.15680168639662
+    },
+    "arm2_ramp_closed_form_random_0_5000": {
+      "max_abs_err": 0.04996815390666143,
+      "mean_abs_err": 0.00024757610310685097,
+      "pct_within_0.01": 99.21799999999999
+    },
+    "arm4_exact_pia_vs_rounded_oracle": {
+      "max_abs_err": 0.09999933742574285,
+      "mean_abs_err": 0.050526842717677545,
+      "pct_within_0.01": 10.956986328766732
+    }
+  }
+}
