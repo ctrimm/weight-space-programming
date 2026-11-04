@@ -15,8 +15,8 @@ Max abs error in dollars. PASS = at most $0.01 everywhere.
 
 | Rule (points) | Original (Muse Spark) | GPT-5.6 Sol | Gemini 3.1 Pro | **q38** (Qwen3.8-27B, 3-bit) | **strata** (Qwen3.8-Flash-Next, IQ3_S) |
 |---|---|---|---|---|---|
-| SNAP (40,049) | PASS 3e-13 | PASS 3.4e-13 | PASS 3.4e-13 | **PASS 4.0e-13** | **PASS 3.4e-13** |
-| SSI individual (32,381) | PASS 2e-13 | PASS 2.3e-13 | PASS 2.3e-13 | **PASS 2.3e-13** | **PASS 2.3e-13** |
+| SNAP (40,049) | PASS 3e-13 | PASS 3.4e-13 | PASS 3.4e-13 | **PASS 3.4e-13** | **PASS 3.4e-13** |
+| SSI individual (32,381) | PASS 2e-13 | PASS 2.3e-13 | PASS 2.3e-13 | **PASS 1.7e-13** | **PASS 2.3e-13** |
 | Medicaid liability (86,105) | PASS 2e-12 | PASS 1.8e-12 | PASS 2.7e-12 | **PASS 2.7e-12** | **PASS 2.7e-12** |
 | Share of cost (43,607) | PASS 1.4e-12 | PASS 1.4e-12 | PASS 1.4e-12 | **PASS 1.4e-12** | **PASS 1.4e-12** |
 | SSI couple (44,762) | PASS 5.8e-13 | PASS 5.8e-13 | PASS 5.8e-13 | **PASS 5.8e-13** | **PASS 5.8e-13** |
