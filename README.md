@@ -362,8 +362,10 @@ at 100.0%; Alaska's three schedules surface as clusters). Files:
 `exp117_real_slice_recovery.*`, `exp118_earnings_recovery.*`,
 `exp119_territory_tables.*`; the generator under test is mirrored at
 `src/synth/`. Full record in the chronicles and DECISION_LOG D17–D18.
-Three follow-ups (exp120–exp122, DECISION_LOG D19) closed the line's
-open threads: the +$268 cluster is ~5/6 client-side unreported
+Three follow-ups (exp120–exp122, DECISION_LOG D19; files
+`experiments/exp120_cluster268_classification.*`,
+`exp121_cluster54_identification.*`, `exp122_alaska_schedules.*`)
+closed the line's open threads: the +$268 cluster is ~5/6 client-side unreported
 earnings and ~1/6 agency failure to act, by the cases' own QC
 variance codes; the +$54 minimodel cluster is the $180 homeless
 shelter deduction, carried in a field (`HOMELESS_DED`) the
