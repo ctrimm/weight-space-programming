@@ -376,6 +376,43 @@ parameter (reconstruction 82.3% → 99.0% on the same frame), which
 also confirms the blind-recovered Hawaii/Guam/Virgin Islands tables
 at 100%.
 
+**Five follow-ups on weights as the atomic unit** (2026-11-03,
+each pre-registered in its PROTOCOL.md). *Trained-net recovery*
+(`experiments/trained-net-recovery/`): the exp116 probing
+instrument turned on a trained network itself — the trained SSI
+baseline's slopes recover essentially exactly (−0.500, −1.000) and
+its FBR within $8, but its earned-exclusion kink sits ~$30 early
+with the statutory spill interaction flattened (kink movement $4
+across unearned-income slices vs the statute's $20): it learned a
+coherent *different* rule, and probing names the differing feature.
+*Trained-net surgery* (`experiments/trained-net-surgery/`): the
+trained couple net's split-dependence ($30.56 max) removed
+*exactly* (→ $0.00) by a closed-form symmetrization of the first
+layer — which also halved its max error ($9.24 → $4.53) — while a
+generic sparse gradient edit of 32 weights managed −6% on the
+violation and damaged mean accuracy 17×. *Certified cliff*
+(`experiments/certified-cliff/`): at an eligibility cliff (jump
+$546), constructed ramp nets pay exactly the $273 floor at every
+band width, disagree with the rule only inside the certified
+band, and pay for narrower bands in largest-weight like 1/w
+(8 → 1,500 as the band goes $400 → $2); the trained control's
+error is diffuse — off by > $1 across 87% of the domain, no band
+to certify. *Weight-tamper audit*
+(`experiments/weight-tamper-audit/`): of four audit instruments,
+only the weight-anatomy audit catches a +$30 tent planted beyond
+every behavioral probe's range (U > 1500); scoring, recovery
+probing, and the property atlas each miss exactly the tampers
+outside their coverage, and none false-positives on the clean
+net. *Composed witnesses* (`experiments/composed-witnesses/`): a
+compiled countable-income net block-composed with a share-of-cost
+head is **bit-identical** to the one-piece compiled net at zero
+parameter overhead, and the FY2024 → FY2026 weight diff of the
+compiled SNAP rule is exactly 5 entries carrying all three COLA
+constants ($535→$546, $198→$209, $672→$744), each recoverable
+from the diff alone — where two same-init trained nets' diff is
+648 parameters that decode to nothing. Full record in each
+folder's RESULTS.md and DECISION_LOG D20.
+
 **The boundary: rounding** (`experiments/ssa-rounding-boundary/`).
 The SSA text's last step — round the PIA down to the next lower
 $0.10 — is a step function, and no continuous network can
@@ -435,6 +472,11 @@ experiments/
   second-writer-snap-composition/  GPT + Gemini replicate the member-level SNAP rule
   canonical-circuits/           Writers' circuits under permutation/scaling gauge: mostly one circuit
   civbench-narrative-order/     Label-side audit: CivBench scenarios have no member order to permute
+  trained-net-recovery/         Probing a trained net: its effective formula, kink ~$30 early, spill flattened
+  trained-net-surgery/          Closed-form W1 symmetrization removes a trained net's split-dependence exactly
+  certified-cliff/              Ramp-compiled eligibility cliff: $273 floor, certified band, price ~1/w in max weight
+  weight-tamper-audit/          Which audit instruments catch weight-space tampers (only anatomy catches all)
+  composed-witnesses/           Block composition is bit-identical; FY24->FY26 weight diff = 5 entries, fully decodable
 ```
 
 Cross-experiment figures live in `docs/figures/` (generator: `docs/make_figures.py`); each experiment's RESULTS.md embeds its own figures from its `figures/` folder (generators: `docs/make_writeup_figures.py`, `docs/make_witness_figures.py`).

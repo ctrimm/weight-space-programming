@@ -1,0 +1,60 @@
+{
+  "countable_net_max_err": 4.547473508864641e-13,
+  "composed_vs_oracle_max_err": 4.547473508864641e-13,
+  "composed_vs_direct_max_err": 0.0,
+  "params_composed": {
+    "total": 1321,
+    "nonzero": 16
+  },
+  "params_direct": {
+    "total": 1321,
+    "nonzero": 16
+  },
+  "compiled_FY24_max_err": 2.8421709430404007e-13,
+  "compiled_FY26_max_err": 3.410605131648481e-13,
+  "compiled_diff": [
+    {
+      "param": "b1(0,)",
+      "from": -0.198,
+      "to": -0.209,
+      "delta": -0.010999999999999982
+    },
+    {
+      "param": "b1(1,)",
+      "from": 0.099,
+      "to": 0.1045,
+      "delta": 0.005499999999999991
+    },
+    {
+      "param": "b1(2,)",
+      "from": -0.5730000000000001,
+      "to": -0.6395,
+      "delta": -0.06649999999999989
+    },
+    {
+      "param": "b2(1,)",
+      "from": -0.535,
+      "to": -0.546,
+      "delta": -0.01100000000000001
+    },
+    {
+      "param": "b3(0,)",
+      "from": 0.535,
+      "to": 0.546,
+      "delta": 0.01100000000000001
+    }
+  ],
+  "recovered_from_diff": {
+    "std_deduction": 209.0,
+    "shelter_cap": 744.0,
+    "allotment": 546.0
+  },
+  "trained_diff": {
+    "n_changed_gt_1e-6": 648,
+    "total_params": 1297,
+    "share_changed": 0.49961449498843485,
+    "max_abs_delta": 1.9169266416500794
+  },
+  "trained_FY2024_max_err": 34.0707819020198,
+  "trained_FY2026_max_err": 21.284652685260653
+}

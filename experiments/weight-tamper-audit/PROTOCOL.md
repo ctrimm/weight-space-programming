@@ -24,46 +24,64 @@ Base artifact: the compiled SSI individual net
 (`../ssi-payment/zero_shot/`), exact vs the oracle (max error
 ~1e-13 on the standard grid).
 
-Two tampers, applied to copies of the compiled weights:
+Three tampers, applied to copies of the compiled weights:
 
 - **T-global (formula-shaped control)**: FBR constant raised by $25
   in the weights — the stale-FBR edit in reverse. Every instrument
   should catch this; it is the sanity arm.
-- **T-local (weight-native)**: one hidden unit appended whose
-  activation is a tent over the region U ∈ [1800, 2000], E ∈ [0, 50]
-  (high unearned income, no earnings — a rare profile), with output
-  weight set so the payment rises by up to +$30 at the tent's peak
-  and $0 outside the region. The function changes nowhere else; no
-  parameter of the recovered formula moves.
+- **T-local-near (weight-native)**: an appended gadget whose
+  activation is a tent over U ∈ [1200, 1400], E ∈ [0, 50], raising
+  the payment by up to +$30 at the tent's peak and $0 outside the
+  region. No parameter of the recovered formula moves.
+- **T-local-far (weight-native)**: the same tent over
+  U ∈ [1800, 2000], E ∈ [0, 50].
+
+### Amendment (2026-11-03, before any tampering or scoring)
+
+The original draft had one local tamper (at U ∈ [1800, 2000]) and
+predicted the uniform scoring grid would catch it. Grounding the
+instruments in the repo's actual code before running showed that
+prediction was wrong about the grid: `../ssi-payment/score.py`'s
+grid caps at U = 1500, the atlas's SSI monotonicity probes cap at
+U = 1450 (+50 step), and the trained baseline's sampling
+distribution is uniform on U ∈ [0, 1500]. Every behavioral
+instrument in this repo lives inside U ≤ 1500. The design therefore
+uses two local tampers — near (inside behavioral coverage) and far
+(beyond all of it) — and the prediction table below is the amended
+one. The amendment is recorded here, before any results exist,
+rather than letting the original table be silently reinterpreted
+after the fact.
 
 Four instruments, each a concrete procedure with a stated detection
 criterion:
 
-1. **Standard scoring**: the repo's accuracy grids (uniform grid +
-   the sampler-style case distribution used by `../ssi-payment/score.py`).
-   Detects if max error vs oracle > $0.01 on either grid.
+1. **Standard scoring**: `../ssi-payment/score.py`'s grid
+   (E ∈ [0, 3000], U ∈ [0, 1500]). Detects if max error vs the
+   oracle > $0.01 on the grid.
 2. **Parameter-recovery probing**: the trained-net-recovery
-   experiment's probe suite (FBR at origin, kinks, windowed slopes).
-   Detects if any recovered parameter moves by > $1 / > 0.01.
-3. **Property atlas (SSI subset)**: monotonicity in E and in U along
-   probe lines, payment ≤ FBR, payment = FBR at (0,0), non-negativity.
-   Detects if any probed property is violated by > $0.01.
+   experiment's probe suite (FBR at origin, kinks, windowed slopes —
+   all at U ≤ 800). Detects if any recovered parameter moves by
+   > $1 / > 0.01.
+3. **Property atlas (SSI subset, as implemented in
+   `../structural-property-atlas/atlas.py`)**: monotonicity in E
+   (grid points, U ≤ 1500) and in U (points with U ≤ 1450, +50
+   step), first-$20-free at E = 0, bounds [0, 994]. Detects if any
+   probed property is violated by > $0.01.
 4. **Weight-anatomy audit**: decode the weights against the known
    construction anatomy (the mechanical form of blind reading for a
-   compiled net): every hidden unit's implied rule fragment must fit
-   the formula's grammar, and the parameter count / unit count must
-   match the frozen construction. Detects if any unit or parameter
+   compiled net): unit counts per layer must match the frozen
+   construction, and every unit's weights must match the
+   construction's gadget patterns. Detects if any unit or parameter
    is non-anatomical.
 
-## Predictions, registered in advance
+## Predictions, registered in advance (as amended)
 
-| Instrument | T-global | T-local |
-|---|---|---|
-| Standard scoring (uniform) | detects | detects (grid crosses the region) |
-| Standard scoring (sampler) | detects | **misses** (region is off-distribution) |
-| Parameter-recovery probing | detects | **misses** (no global parameter moves) |
-| Property atlas | detects | detects **only if** a monotonicity line crosses the region; the standard atlas lines do not, so as-run it **misses** |
-| Weight-anatomy audit | detects | detects |
+| Instrument | T-global | T-local-near | T-local-far |
+|---|---|---|---|
+| Standard scoring | detects | detects (grid crosses U 1200–1400) | **misses** (grid ends at U = 1500) |
+| Parameter-recovery probing | detects | **misses** | **misses** |
+| Property atlas (as implemented) | detects | detects (mono-U pairs straddle the tent at low E) | **misses** (probes end at U = 1450) |
+| Weight-anatomy audit | detects | detects | detects |
 
 The predicted lesson, registered now so it cannot be retrofitted:
 **behavioral instruments certify the function only where they look;

@@ -421,3 +421,62 @@ does not survive.
 - All three pushed to ctrimm/snap-qc-per-experiments (canonical) and
   mirrored here per D17's arrangement; README indexes updated in
   both repos in the same pass.
+
+## D20 — Five weight-space follow-ups: recovery, surgery, cliff, tamper audit, composition (2026-11-03)
+
+All five pre-registered (protocols committed before any run), $0 API
+spend, local CPU only.
+
+- trained-net-recovery: exp116's probing instrument run on the
+  trained SSI baseline (compiled control recovers the statute
+  exactly). Trained net: FBR_eff $1,001.91 (+$7.91), unearned kink
+  $18 (statute $20), earned kink $53/$54/$55/$57 at U=0/10/20/50
+  (statute $85/$75/$65/$65) — ~$30 early where the spill matters,
+  kink U-movement $4 vs the statute's $20 (spill interaction
+  flattened); slopes essentially exact (earned spread 0.0018 over
+  binding windows, unearned -1.007/-1.001). Registered predictions
+  of large slope drift FAILED: the net learned a coherent different
+  rule, not a regionally drifting one. Probing localizes the
+  training failure to the exclusion-spill interaction, which error
+  scores and the atlas never isolated.
+- trained-net-surgery: trained couple net split-dependence (max
+  $30.56 on this probe design; $25.15 in the split-invariance
+  experiment's own) removed EXACTLY (2.3e-13) by averaging W1's two
+  spouse blocks — closed form, no training — and max error vs the
+  oracle improved $9.24 -> $4.53. Sparse gradient edit (32 params,
+  pre-registered recipe): violation -6% only, mean split-dependence
+  worse, mean accuracy 17x worse. Structural edits beat generic
+  minimal edits for behavioral defects. Protocol's "48 of 96"
+  edit-size line was a drafting error (all 96 W1 entries change);
+  corrected in RESULTS.
+- certified-cliff: cliff J=$546 at G=$3,000. Constructed ramps:
+  max error exactly $273.00 = J/2 at widths 400/200/100/50/10/2;
+  measured disagreement width = certified band - one grid step;
+  max |weight| hyperbolic in w (8.0 at w=400 -> 1,500.5 at w=2,
+  ratio 188x; protocol's ~250x was loose). Trained control: max
+  error $284 (floor binds it too), but >$1 error across 5,225 of
+  6,000 domain dollars — diffuse error, no certifiable band;
+  predicted asymmetry failed (split 2,995/2,999).
+- weight-tamper-audit: detection matrix exactly as amended-
+  registered (protocol amended pre-run after grounding showed all
+  behavioral instruments cap at U<=1500; two tents: near U
+  1200-1400, far U 1800-2000, +$30, payment is $0 throughout both
+  bands in the clean net). Scoring detects global+near, misses
+  far; recovery probing detects global only; atlas detects
+  global+near (mono-U straddle), misses far; weight-anatomy audit
+  (unit census + constant decode vs the writer's anatomy) detects
+  all three; clean net fires nothing. Tent gates on U only
+  (min-of-3 exceeds the net's depth) — disclosed in RESULTS.
+- composed-witnesses: countable-income net composed with a
+  share-of-cost head is bit-identical to the direct compiled SOC
+  net on the scoring grid (max diff 0.0; vs oracle 4.5e-13) at
+  identical parameter counts (1321 total / 16 nonzero) — the
+  registered overhead prediction failed pleasantly. FY2024 ->
+  FY2026 compiled SNAP diff: exactly 5 parameters (b1[0], b1[1],
+  b1[2], b2[1], b3[0]) carrying std $198->$209, cap $672->$744,
+  allotment $535->$546; all three constants recovered exactly
+  from the FY2024 net + diff alone. Trained pair (same init/seed,
+  5,000 steps, max err $34.07/$21.28): 648/1,297 params change
+  > 1e-6 (49.96%; the registered >= 95% FAILED — dead pathways
+  never move), no decodable subset. Contrast stated as
+  sparsity-plus-decodability vs half-net opacity.

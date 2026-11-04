@@ -1,0 +1,70 @@
+{
+  "rule": {
+    "limit": 3000.0,
+    "jump": 546.0
+  },
+  "constructions": {
+    "400": {
+      "max_err": 273.0,
+      "disagreement_width": 399.75,
+      "width_below_cliff": 199.75,
+      "width_above_cliff": 200.0,
+      "width_err_gt_1": 398.75,
+      "certified_band": 400.0,
+      "max_abs_weight": 8.0
+    },
+    "200": {
+      "max_err": 273.0,
+      "disagreement_width": 199.75,
+      "width_below_cliff": 99.75,
+      "width_above_cliff": 100.0,
+      "width_err_gt_1": 199.25,
+      "certified_band": 200.0,
+      "max_abs_weight": 15.5
+    },
+    "100": {
+      "max_err": 273.0,
+      "disagreement_width": 99.75,
+      "width_below_cliff": 49.75,
+      "width_above_cliff": 50.0,
+      "width_err_gt_1": 99.75,
+      "certified_band": 100.0,
+      "max_abs_weight": 30.5
+    },
+    "50": {
+      "max_err": 273.0,
+      "disagreement_width": 49.75,
+      "width_below_cliff": 24.75,
+      "width_above_cliff": 25.0,
+      "width_err_gt_1": 49.75,
+      "certified_band": 50.0,
+      "max_abs_weight": 60.5
+    },
+    "10": {
+      "max_err": 273.0,
+      "disagreement_width": 9.75,
+      "width_below_cliff": 4.75,
+      "width_above_cliff": 5.0,
+      "width_err_gt_1": 9.75,
+      "certified_band": 10.0,
+      "max_abs_weight": 300.5
+    },
+    "2": {
+      "max_err": 273.0,
+      "disagreement_width": 1.75,
+      "width_below_cliff": 0.75,
+      "width_above_cliff": 1.0,
+      "width_err_gt_1": 1.75,
+      "certified_band": 2.0,
+      "max_abs_weight": 1500.5
+    }
+  },
+  "trained_control": {
+    "max_err": 284.42267555638574,
+    "disagreement_width": 5993.75,
+    "width_below_cliff": 2995.0,
+    "width_above_cliff": 2998.75,
+    "width_err_gt_1": 5225.5,
+    "max_abs_weight": 2.695744590325753
+  }
+}
