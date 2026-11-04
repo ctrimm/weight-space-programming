@@ -308,7 +308,32 @@ does not survive.
   may know the formula from training data — the claim is
   weight-writing from text, not rule discovery).
 
-## D16 — Boundary case (SSA rounding) + full-suite verification (2026-11-03)
+## D16 — Local open-weight replication on the homelab rig (2026-11-03)
+- Brandon asked for the study to be replicated on the homelab rig
+  (one RTX 3090 Ti, LiteLLM gateway). Writers: `q38` (Qwen3.8-27B,
+  3-bit) and `strata` (Qwen3.8-Flash-Next 125B MoE, IQ3_S). Tasks:
+  all seven second-writer rules. The prompts were imported from the
+  three earlier runners, not retyped, and hash-checked against their
+  freezes before the first call.
+- Deviations were declared in PROTOCOL.md before any task call:
+  max_tokens 32,768 (was 20,000), because local reasoning tokens
+  count against it; and up to 3 transport-only retries, not counted
+  as attempts, after the q38 lane crashed and recovered during the
+  smoke test. No transport retry was needed in the run.
+- Result: both writers PASS on all six non-EITC rules at float
+  noise. EITC is Partial ($0.024, 81.8%) for both, identical to
+  Gemini and the original attempt 1, and both reasoning traces name
+  the seam. q38 needed the syntax-only retry on 4/7; strata on 0/7.
+  strata's EITC and member-level SNAP replies ran past 20k tokens.
+- Scoring ran in the foreground (per the D14 lesson), after a
+  calibration step that re-scored the committed Gemini weights and
+  reproduced all seven published max errors.
+- Correction made before publishing: the first RESULTS draft said
+  Gemini's EITC net was 99.96% exact. That figure is the original
+  writer's attempt 2. Gemini's net, re-run, sits at $0.024 across
+  the whole tail, same as the local models.
+
+## D17 — Boundary case (SSA rounding) + full-suite verification (2026-11-03)
 - Boundary: the $0.05 error floor for dime rounding is real and
   attained by the centered-ramp construction (max $0.0500, real
   network and closed form). Trained arm: mid-range mean $0.0250
@@ -331,8 +356,7 @@ does not survive.
   Corrected in place with a dated note; no conclusion depends on
   it (0.0% of probes over a cent reproduced exactly).
 
-## D17 — Formula recovery mirrored from snap-qc-per-experiments (2026-11-03)
-
+## D18 — Formula recovery mirrored from snap-qc-per-experiments (2026-11-03)
 - The black-box formula-recovery program (recover a SNAP benefit
   calculator's exact parameters from query access alone, price a
   planted defect by diffing against the statute, compile the recovered
@@ -361,8 +385,7 @@ does not survive.
   snap-qc-per-experiments, renumbered on arrival — the canonical
   series runs to exp115 and its exp52/exp53 are other experiments.
 
-## D18 — Recovery line completed: earnings (exp118) + territories (exp119) (2026-11-03)
-
+## D19 — Recovery line completed: earnings (exp118) + territories (exp119) (2026-11-03)
 - exp118 (earnings cases, 9,690 mainland size 1-4): minimodel
   reconstruction 99.85%; issued benefits exact vs statute only 37.0%
   (vs 61.6% no-earnings), skewed to overissuance (40.0% over / 23.0%
@@ -390,8 +413,7 @@ does not survive.
   failure to act), the recurring +$54 minimodel cluster (37 cases
   across exp117/118), and Alaska schedule assignment.
 
-## D19 — Recovery line's three open threads closed: exp120–exp122 (2026-11-03)
-
+## D20 — Recovery line's three open threads closed: exp120–exp122 (2026-11-03)
 - exp120 (+$268 cluster classified): 204/205 cluster cases carry a
   coded QC variance (median AMTERR exactly $268). First variance:
   earned income in 192/205; responsibility client 170 (82.9%) vs
@@ -422,8 +444,7 @@ does not survive.
   mirrored here per D17's arrangement; README indexes updated in
   both repos in the same pass.
 
-## D20 — Five weight-space follow-ups: recovery, surgery, cliff, tamper audit, composition (2026-11-03)
-
+## D21 — Five weight-space follow-ups: recovery, surgery, cliff, tamper audit, composition (2026-11-03)
 All five pre-registered (protocols committed before any run), $0 API
 spend, local CPU only.
 
