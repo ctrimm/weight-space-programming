@@ -360,3 +360,32 @@ does not survive.
 - Numbering note: drafted as exp52/53 in a stale sandbox snapshot of
   snap-qc-per-experiments, renumbered on arrival — the canonical
   series runs to exp115 and its exp52/exp53 are other experiments.
+
+## D18 — Recovery line completed: earnings (exp118) + territories (exp119) (2026-11-03)
+
+- exp118 (earnings cases, 9,690 mainland size 1-4): minimodel
+  reconstruction 99.85%; issued benefits exact vs statute only 37.0%
+  (vs 61.6% no-earnings), skewed to overissuance (40.0% over / 23.0%
+  under). Modal residual +$268 in 205 cases = full allotment issued
+  where verified earnings (median $2,752) imply the $23 minimum;
+  minimodel and corrected benefit agree with the prediction in
+  100% / 99.5% of the cluster — earnings that never reached the
+  issued benefit, QC-confirmed. Parameter fits from every target
+  return $198 and 20%; the earned staircase (floor) beats smooth on
+  minimodel outputs (81.8% vs 77.9%) and is below the noise floor in
+  issued data. Conclusion of the line: the formula layer is not
+  where SNAP payment error lives; the fact layer is, earnings worst.
+- exp119 (territories): allotment tables + standard deductions
+  recovered from the territories' own QC slices — Hawaii
+  (527/967/1385/1759, std $279) and Guam (430/788/1129/1434, std
+  $397) reconstruct the minimodel at 100.0%; Virgin Islands
+  (375/688/985/1251, std $174) at 97.1%; Alaska's three schedules
+  surface as clusters at size 1 ($374 Urban n=111, $581 Rural 2
+  n=19, $477 Rural 1 n=3), std $338, single-table reconstruction
+  capped at 78.4% for want of a schedule-assignment field.
+- Both experiments live canonically in ctrimm/snap-qc-per-experiments
+  (main 68a3f39b) and are mirrored here, per D17's arrangement.
+  Open threads recorded in the chronicles: variance-code
+  classification of the +$268 cluster (unreported earnings vs agency
+  failure to act), the recurring +$54 minimodel cluster (37 cases
+  across exp117/118), and Alaska schedule assignment.
