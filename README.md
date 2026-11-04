@@ -337,6 +337,32 @@ three models from three vendors converged on the identical
 circuit. Full-suite verification of everything above: see
 VERIFICATION.md.
 
+**Formula recovery: the calculator as a black box** (exp116–exp119,
+mirrored from [snap-qc-per-experiments](https://github.com/ctrimm/snap-qc-per-experiments),
+where this line is canonical). Everything above *writes* weights from a
+known formula. This line runs the other direction: given only query
+access to a SNAP benefit calculator (the QC harness's calculator from
+snap-qc-per-experiments, facts in and payment out, no code access),
+adaptive probing recovered its exact parameters — allotments,
+deduction tables, the $672 shelter cap, the floored 20% earned
+staircase — and a planted stale-parameter pair was priced exactly by
+diffing the recovered formula against the statute (−$34 / −$15). The
+recovered formula compiled back into weights reproduces the
+calculator at 100% (max error $0) once the staircase is computed in
+code, the same boundary doctrine as the rounding result below.
+Run against real FY2024 QC data (exp117/exp118), the statutory formula
+reconstructs the QC minimodel at 99.9%, issued benefits match it far
+less often (61.6% without earnings, 37.0% with), and the effective
+parameters fit from issued benefits are the statutory ones ($198,
+0.30, 20%): the error is case-level variance, not formula
+configuration. exp119 recovers the Alaska/Hawaii/Guam/Virgin Islands
+allotment tables from their own slices (Hawaii and Guam reconstruct
+at 100.0%; Alaska's three schedules surface as clusters). Files:
+`experiments/exp116_formula_recovery.*`, `exp116b_qc_audit.*`,
+`exp117_real_slice_recovery.*`, `exp118_earnings_recovery.*`,
+`exp119_territory_tables.*`; the generator under test is mirrored at
+`src/synth/`. Full record in the chronicles and DECISION_LOG D17–D18.
+
 **The boundary: rounding** (`experiments/ssa-rounding-boundary/`).
 The SSA text's last step — round the PIA down to the next lower
 $0.10 — is a step function, and no continuous network can
@@ -400,6 +426,8 @@ experiments/
 
 Cross-experiment figures live in `docs/figures/` (generator: `docs/make_figures.py`); each experiment's RESULTS.md embeds its own figures from its `figures/` folder (generators: `docs/make_writeup_figures.py`, `docs/make_witness_figures.py`).
 
+The formula-recovery line (exp116–exp119, see "Experiments and findings") lives as flat files in `experiments/` — code, chronicle, and results JSON per experiment — mirrored from ctrimm/snap-qc-per-experiments, its canonical home; the generator those experiments run against is mirrored under `src/synth/`.
+
 Each experiment is self-contained: `PROTOCOL.md` (pre-registration),
 `oracle.py` (the stipulated rule), `mlp.py` (generic forward pass),
 `zero_shot/` (the weight constructions, with derivations, plus
@@ -424,11 +452,18 @@ python3 train_baseline.py
 
 ## What's next
 
-- Nothing queued. The witness pattern now covers the arithmetic
+- The witness pattern now covers the arithmetic
   cores named for the CivBench label program — six rules, each with
   a trained baseline, and the two newest independently replicated
   by two other frontier models. Extending coverage to further rule
   families is future work.
+- Open threads from the formula-recovery line (exp116–exp119,
+  recorded in those chronicles): classify the +$268
+  uncounted-earnings cluster by the QC file's variance codes
+  (unreported earnings vs agency failure to act); identify the
+  recurring +$54 minimodel residual cluster (37 cases across
+  exp117/exp118); find a schedule-assignment field or proxy so
+  Alaska's three recovered schedules can be reconstructed per case.
 
 ## License
 
