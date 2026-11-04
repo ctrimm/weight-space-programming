@@ -332,3 +332,172 @@ does not survive.
   Gemini's EITC net was 99.96% exact. That figure is the original
   writer's attempt 2. Gemini's net, re-run, sits at $0.024 across
   the whole tail, same as the local models.
+
+## D17 — Boundary case (SSA rounding) + full-suite verification (2026-11-03)
+- Boundary: the $0.05 error floor for dime rounding is real and
+  attained by the centered-ramp construction (max $0.0500, real
+  network and closed form). Trained arm: mid-range mean $0.0250
+  (the predicted midpoint signature) but a low-end offset set its
+  max at $2.26 — the protocol's "near $0.10" trained-max guess
+  missed and is recorded as missed. Composition arm: exact PIA
+  vs rounded-by-law amount, max $0.0999 — deployments must round
+  in ordinary code after any network.
+- Process: two uncheckpointed arm-3 training runs were lost to
+  sandbox volatility (one "successful" delivery, files missing —
+  the D14 pattern). Final run: checkpointed chunks, sync per
+  chunk; discarded 6,000-step run's scores preserved. The
+  15,000-step repo-standard length replaced the shortened plan.
+- Verification: Cory asked for a full recheck before publication
+  or author outreach. Every experiment's own scorer was re-run
+  in the foreground against the shipped weights (VERIFICATION.md).
+  All decisive numbers reproduced except one bound: the atlas
+  RESULTS claimed compiled violations "at most 4.4e-13"; the
+  rerun puts the couple original's worst probe at 8.882e-13.
+  Corrected in place with a dated note; no conclusion depends on
+  it (0.0% of probes over a cent reproduced exactly).
+
+## D18 — Formula recovery mirrored from snap-qc-per-experiments (2026-11-03)
+- The black-box formula-recovery program (recover a SNAP benefit
+  calculator's exact parameters from query access alone, price a
+  planted defect by diffing against the statute, compile the recovered
+  formula to weights, then run the recovery on real FY2024 QC data)
+  was built as exp116/exp117 in ctrimm/snap-qc-per-experiments, that
+  repo being its canonical home and the source of the generator under
+  test (src/synth/benefit.py, the QC harness's Minimodel stand-in).
+- Cory directed it live in both repos. The eight experiment files are
+  mirrored here under experiments/exp116*/exp117*, byte-identical to
+  the snap-qc-per copies, chronicles carrying a repository note in
+  each. The generator modules the code imports (benefit.py, params.py,
+  household.py) are mirrored under src/synth/ so exp116 runs standalone
+  in this repo too; exp117 reads the FY2024 QC public-use file from the
+  project's snap-qc-data store, which is in neither repo.
+- Headline results (full record in the chronicles): clean recovery
+  exact on every parameter; planted stale cap/deduction recovered at
+  full price (-$34 / -$15); compiled recovered weights 100% agreement,
+  max error $0, once the earned staircase is computed in code (the
+  v1 pure relaxation leaves a $1-max residual on 3-8% of cases). On
+  real QC data the statutory formula reconstructs the QC minimodel on
+  99.87% of a 29,572-case slice, issued benefits match it on 61.6%,
+  and the effective parameters fit from issued benefits are the
+  statutory ones ($198 / 0.30): the error is case-level variance, not
+  formula configuration.
+- Numbering note: drafted as exp52/53 in a stale sandbox snapshot of
+  snap-qc-per-experiments, renumbered on arrival — the canonical
+  series runs to exp115 and its exp52/exp53 are other experiments.
+
+## D19 — Recovery line completed: earnings (exp118) + territories (exp119) (2026-11-03)
+- exp118 (earnings cases, 9,690 mainland size 1-4): minimodel
+  reconstruction 99.85%; issued benefits exact vs statute only 37.0%
+  (vs 61.6% no-earnings), skewed to overissuance (40.0% over / 23.0%
+  under). Modal residual +$268 in 205 cases = full allotment issued
+  where verified earnings (median $2,752) imply the $23 minimum;
+  minimodel and corrected benefit agree with the prediction in
+  100% / 99.5% of the cluster — earnings that never reached the
+  issued benefit, QC-confirmed. Parameter fits from every target
+  return $198 and 20%; the earned staircase (floor) beats smooth on
+  minimodel outputs (81.8% vs 77.9%) and is below the noise floor in
+  issued data. Conclusion of the line: the formula layer is not
+  where SNAP payment error lives; the fact layer is, earnings worst.
+- exp119 (territories): allotment tables + standard deductions
+  recovered from the territories' own QC slices — Hawaii
+  (527/967/1385/1759, std $279) and Guam (430/788/1129/1434, std
+  $397) reconstruct the minimodel at 100.0%; Virgin Islands
+  (375/688/985/1251, std $174) at 97.1%; Alaska's three schedules
+  surface as clusters at size 1 ($374 Urban n=111, $581 Rural 2
+  n=19, $477 Rural 1 n=3), std $338, single-table reconstruction
+  capped at 78.4% for want of a schedule-assignment field.
+- Both experiments live canonically in ctrimm/snap-qc-per-experiments
+  (main 68a3f39b) and are mirrored here, per D17's arrangement.
+  Open threads recorded in the chronicles: variance-code
+  classification of the +$268 cluster (unreported earnings vs agency
+  failure to act), the recurring +$54 minimodel cluster (37 cases
+  across exp117/118), and Alaska schedule assignment.
+
+## D20 — Recovery line's three open threads closed: exp120–exp122 (2026-11-03)
+- exp120 (+$268 cluster classified): 204/205 cluster cases carry a
+  coded QC variance (median AMTERR exactly $268). First variance:
+  earned income in 192/205; responsibility client 170 (82.9%) vs
+  agency 34 (16.6%); dominant natures "unreported source of income"
+  (139) and "employment status changed to employed" (38). Ordinary
+  error cases split 32/28/26/14 agency/client/no-fault/unrecorded —
+  the cluster is a specific failure mode, ~5/6 client-side
+  unreported earnings, ~1/6 agency failure to act on known earnings.
+- exp121 (+$54 cluster identified): the minimodel applies the $180
+  homeless shelter deduction from the HOMELESS_DED field in cases
+  where FSSLTDED carries 0; 0.30 x 180 = 54 exactly. 78 frame cases
+  carry HOMELESS_DED=180 (37 binding at +$54, 31 non-binding, 10
+  partial). Corrected field (shelter := FSSLTDED + HOMELESS_DED)
+  lifts pooled mainland minimodel reconstruction 99.86% -> 99.98%;
+  +$54 residual eliminated. exp117/118 headlines unaffected (the
+  cluster was inside their non-exact tail).
+- exp122 (Alaska assignment): no geography field exists, but BENMAX
+  (each case's maximum-allotment parameter) separates the three
+  schedules at purity 1.000 and equals FSBEN on 100% of net<=0 cases.
+  Shares: Urban 321 / Rural 2 64 / Rural 1 10. Reconstruction with
+  assignment 98.0% full frame; sizes 1-6 same-frame control 82.3%
+  single-table -> 99.0% assigned. Remaining 8 misses: rural size
+  6/7/9, +$3-4, consistent with a slightly higher large-rural std
+  deduction (rural binding n=18 too thin to pin). BENMAX also
+  confirms exp119's blind-recovered HI/GU/VI tables at 100.0%.
+  Every FY2024 jurisdiction now reconstructs at 97-100%.
+- All three pushed to ctrimm/snap-qc-per-experiments (canonical) and
+  mirrored here per D17's arrangement; README indexes updated in
+  both repos in the same pass.
+
+## D21 — Five weight-space follow-ups: recovery, surgery, cliff, tamper audit, composition (2026-11-03)
+All five pre-registered (protocols committed before any run), $0 API
+spend, local CPU only.
+
+- trained-net-recovery: exp116's probing instrument run on the
+  trained SSI baseline (compiled control recovers the statute
+  exactly). Trained net: FBR_eff $1,001.91 (+$7.91), unearned kink
+  $18 (statute $20), earned kink $53/$54/$55/$57 at U=0/10/20/50
+  (statute $85/$75/$65/$65) — ~$30 early where the spill matters,
+  kink U-movement $4 vs the statute's $20 (spill interaction
+  flattened); slopes essentially exact (earned spread 0.0018 over
+  binding windows, unearned -1.007/-1.001). Registered predictions
+  of large slope drift FAILED: the net learned a coherent different
+  rule, not a regionally drifting one. Probing localizes the
+  training failure to the exclusion-spill interaction, which error
+  scores and the atlas never isolated.
+- trained-net-surgery: trained couple net split-dependence (max
+  $30.56 on this probe design; $25.15 in the split-invariance
+  experiment's own) removed EXACTLY (2.3e-13) by averaging W1's two
+  spouse blocks — closed form, no training — and max error vs the
+  oracle improved $9.24 -> $4.53. Sparse gradient edit (32 params,
+  pre-registered recipe): violation -6% only, mean split-dependence
+  worse, mean accuracy 17x worse. Structural edits beat generic
+  minimal edits for behavioral defects. Protocol's "48 of 96"
+  edit-size line was a drafting error (all 96 W1 entries change);
+  corrected in RESULTS.
+- certified-cliff: cliff J=$546 at G=$3,000. Constructed ramps:
+  max error exactly $273.00 = J/2 at widths 400/200/100/50/10/2;
+  measured disagreement width = certified band - one grid step;
+  max |weight| hyperbolic in w (8.0 at w=400 -> 1,500.5 at w=2,
+  ratio 188x; protocol's ~250x was loose). Trained control: max
+  error $284 (floor binds it too), but >$1 error across 5,225 of
+  6,000 domain dollars — diffuse error, no certifiable band;
+  predicted asymmetry failed (split 2,995/2,999).
+- weight-tamper-audit: detection matrix exactly as amended-
+  registered (protocol amended pre-run after grounding showed all
+  behavioral instruments cap at U<=1500; two tents: near U
+  1200-1400, far U 1800-2000, +$30, payment is $0 throughout both
+  bands in the clean net). Scoring detects global+near, misses
+  far; recovery probing detects global only; atlas detects
+  global+near (mono-U straddle), misses far; weight-anatomy audit
+  (unit census + constant decode vs the writer's anatomy) detects
+  all three; clean net fires nothing. Tent gates on U only
+  (min-of-3 exceeds the net's depth) — disclosed in RESULTS.
+- composed-witnesses: countable-income net composed with a
+  share-of-cost head is bit-identical to the direct compiled SOC
+  net on the scoring grid (max diff 0.0; vs oracle 4.5e-13) at
+  identical parameter counts (1321 total / 16 nonzero) — the
+  registered overhead prediction failed pleasantly. FY2024 ->
+  FY2026 compiled SNAP diff: exactly 5 parameters (b1[0], b1[1],
+  b1[2], b2[1], b3[0]) carrying std $198->$209, cap $672->$744,
+  allotment $535->$546; all three constants recovered exactly
+  from the FY2024 net + diff alone. Trained pair (same init/seed,
+  5,000 steps, max err $34.07/$21.28): 648/1,297 params change
+  > 1e-6 (49.96%; the registered >= 95% FAILED — dead pathways
+  never move), no decodable subset. Contrast stated as
+  sparsity-plus-decodability vs half-net opacity.

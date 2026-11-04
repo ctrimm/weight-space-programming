@@ -1,0 +1,396 @@
+{
+  "clean": {
+    "footprint": {
+      "max_dev_vs_clean_net": 0.0,
+      "share_of_domain_cells_changed_gt_1c": 0.0
+    },
+    "scoring": {
+      "max_err": 2.2737367544323206e-13,
+      "detects": false
+    },
+    "probing": {
+      "recovered": {
+        "fbr_eff": 994.0,
+        "unearned_kink": 20.0,
+        "earned_kinks": {
+          "0": 85.0,
+          "10": 75.0,
+          "20": 65.0,
+          "50": 65.0
+        },
+        "earned_slopes": {
+          "U0_E200-400": -0.5000000000000016,
+          "U0_E800-1000": -0.49999999999999856,
+          "U0_E1400-1600": -0.500000000000001,
+          "U100_E200-400": -0.5000000000000019,
+          "U100_E800-1000": -0.4999999999999991,
+          "U100_E1400-1600": -0.5000000000000008,
+          "U500_E200-400": -0.49999999999999994,
+          "U500_E800-1000": -0.4999999999999992,
+          "U500_E1400-1600": 1.441848083928773e-16
+        },
+        "earned_slopes_binding": {
+          "U0_E200-400": true,
+          "U0_E800-1000": true,
+          "U0_E1400-1600": true,
+          "U100_E200-400": true,
+          "U100_E800-1000": true,
+          "U100_E1400-1600": true,
+          "U500_E200-400": true,
+          "U500_E800-1000": true,
+          "U500_E1400-1600": false
+        },
+        "unearned_slopes": {
+          "E0_U100-300": -1.0000000000000007,
+          "E0_U600-800": -1.0000000000000002
+        },
+        "earned_slope_spread_binding": 3.3306690738754696e-15,
+        "earned_kink_spread": 20.0,
+        "earned_kink_errors_vs_statute": {
+          "0": 0.0,
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.0
+        },
+        "unearned_slope_spread": 4.440892098500626e-16
+      },
+      "moves": {
+        "fbr": 0.0,
+        "unearned_kink": 0.0,
+        "earned_slope_spread": 0.0
+      },
+      "detects": false
+    },
+    "atlas": {
+      "props": {
+        "mono_E": 4.440892098500626e-13,
+        "mono_U": 4.440892098500626e-13,
+        "first20_free": 0.0,
+        "bounds": 2.220446049250313e-13
+      },
+      "detects": false
+    },
+    "anatomy": {
+      "active_units": {
+        "L1": [
+          0,
+          1,
+          2
+        ],
+        "L2": [
+          0,
+          1
+        ],
+        "L3": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fbr_decoded": 994.0,
+      "issues": [],
+      "detects": false
+    }
+  },
+  "T-global": {
+    "footprint": {
+      "max_dev_vs_clean_net": 25.0,
+      "share_of_domain_cells_changed_gt_1c": 0.15413429339121917
+    },
+    "scoring": {
+      "max_err": 25.000000000000114,
+      "detects": true
+    },
+    "probing": {
+      "recovered": {
+        "fbr_eff": 1018.9999999999999,
+        "unearned_kink": 20.0,
+        "earned_kinks": {
+          "0": 85.0,
+          "10": 75.0,
+          "20": 65.0,
+          "50": 65.0
+        },
+        "earned_slopes": {
+          "U0_E200-400": -0.5000000000000006,
+          "U0_E800-1000": -0.5000000000000007,
+          "U0_E1400-1600": -0.5000000000000011,
+          "U100_E200-400": -0.5000000000000009,
+          "U100_E800-1000": -0.4999999999999989,
+          "U100_E1400-1600": -0.5000000000000012,
+          "U500_E200-400": -0.5000000000000004,
+          "U500_E800-1000": -0.499999999999999,
+          "U500_E1400-1600": 2.883696167857546e-16
+        },
+        "earned_slopes_binding": {
+          "U0_E200-400": true,
+          "U0_E800-1000": true,
+          "U0_E1400-1600": true,
+          "U100_E200-400": true,
+          "U100_E800-1000": true,
+          "U100_E1400-1600": true,
+          "U500_E200-400": true,
+          "U500_E800-1000": true,
+          "U500_E1400-1600": false
+        },
+        "unearned_slopes": {
+          "E0_U100-300": -1.0000000000000018,
+          "E0_U600-800": -1.0000000000000007
+        },
+        "earned_slope_spread_binding": 2.3314683517128287e-15,
+        "earned_kink_spread": 20.0,
+        "earned_kink_errors_vs_statute": {
+          "0": 0.0,
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.0
+        },
+        "unearned_slope_spread": 1.1102230246251565e-15
+      },
+      "moves": {
+        "fbr": 24.999999999999886,
+        "unearned_kink": 0.0,
+        "earned_slope_spread": 9.992007221626409e-16
+      },
+      "detects": true
+    },
+    "atlas": {
+      "props": {
+        "mono_E": 4.440892098500626e-13,
+        "mono_U": 4.440892098500626e-13,
+        "first20_free": 24.999999999999886,
+        "bounds": 24.999999999999886
+      },
+      "detects": true
+    },
+    "anatomy": {
+      "active_units": {
+        "L1": [
+          0,
+          1,
+          2
+        ],
+        "L2": [
+          0,
+          1
+        ],
+        "L3": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fbr_decoded": 1018.9999999999999,
+      "issues": [
+        "decoded FBR 1019 != statute 994"
+      ],
+      "detects": true
+    }
+  },
+  "T-local-near": {
+    "footprint": {
+      "max_dev_vs_clean_net": 29.99999999999992,
+      "share_of_domain_cells_changed_gt_1c": 0.07569721115537849
+    },
+    "scoring": {
+      "max_err": 30.00000000000014,
+      "detects": true
+    },
+    "probing": {
+      "recovered": {
+        "fbr_eff": 994.0,
+        "unearned_kink": 20.0,
+        "earned_kinks": {
+          "0": 85.0,
+          "10": 75.0,
+          "20": 65.0,
+          "50": 65.0
+        },
+        "earned_slopes": {
+          "U0_E200-400": -0.5000000000000016,
+          "U0_E800-1000": -0.49999999999999856,
+          "U0_E1400-1600": -0.500000000000001,
+          "U100_E200-400": -0.5000000000000019,
+          "U100_E800-1000": -0.4999999999999991,
+          "U100_E1400-1600": -0.5000000000000008,
+          "U500_E200-400": -0.49999999999999994,
+          "U500_E800-1000": -0.4999999999999992,
+          "U500_E1400-1600": 1.441848083928773e-16
+        },
+        "earned_slopes_binding": {
+          "U0_E200-400": true,
+          "U0_E800-1000": true,
+          "U0_E1400-1600": true,
+          "U100_E200-400": true,
+          "U100_E800-1000": true,
+          "U100_E1400-1600": true,
+          "U500_E200-400": true,
+          "U500_E800-1000": true,
+          "U500_E1400-1600": false
+        },
+        "unearned_slopes": {
+          "E0_U100-300": -1.0000000000000007,
+          "E0_U600-800": -1.0000000000000002
+        },
+        "earned_slope_spread_binding": 3.3306690738754696e-15,
+        "earned_kink_spread": 20.0,
+        "earned_kink_errors_vs_statute": {
+          "0": 0.0,
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.0
+        },
+        "unearned_slope_spread": 4.440892098500626e-16
+      },
+      "moves": {
+        "fbr": 0.0,
+        "unearned_kink": 0.0,
+        "earned_slope_spread": 0.0
+      },
+      "detects": false
+    },
+    "atlas": {
+      "props": {
+        "mono_E": 4.476419235288631e-13,
+        "mono_U": 15.000000000000348,
+        "first20_free": 0.0,
+        "bounds": 3.3306690738754696e-13
+      },
+      "detects": true
+    },
+    "anatomy": {
+      "active_units": {
+        "L1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "L2": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "L3": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "fbr_decoded": 994.0,
+      "issues": [
+        "active-unit census {'L1': [0, 1, 2, 3, 4, 5, 6], 'L2': [0, 1, 2, 3], 'L3': [0, 1, 2, 3, 4]} != construction {'L1': [0, 1, 2], 'L2': [0, 1], 'L3': [0, 1, 2]}"
+      ],
+      "detects": true
+    }
+  },
+  "T-local-far": {
+    "footprint": {
+      "max_dev_vs_clean_net": 30.00000000000003,
+      "share_of_domain_cells_changed_gt_1c": 0.07569721115537849
+    },
+    "scoring": {
+      "max_err": 2.2737367544323206e-13,
+      "detects": false
+    },
+    "probing": {
+      "recovered": {
+        "fbr_eff": 994.0,
+        "unearned_kink": 20.0,
+        "earned_kinks": {
+          "0": 85.0,
+          "10": 75.0,
+          "20": 65.0,
+          "50": 65.0
+        },
+        "earned_slopes": {
+          "U0_E200-400": -0.5000000000000016,
+          "U0_E800-1000": -0.49999999999999856,
+          "U0_E1400-1600": -0.500000000000001,
+          "U100_E200-400": -0.5000000000000019,
+          "U100_E800-1000": -0.4999999999999991,
+          "U100_E1400-1600": -0.5000000000000008,
+          "U500_E200-400": -0.49999999999999994,
+          "U500_E800-1000": -0.4999999999999992,
+          "U500_E1400-1600": 1.441848083928773e-16
+        },
+        "earned_slopes_binding": {
+          "U0_E200-400": true,
+          "U0_E800-1000": true,
+          "U0_E1400-1600": true,
+          "U100_E200-400": true,
+          "U100_E800-1000": true,
+          "U100_E1400-1600": true,
+          "U500_E200-400": true,
+          "U500_E800-1000": true,
+          "U500_E1400-1600": false
+        },
+        "unearned_slopes": {
+          "E0_U100-300": -1.0000000000000007,
+          "E0_U600-800": -1.0000000000000002
+        },
+        "earned_slope_spread_binding": 3.3306690738754696e-15,
+        "earned_kink_spread": 20.0,
+        "earned_kink_errors_vs_statute": {
+          "0": 0.0,
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.0
+        },
+        "unearned_slope_spread": 4.440892098500626e-16
+      },
+      "moves": {
+        "fbr": 0.0,
+        "unearned_kink": 0.0,
+        "earned_slope_spread": 0.0
+      },
+      "detects": false
+    },
+    "atlas": {
+      "props": {
+        "mono_E": 4.440892098500626e-13,
+        "mono_U": 4.440892098500626e-13,
+        "first20_free": 0.0,
+        "bounds": 2.220446049250313e-13
+      },
+      "detects": false
+    },
+    "anatomy": {
+      "active_units": {
+        "L1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "L2": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "L3": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "fbr_decoded": 994.0,
+      "issues": [
+        "active-unit census {'L1': [0, 1, 2, 3, 4, 5, 6], 'L2': [0, 1, 2, 3], 'L3': [0, 1, 2, 3, 4]} != construction {'L1': [0, 1, 2], 'L2': [0, 1], 'L3': [0, 1, 2]}"
+      ],
+      "detects": true
+    }
+  }
+}

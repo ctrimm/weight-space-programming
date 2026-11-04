@@ -23,6 +23,7 @@ If you evaluate AI that touches public benefits: a model can score well on avera
 
 This covers the arithmetic only. Eligibility is a legal determination, and it belongs in ordinary, auditable code.
 
-Everything is public, including the failures and one set of numbers I had to correct. Total API cost: $2.40.
+Everything is public, including the failures and one set of numbers I had to correct. Total API cost: $2.48.
 
-https://github.com/ctrimm/weight-space-programming
+Full writeup: https://corytrimm.com/posts/weight-space-programming/
+Code, weights, and protocols: https://github.com/ctrimm/weight-space-programming

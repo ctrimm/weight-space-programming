@@ -14,8 +14,8 @@ survive when the writer gets only the regulator's published text?
 - Rule: Social Security primary insurance amount (PIA), worker
   first eligible in 2027, as published by SSA
   (SOURCE_TEXT.md, retrieved 2026-11-03). No prior experiment in
-  this repo touches Social Security; the 2027 bend points
-  postdate all earlier runs.
+  this repo touches Social Security; the 2027 formula is the
+  version SSA currently publishes.
 - Writers received the verbatim SSA text and the fixed network
   spec, and were told to implement the (a)+(b)+(c) sum only, not
   the rounding sentence. No cleaned formula, no hinge form, no

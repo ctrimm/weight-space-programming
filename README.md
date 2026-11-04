@@ -350,6 +350,96 @@ three models from three vendors converged on the identical
 circuit. Full-suite verification of everything above: see
 VERIFICATION.md.
 
+**Formula recovery: the calculator as a black box** (exp116–exp119,
+mirrored from [snap-qc-per-experiments](https://github.com/ctrimm/snap-qc-per-experiments),
+where this line is canonical). Everything above *writes* weights from a
+known formula. This line runs the other direction: given only query
+access to a SNAP benefit calculator (the QC harness's calculator from
+snap-qc-per-experiments, facts in and payment out, no code access),
+adaptive probing recovered its exact parameters — allotments,
+deduction tables, the $672 shelter cap, the floored 20% earned
+staircase — and a planted stale-parameter pair was priced exactly by
+diffing the recovered formula against the statute (−$34 / −$15). The
+recovered formula compiled back into weights reproduces the
+calculator at 100% (max error $0) once the staircase is computed in
+code, the same boundary doctrine as the rounding result below.
+Run against real FY2024 QC data (exp117/exp118), the statutory formula
+reconstructs the QC minimodel at 99.9%, issued benefits match it far
+less often (61.6% without earnings, 37.0% with), and the effective
+parameters fit from issued benefits are the statutory ones ($198,
+0.30, 20%): the error is case-level variance, not formula
+configuration. exp119 recovers the Alaska/Hawaii/Guam/Virgin Islands
+allotment tables from their own slices (Hawaii and Guam reconstruct
+at 100.0%; Alaska's three schedules surface as clusters). Files:
+`experiments/exp116_formula_recovery.*`, `exp116b_qc_audit.*`,
+`exp117_real_slice_recovery.*`, `exp118_earnings_recovery.*`,
+`exp119_territory_tables.*`; the generator under test is mirrored at
+`src/synth/`. Full record in the chronicles and DECISION_LOG D17–D18.
+Three follow-ups (exp120–exp122, DECISION_LOG D19; files
+`experiments/exp120_cluster268_classification.*`,
+`exp121_cluster54_identification.*`, `exp122_alaska_schedules.*`)
+closed the line's open threads: the +$268 cluster is ~5/6 client-side unreported
+earnings and ~1/6 agency failure to act, by the cases' own QC
+variance codes; the +$54 minimodel cluster is the $180 homeless
+shelter deduction, carried in a field (`HOMELESS_DED`) the
+`FS*DED` set leaves at zero — with it, mainland minimodel
+reconstruction is 99.98%; and Alaska's schedules are assignable
+after all, via `BENMAX`, the case's own maximum-allotment
+parameter (reconstruction 82.3% → 99.0% on the same frame), which
+also confirms the blind-recovered Hawaii/Guam/Virgin Islands tables
+at 100%.
+
+**Five follow-ups on weights as the atomic unit** (2026-11-03,
+each pre-registered in its PROTOCOL.md). *Trained-net recovery*
+(`experiments/trained-net-recovery/`): the exp116 probing
+instrument turned on a trained network itself — the trained SSI
+baseline's slopes recover essentially exactly (−0.500, −1.000) and
+its FBR within $8, but its earned-exclusion kink sits ~$30 early
+with the statutory spill interaction flattened (kink movement $4
+across unearned-income slices vs the statute's $20): it learned a
+coherent *different* rule, and probing names the differing feature.
+*Trained-net surgery* (`experiments/trained-net-surgery/`): the
+trained couple net's split-dependence ($30.56 max) removed
+*exactly* (→ $0.00) by a closed-form symmetrization of the first
+layer — which also halved its max error ($9.24 → $4.53) — while a
+generic sparse gradient edit of 32 weights managed −6% on the
+violation and damaged mean accuracy 17×. *Certified cliff*
+(`experiments/certified-cliff/`): at an eligibility cliff (jump
+$546), constructed ramp nets pay exactly the $273 floor at every
+band width, disagree with the rule only inside the certified
+band, and pay for narrower bands in largest-weight like 1/w
+(8 → 1,500 as the band goes $400 → $2); the trained control's
+error is diffuse — off by > $1 across 87% of the domain, no band
+to certify. *Weight-tamper audit*
+(`experiments/weight-tamper-audit/`): of four audit instruments,
+only the weight-anatomy audit catches a +$30 tent planted beyond
+every behavioral probe's range (U > 1500); scoring, recovery
+probing, and the property atlas each miss exactly the tampers
+outside their coverage, and none false-positives on the clean
+net. *Composed witnesses* (`experiments/composed-witnesses/`): a
+compiled countable-income net block-composed with a share-of-cost
+head is **bit-identical** to the one-piece compiled net at zero
+parameter overhead, and the FY2024 → FY2026 weight diff of the
+compiled SNAP rule is exactly 5 entries carrying all three COLA
+constants ($535→$546, $198→$209, $672→$744), each recoverable
+from the diff alone — where two same-init trained nets' diff is
+648 parameters that decode to nothing. Full record in each
+folder's RESULTS.md and DECISION_LOG D20.
+
+**The boundary: rounding** (`experiments/ssa-rounding-boundary/`).
+The SSA text's last step — round the PIA down to the next lower
+$0.10 — is a step function, and no continuous network can
+implement it exactly: at a $0.10 jump, any candidate is at least
+$0.05 wrong somewhere (proof in the experiment's protocol). The
+best construction attains exactly that floor ($0.0500 max error,
+99.2% of points within a cent); a trained network lands on the
+same midpoint strategy in mid-range (mean error $0.0250) plus a
+low-end offset; and the exact PIA network scored against the
+rounded-by-law amount is off by up to $0.0999 — the rounding gap
+itself. Continuous rules are exactly representable; discontinuous
+ones only to half their jump. For a whole-dollar round the floor
+is $0.50; for an eligibility gate, the jump is the whole decision.
+
 ## What all of this cost
 
 **$2.48 in total API spend** ($0.653 for the second-writer
@@ -397,9 +487,16 @@ experiments/
   second-writer-rig-local/      Two local open-weight Qwen models on one consumer GPU replicate all seven rules
   canonical-circuits/           Writers' circuits under permutation/scaling gauge: mostly one circuit
   civbench-narrative-order/     Label-side audit: CivBench scenarios have no member order to permute
+  trained-net-recovery/         Probing a trained net: its effective formula, kink ~$30 early, spill flattened
+  trained-net-surgery/          Closed-form W1 symmetrization removes a trained net's split-dependence exactly
+  certified-cliff/              Ramp-compiled eligibility cliff: $273 floor, certified band, price ~1/w in max weight
+  weight-tamper-audit/          Which audit instruments catch weight-space tampers (only anatomy catches all)
+  composed-witnesses/           Block composition is bit-identical; FY24->FY26 weight diff = 5 entries, fully decodable
 ```
 
 Cross-experiment figures live in `docs/figures/` (generator: `docs/make_figures.py`); each experiment's RESULTS.md embeds its own figures from its `figures/` folder (generators: `docs/make_writeup_figures.py`, `docs/make_witness_figures.py`).
+
+The formula-recovery line (exp116–exp119, see "Experiments and findings") lives as flat files in `experiments/` — code, chronicle, and results JSON per experiment — mirrored from ctrimm/snap-qc-per-experiments, its canonical home; the generator those experiments run against is mirrored under `src/synth/`.
 
 Each experiment is self-contained: `PROTOCOL.md` (pre-registration),
 `oracle.py` (the stipulated rule), `mlp.py` (generic forward pass),
@@ -425,11 +522,19 @@ python3 train_baseline.py
 
 ## What's next
 
-- Nothing queued. The witness pattern now covers the arithmetic
+- The witness pattern now covers the arithmetic
   cores named for the CivBench label program — six rules, each with
   a trained baseline, and the two newest independently replicated
   by two other frontier models. Extending coverage to further rule
   families is future work.
+- The formula-recovery line's three open threads are closed
+  (exp120–exp122): the +$268 cluster is classified by variance
+  code, the +$54 cluster is the homeless shelter deduction, and
+  Alaska's schedules are assigned via BENMAX. One wobble remains,
+  recorded in exp122: 8 large rural Alaska households sit +$3–4
+  above the assigned reconstruction, consistent with a slightly
+  higher rural standard deduction — pinning it needs a larger
+  Alaska sample (another fiscal year's file), not more method.
 
 ## License
 
