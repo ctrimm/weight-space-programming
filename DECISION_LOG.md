@@ -389,3 +389,35 @@ does not survive.
   classification of the +$268 cluster (unreported earnings vs agency
   failure to act), the recurring +$54 minimodel cluster (37 cases
   across exp117/118), and Alaska schedule assignment.
+
+## D19 — Recovery line's three open threads closed: exp120–exp122 (2026-11-03)
+
+- exp120 (+$268 cluster classified): 204/205 cluster cases carry a
+  coded QC variance (median AMTERR exactly $268). First variance:
+  earned income in 192/205; responsibility client 170 (82.9%) vs
+  agency 34 (16.6%); dominant natures "unreported source of income"
+  (139) and "employment status changed to employed" (38). Ordinary
+  error cases split 32/28/26/14 agency/client/no-fault/unrecorded —
+  the cluster is a specific failure mode, ~5/6 client-side
+  unreported earnings, ~1/6 agency failure to act on known earnings.
+- exp121 (+$54 cluster identified): the minimodel applies the $180
+  homeless shelter deduction from the HOMELESS_DED field in cases
+  where FSSLTDED carries 0; 0.30 x 180 = 54 exactly. 78 frame cases
+  carry HOMELESS_DED=180 (37 binding at +$54, 31 non-binding, 10
+  partial). Corrected field (shelter := FSSLTDED + HOMELESS_DED)
+  lifts pooled mainland minimodel reconstruction 99.86% -> 99.98%;
+  +$54 residual eliminated. exp117/118 headlines unaffected (the
+  cluster was inside their non-exact tail).
+- exp122 (Alaska assignment): no geography field exists, but BENMAX
+  (each case's maximum-allotment parameter) separates the three
+  schedules at purity 1.000 and equals FSBEN on 100% of net<=0 cases.
+  Shares: Urban 321 / Rural 2 64 / Rural 1 10. Reconstruction with
+  assignment 98.0% full frame; sizes 1-6 same-frame control 82.3%
+  single-table -> 99.0% assigned. Remaining 8 misses: rural size
+  6/7/9, +$3-4, consistent with a slightly higher large-rural std
+  deduction (rural binding n=18 too thin to pin). BENMAX also
+  confirms exp119's blind-recovered HI/GU/VI tables at 100.0%.
+  Every FY2024 jurisdiction now reconstructs at 97-100%.
+- All three pushed to ctrimm/snap-qc-per-experiments (canonical) and
+  mirrored here per D17's arrangement; README indexes updated in
+  both repos in the same pass.

@@ -362,6 +362,17 @@ at 100.0%; Alaska's three schedules surface as clusters). Files:
 `exp117_real_slice_recovery.*`, `exp118_earnings_recovery.*`,
 `exp119_territory_tables.*`; the generator under test is mirrored at
 `src/synth/`. Full record in the chronicles and DECISION_LOG D17–D18.
+Three follow-ups (exp120–exp122, DECISION_LOG D19) closed the line's
+open threads: the +$268 cluster is ~5/6 client-side unreported
+earnings and ~1/6 agency failure to act, by the cases' own QC
+variance codes; the +$54 minimodel cluster is the $180 homeless
+shelter deduction, carried in a field (`HOMELESS_DED`) the
+`FS*DED` set leaves at zero — with it, mainland minimodel
+reconstruction is 99.98%; and Alaska's schedules are assignable
+after all, via `BENMAX`, the case's own maximum-allotment
+parameter (reconstruction 82.3% → 99.0% on the same frame), which
+also confirms the blind-recovered Hawaii/Guam/Virgin Islands tables
+at 100%.
 
 **The boundary: rounding** (`experiments/ssa-rounding-boundary/`).
 The SSA text's last step — round the PIA down to the next lower
@@ -457,13 +468,14 @@ python3 train_baseline.py
   a trained baseline, and the two newest independently replicated
   by two other frontier models. Extending coverage to further rule
   families is future work.
-- Open threads from the formula-recovery line (exp116–exp119,
-  recorded in those chronicles): classify the +$268
-  uncounted-earnings cluster by the QC file's variance codes
-  (unreported earnings vs agency failure to act); identify the
-  recurring +$54 minimodel residual cluster (37 cases across
-  exp117/exp118); find a schedule-assignment field or proxy so
-  Alaska's three recovered schedules can be reconstructed per case.
+- The formula-recovery line's three open threads are closed
+  (exp120–exp122): the +$268 cluster is classified by variance
+  code, the +$54 cluster is the homeless shelter deduction, and
+  Alaska's schedules are assigned via BENMAX. One wobble remains,
+  recorded in exp122: 8 large rural Alaska households sit +$3–4
+  above the assigned reconstruction, consistent with a slightly
+  higher rural standard deduction — pinning it needs a larger
+  Alaska sample (another fiscal year's file), not more method.
 
 ## License
 
