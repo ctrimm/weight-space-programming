@@ -330,3 +330,33 @@ does not survive.
   rerun puts the couple original's worst probe at 8.882e-13.
   Corrected in place with a dated note; no conclusion depends on
   it (0.0% of probes over a cent reproduced exactly).
+
+## D17 — Formula recovery mirrored from snap-qc-per-experiments (2026-11-03)
+
+- The black-box formula-recovery program (recover a SNAP benefit
+  calculator's exact parameters from query access alone, price a
+  planted defect by diffing against the statute, compile the recovered
+  formula to weights, then run the recovery on real FY2024 QC data)
+  was built as exp116/exp117 in ctrimm/snap-qc-per-experiments, that
+  repo being its canonical home and the source of the generator under
+  test (src/synth/benefit.py, the QC harness's Minimodel stand-in).
+- Cory directed it live in both repos. The eight experiment files are
+  mirrored here under experiments/exp116*/exp117*, byte-identical to
+  the snap-qc-per copies, chronicles carrying a repository note in
+  each. The generator modules the code imports (benefit.py, params.py,
+  household.py) are mirrored under src/synth/ so exp116 runs standalone
+  in this repo too; exp117 reads the FY2024 QC public-use file from the
+  project's snap-qc-data store, which is in neither repo.
+- Headline results (full record in the chronicles): clean recovery
+  exact on every parameter; planted stale cap/deduction recovered at
+  full price (-$34 / -$15); compiled recovered weights 100% agreement,
+  max error $0, once the earned staircase is computed in code (the
+  v1 pure relaxation leaves a $1-max residual on 3-8% of cases). On
+  real QC data the statutory formula reconstructs the QC minimodel on
+  99.87% of a 29,572-case slice, issued benefits match it on 61.6%,
+  and the effective parameters fit from issued benefits are the
+  statutory ones ($198 / 0.30): the error is case-level variance, not
+  formula configuration.
+- Numbering note: drafted as exp52/53 in a stale sandbox snapshot of
+  snap-qc-per-experiments, renumbered on arrival — the canonical
+  series runs to exp115 and its exp52/exp53 are other experiments.
