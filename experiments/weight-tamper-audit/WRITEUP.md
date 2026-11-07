@@ -406,6 +406,12 @@ with the numbers attached.
   surgery setting), where no construction exists and the anatomy audit
   must be replaced by the strongest available artifact-level check —
   the honest test of how much of §7 survives without a decoder.
+- **Inspect AI port (done 2026-11-07, at Cory's request):** the audit
+  now also runs as an Inspect AI (UK AISI) task — see
+  [`inspect_port/`](inspect_port/) in this folder — with the full 4×4
+  detection matrix as 16 samples whose per-cell measurements can be
+  browsed in Inspect View. The port reuses `audit.py` unchanged; it
+  is a presentation and portability layer, not a new measurement.
 
 ## Appendix: reproduction
 
