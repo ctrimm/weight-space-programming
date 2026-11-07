@@ -229,19 +229,6 @@ while GPT-5.6 Sol returned no weights at all — it derived the
 $0.024 discontinuity from the constants and declined to submit an
 inexact network. Total measured cost of the replication: $0.65.
 
-**It doesn't need a frontier model** (2026-11-03,
-`experiments/second-writer-rig-local/`). The same seven bare prompts
-were sent, byte for byte, to two open-weight models running on one
-RTX 3090 Ti in a homelab: Qwen3.8-27B (3-bit) and Qwen3.8-Flash-Next
-(125B MoE, 3-bit, split across GPU and RAM). Both compiled all six
-non-EITC rules exactly, audit probes, zero-member slices, and
-member-level invariance included. On EITC both found the 2.4-cent
-seam in their reasoning and submitted the same continuous
-construction as the original first attempt and Gemini. Caveats: the
-27B model needed the syntax-only retry on four of seven rules, and
-the output budget was raised from 20k to 32k tokens, which two of
-the MoE model's replies used. $0 API spend, about an hour of GPU.
-
 The reading direction is also done (2026-11-02,
 `experiments/weight-reading/`): eleven anonymized networks were
 handed to fresh readers — GPT-5.6 Sol, Gemini 3.1 Pro, and the
@@ -416,7 +403,8 @@ only the weight-anatomy audit catches a +$30 tent planted beyond
 every behavioral probe's range (U > 1500); scoring, recovery
 probing, and the property atlas each miss exactly the tampers
 outside their coverage, and none false-positives on the clean
-net. *Composed witnesses* (`experiments/composed-witnesses/`): a
+net. Long-form write-up with figures:
+`experiments/weight-tamper-audit/WRITEUP.md`. *Composed witnesses* (`experiments/composed-witnesses/`): a
 compiled countable-income net block-composed with a share-of-cost
 head is **bit-identical** to the one-piece compiled net at zero
 parameter overhead, and the FY2024 → FY2026 weight diff of the
@@ -449,8 +437,7 @@ member-level SNAP replication, $0.0831 for the held-out PIA test, all measured f
 own usage accounting, reconciled against the account aggregate,
 and itemized in those experiments' RESULTS.md). Everything else — the original
 constructions, the trained baselines, the editing experiment — ran
-in-session or on local CPU at no API cost, and the local-model
-replication ran on a homelab GPU at no API cost. Each experiment's
+in-session or on local CPU at no API cost. Each experiment's
 RESULTS.md carries its own cost line.
 
 ## Guardrails
@@ -484,7 +471,6 @@ experiments/
   ssi-couple-repair-bakeoff/    Augmentation vs penalty vs architecture: only architecture reaches zero
   snap-household-composition/   SNAP with per-member inputs: invariance + should-change controls
   second-writer-snap-composition/  GPT + Gemini replicate the member-level SNAP rule
-  second-writer-rig-local/      Two local open-weight Qwen models on one consumer GPU replicate all seven rules
   canonical-circuits/           Writers' circuits under permutation/scaling gauge: mostly one circuit
   civbench-narrative-order/     Label-side audit: CivBench scenarios have no member order to permute
   trained-net-recovery/         Probing a trained net: its effective formula, kink ~$30 early, spill flattened
